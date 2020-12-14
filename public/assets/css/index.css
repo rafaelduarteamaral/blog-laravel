@@ -7,6 +7,12 @@ html {
     padding: 0; 
 }
 
+body, p, ol, ul, td, th {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 18px;
+    padding: 0;
+    background-color: white;
+}
 
 div { 
     padding: 0; 
@@ -167,15 +173,234 @@ h2 {
     float: right;
     font-size: 10px;
     line-height: 12px;
-    width: 180px;
-    margin-left: 5px;
+    width: 169px;
+    margin-right: 60px;
     margin-top: 5px;
 }
 
-.conteudoPagina {
+.outrasFormas {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 283px;
+    height: 32px;
+    margin: 0 18px 0 0;
+    vertical-align: middle;
+    text-align: center;
+    padding: 13px 0 5px 0;
+    background: #333333;
+    border-radius: 4px 4px 0 0;
+    font-family: "Lato", "Helvetica Neue", "Helvetica", "sans-serif";
+}
+/* 
+.redesSociais {
+    height: 26px;
+    width: 26px;
+    margin-left: 5px;
+    display: inline-block;
+} */
+
+
+/* .conteudoPagina {
+    height: 100vh;
     color: #333333;
-    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    font-family: "Lato", "Helvetica Neue", "Helvetica", "sans-serif";
     font-size: 14px;
     line-height: 18px;
     align-items: center;
+} */
+
+
+/* @supports not (display: grid) {
+	.conteudoPagina {
+		max-width: 50em;
+		margin: 0 auto;
+	}
+} */
+
+.conteudoPagina {
+    display: grid;
+    grid-template-columns: 1.2fr 3fr 1.2fr 1.2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 100vh;
+    grid-template-areas: 
+        "esquerda grid1 grid2 direita"
+        "esquerda grid3 grid2 direita"
+        "esquerda grid4 grid2 direita"
+        "esquerda grid5 grid2 direita"
+        ;
 }
+
+.esquerda {
+    grid-area: esquerda;
+}
+
+.direita {
+    grid-area: direita;
+}
+
+.grid1{
+    grid-area: grid1;
+    clear: both;
+    margin: 24px 0;
+    background: #F4F1EA;
+    padding: 32px 16px 20px 16px;
+    text-align: center;
+}
+
+.grid2 {
+    grid-area: grid2;
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 12px;
+    min-height: 400px;
+}
+
+.grid3{
+    grid-area: grid3;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* .grid4{
+    background: purple;
+    grid-area: grid4;
+}
+
+.grid5{
+    background: yellow;
+    grid-area: grid5;
+} */
+
+
+
+@media only screen and (max-width: 550px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+      grid-template-areas:
+        "grid1"
+        "grid2"
+        "grid3"
+        "grid4"
+        "grid5";
+    }
+}
+
+
+.links {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    margin: 0;
+    padding: 0 24px;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+li {
+    -moz-page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    list-style-type: none;
+    padding-bottom: 12px;
+    padding-right: 24px;
+}
+
+.boxEsquerda {
+    box-sizing: border-box;
+    /* padding: 1rem; */
+    margin: 1rem;
+    width: 43%;
+    color: #333333;
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.boxDireita {
+    box-sizing: border-box;
+    /* padding: 1rem; */
+    margin: 1rem;
+    width: 43%;
+    color: #333333;
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+p {
+    margin-top: -7px;
+}
+
+h3{
+    margin-top: 10px;
+}
+
+
+.buttonConteudo {
+    margin-top: 11px; 
+    padding: 8px;
+    border: 0px;
+    border-radius: 4px;
+    background-color: #fdd05f;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.lists {
+    clear: both;
+    width: 100%;
+    min-height: 40px;
+    margin: 0;
+    padding: 2px 0;
+    border-bottom: 1px solid #ebece7;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 270px;
+}
+
+.contentFooter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+ul {
+    list-style-type: none;
+}
+
+li:first-child {
+    margin-bottom: 15px;;
+    font-size: 16px;
+    color: #333232;
+}
+
+li {
+    font-size: 14px;
+    font-weight: 500;
+    color: #595959;
+    margin-bottom: 5px;
+}
+
+li:hover {
+    border-bottom: 1px solid #595959;
+    cursor: pointer;
+}
+
+li:first-child {
+    border: none;
+}
+/* .rodape{
+
+} */
