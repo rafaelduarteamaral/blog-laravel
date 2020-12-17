@@ -1,4 +1,3 @@
-
 body{
     padding: 0;
     margin: 0;
@@ -13,7 +12,9 @@ body{
     top: 0;
     height: 50px;
     width: 100%;
-    background-color: #F4F1EA;
+    background-color: #ffce5c;
+    /* -webkit-box-shadow: 0px 10px 45px 5px rgba(0,0,0,0.08); 
+    box-shadow: 0px 10px 45px 5px rgba(0,0,0,0.08); */
 }
 
 .headerConteudo {
@@ -24,7 +25,7 @@ body{
     justify-content: space-between;
 }
 
-a{
+.headerConteudo .books{
     display: flex;
     align-items: center;
     color: #382110;
@@ -32,13 +33,27 @@ a{
     height: 100%;
 }
 
-a:hover {
-    color: #FFFFFF;
-    background-color: #382110;
+.headerConteudo .home{
+    display: flex;
+    align-items: center;
+    color: #382110;
+    font-size: 18px;
+    height: 100%;
+}
+
+.headerConteudo .books:hover {
+    /* color: #FFFFFF; */
+    /* background-color: #382110; */
     cursor: pointer;
 }
 
-img {
+.headerConteudo .home:hover {
+    /* color: #FFFFFF; */
+    /* background-color: #382110; */
+    cursor: pointer;
+}
+
+.logo {
     font-size: 18px;
     height: 100%;
 }
@@ -67,8 +82,8 @@ option:hover {
 
 select:hover {
     cursor: pointer;
-    background-color: #382110;
-    color: #FFFFFF;
+    /* background-color: #382110; */
+    /* color: #FFFFFF; */
 }
 
 input {
@@ -77,6 +92,11 @@ input {
     border-radius: 3px;
     border: 0.1px solid #A8A8A8;
     outline: none;
+}
+
+
+.logo {
+    width: 20%;
 }
 
 .buttonHeader {
@@ -89,9 +109,16 @@ input {
 }
 
 .buttonHeader:hover {
-    color: #FFFFFF;
-    background-color: #382110;
+    /* color: #FFFFFF; */
+    /* background-color: #382110; */
     cursor: pointer;
+}
+
+.mobileOpen {
+    display: none;
+    outline: none;
+    border: none;
+    background: rgba(255,255,255,0.00001);
 }
 
 .itemImg {
@@ -99,28 +126,28 @@ input {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 250px;
-    background: #333232;
+    height: 20%;
+    /* background: #333232; */
     flex-wrap: wrap;
     font-size: 40px;
     color: #FFFFFF;
 }
 
 .containerFundo {
-    margin-top: 50px;
     display: flex;
     justify-content: center;
+    margin-top: 25px;
     width: 100%;
-    height: 1400px;
-    background: #d1d1d1;
+    /* height: 100%; */
+    /* background: #cccbc9d5; */
+    /* background: #ffdc8a; */
+    background-image: linear-gradient(to bottom, #ffce5c, #ffcc56, #ffcb51, #ffc94b, #ffc745);
 }
 
 .containerContent {
     display: flex;
     justify-content: center;
-    width: 85%;
-    height: 1350px;
-    background: #FFFFFF;
+    width: 90%;
 }
 
 .sideContainerContent {
@@ -128,16 +155,23 @@ input {
     align-items: center;
     text-align: left;
     flex-direction: column;
-    height: 1350px;
-    width: 225px;
+    height: 95%;
+    width: 195px;
+    margin-top: 25px;
     background: #111111;
     color: red;
 }
 
+.imgSide {
+    width: 90%;
+    height: 90%;
+}
+
 .itemBusca {
-    text-align: left;
-    margin-left: 45%;
     width: 100%;
+    flex-wrap: wrap;
+    text-align: left;
+    margin-left: 25%;
     font-size: 16px;
     color: #FFFFFF;
 }
@@ -147,42 +181,114 @@ input {
     color: #D3A519;
 }
 
+/* .voltarBox {
+} */
+
+.linkButton {
+    text-decoration: none;
+
+}
+
+.buttonVoltar {
+    display: flex;
+    align-items: center;
+    height: 30px;    
+    background: #111111;
+    border: none;
+    border-radius: 5px;
+}
+
+.textButton {
+    margin-left: 5px;
+    color: #FFFFFF !important;
+}
+
+.textButton:hover {
+    cursor: pointer;
+}
+
 .listaContainerContent {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     width: 85%;
-    /* height: 1350px; */
+    height: 95%;
+    margin-top: 25px;
     background: #FFFFFF;
-    margin-top: 20px;
 }
 
 .titleContent {
     display: flex;
     align-items: center;
-    padding-left: 20px;
-    width: 100%;
+    width: 90%;
     margin: 0;
     font-size: 30px;
+}
+
+.cardWinner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #ffdc8a;
+}
+
+.lerMaisCardbox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+/* 
+.imgCardWinner {
+    width: 20%;
+} */
+
+.textCardWinner {
+    width: 50%;
+}
+
+.h1TextCardWinner {
+    font-size: 22px;
+    color: #00635d;
+}
+
+.h2TextCardWinner {
+    font-size: 16px;
+    color: #8e8379;
 }
 
 .listaCardBox{
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     width: 200px;
     height: 300px;
-    background: #D1D1D1;
+    /* background: #D1D1D1; */
     margin-right: 15px;
     margin-left: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .imgCardBox {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
     width: 80%;
     height: 200px;
     background: #e1e1e1;
+}
+
+.imgCard {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
 }
 
 .buttonLerMais {
@@ -192,16 +298,22 @@ input {
     margin-top: 20px;
     outline: none;
     border: none;
-    background: #3D9363;
+    background: #000000;
     color: #FFFFFF;
 }
 
 .buttonLerMais:hover {
     cursor: pointer;
-    background: #398459;
+    background: #362600;
+}
+
+.starRate {
+    margin-top: 10px;
 }
 
 .avaliarTexto {
+    margin: 0;
+    margin-top: 5;
     font-size: 12px;
     color: #333232;
 }
@@ -210,16 +322,28 @@ input {
     position: relative;
     bottom: 0;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    flex-direction: column;
     align-items: center;
     height: 270px;
+    background-color: #ffffff;
 }
 
 .contentFooter {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
 }
+
+.rightFooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 30%;
+}
+
 ul {
     list-style-type: none;
 }
@@ -245,8 +369,25 @@ li:hover {
 li:first-child {
     border: none;
 }
+
+.ulSocial{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.liFirstSocial {
+    font-size: 14px !important;
+    color: #595959 !important;
+    margin-right: 10px;
+}
+
+.liSecondSocial {
+    margin-right: 10px;
+}
+
 @media only screen and (max-width: 1350px) {
-    a {
+    /* a {
         display: none;
     }
 
@@ -256,7 +397,7 @@ li:first-child {
 
     input {
         display: none;
-    }
+    } */
 
     .headerConteudo {
         width: 100%;
@@ -265,4 +406,254 @@ li:first-child {
     .sideContainerContent {
         width: 150px;
     }
+
 }
+
+@media only screen and (max-width: 1100px) {
+    .books {
+        display: none !important;
+    }
+
+    .home {
+        display: none !important;
+    }
+
+    select {
+        display: none;
+    }
+
+    input {
+        display: none;
+    }
+    
+    .buttonHeader {
+        display: none;
+    }
+
+    .mobileOpen {
+        display: block;
+    }
+
+    .containerContent {
+        width: 100%;
+    }
+    
+    .sideContainerContent {
+        width: 20%;
+    }
+
+    .itemImg {
+        margin-top: 20px;
+        height: 18%;
+        /* display: none; */
+    }
+
+    .listaContainerContent {
+        width: 100%;
+    }
+
+    .headerProdutos {
+        height: 60px;
+    }
+
+    .cardWinner {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .textCardWinner {
+        width: 80%;
+    }
+
+    .h1TextCardWinner {
+        font-size: 20px;
+    }
+
+    .h2TextCardWinner {
+        font-size: 18px;
+    }
+
+    .pTextCardWinner {
+        font-size: 17px;
+    }
+
+    .buttonLerMais {
+        font-size: 16px
+    }
+
+    .avaliarTexto{
+        font-size: 14px;
+    }
+
+    .itemBusca {
+        font-size: 18px;
+    }
+}
+
+
+/* --------- SIDE MENU ---------- */
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(61, 61, 61);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav .linkMobile {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f7f7f7;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+  }
+
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 55px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #2b2b2b;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    height: 60%;
+  }
+
+  .imgModal {
+      width: 50%;
+      height: 60%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+
+  /* ------ CSS COMENT PAGE ------- */
+  
+  .containerComents{
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      /* background: red; */
+  }
+
+  .comentBox {
+      border-bottom: 1px solid #FFCC54;
+  }
+
+  .imgBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .imgComent {
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
+  }
+
+  .nameComent {
+      margin-left: 10px;
+      font-size: 22px;
+      color: #00635d;
+  }
+
+  .textBox{
+      width: 80%;
+  }
+
+  .curtidas {
+      font-size: 14px;
+      color: rgb(87, 87, 250);
+  }
+
+  .numCurtidas {
+      margin-left: 10px;
+      font-size: 14px;
+  }
+
+  .curtidas:hover {
+      cursor: pointer;
+  }
+
+  .writeComent {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .coment {
+      font-size: 14px;
+      color: #54574C;
+  }
+
+  .textArea {
+      width: 100%;
+      height: 125px;
+      outline: none;
+  }
+
+  .writeText {
+    font-size: 22px;
+    color: #00635d;
+  }
+
+

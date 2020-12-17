@@ -40,17 +40,19 @@
         <div class="containerContent">
             <div class="sideContainerContent">
                 <span class="itemImg"><img class="imgSide" src="/img/principal.jpg" /></span>
-                <h3 class="itemBusca">Paleta</h3>
-                <h3 class="itemBusca">Rosto</h3>
-                <h3 class="itemBusca">Olhos</h3>
-                <h3 class="itemBusca">Sobrancelhas</h3>
-                <h3 class="itemBusca">Boca</h3>
-                <h3 class="itemBusca">Corpo</h3>
-                <h3 class="itemBusca">Acessórios</h3>
-                <h3 class="itemBusca">Pincéis</h3>
-                <h3 class="itemBusca">Unhas</h3>
+                <h3 class="itemBusca">Maquiagem</h3>
+                <h3 class="itemBusca">Batom</h3>
+                <h3 class="itemBusca">outro</h3>
+                <h3 class="itemBusca">Po</h3>
+                <h3 class="itemBusca">saddsadas</h3>
+                <h3 class="itemBusca">Batom</h3>
+                <h3 class="itemBusca">Masafdfregrequiagem</h3>
+                <h3 class="itemBusca">Po</h3>
             </div>
             <div class="listaContainerContent">
+                <div class="voltarBox">
+                    <a class="linkButton" href="books.blade.html"><button class="buttonVoltar"><img src="img/retorna.png"/><span class="textButton">voltar</span></button></a>
+                </div>
                 <div class="titleContent">
                     <h1>Maquiagem</h1>
                 </div>
@@ -65,7 +67,7 @@
                         <p class="pTextCardWinner">Author and alpha foodie Ina Garten takes the Food & Cookbooks prize with a collection of recipes perfect for the quarantined lifestyle of 2020. The 85 dishes featured here?many of them childhood favorites?are easy to make and meant to provide culinary comfort in this strangest of times. Cheddar and Chutney Grilled Cheese! Creamy Tomato Bisque! Banana Rum Trifle! We?re feeling better already.</p>
                     </div>
                     <div class="lerMaisCardbox">
-                        <a href="bookProduct.blade.html"><button  class="buttonLerMais">ver mais</button></a>
+                        <!-- <button id="myBtn" class="buttonLerMais">ver mais</button> -->
                         <div class="starRate">
                             <a href="javascript:void(0)" onclick="Avaliar(1)">
                             <img src="img/star0.png" id="s1"></a>
@@ -85,104 +87,126 @@
                             <h3 class="avaliarTexto">Avaliar esse produto</h3>
                         </div>
                     </div>
+                </div>
 
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                        <img class="imgCard" src="/img/produto1.jpg"/>
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                        <img class="imgCard" src="/img/produto2.jpg"/>
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                        <img class="imgCard" src="/img/produto3.jpg"/>
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                        <img class="imgCard" src="/img/produto4.jpg"/>
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                        <img class="imgCard" src="/img/produto5.jpg"/>
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                        <img class="imgCard" src="/img/produto6.jpg"/>
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
+                <div class="containerComents">
 
+                    <div class="writeComent">
+                        <form action="" class="">
+                            <h1 class="writeText">Comentar</h1>
+                            <textarea class="textArea"></textarea>
+                            <button  class="buttonLerMais" type="submit">enviar</button>
+                        </form>
                     </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
 
+                    <div class="comentBox">
+                        <div class="imgBox">
+                            <img class="imgComent" src="a"/>
+                            <h1 class="nameComent">Isabela</h1>
+                        </div>  
+                        <div class="textBox">
+                            <p class="coment">Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias</p>
+                        </div>
+                        <div class="likesBox">
+                            <a class="curtidas" onclick="curtidas(7)">Curtir</a>
+                            <span class="numCurtidas"><span id="num">7</span> curtidas</span>
+                        </div>
                     </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
+                    <div class="comentBox">
+                        <div class="imgBox">
+                            <img class="imgComent" src="a"/>
+                            <h1 class="nameComent">Bruna</h1>
+                            <div class="rateComent">
+
+                            </div>
+                        </div>  
+                        <div class="textBox">
+                            <p class="coment">Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias</p>
+                        </div>
+                        <div class="likesBox">
+                            <a class="curtidas" onclick="curtidas(32)">Curtir</a>
+                            <span class="numCurtidas"><span id="num">32</span> curtidas</span>
+                        </div>
                     </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
+                    <div class="comentBox">
+                        <div class="imgBox">
+                            <img class="imgComent" src="a"/>
+                            <h1 class="nameComent">Ana</h1>
+                            <div class="rateComent">
+
+                            </div>
+                        </div>  
+                        <div class="textBox">
+                            <p class="coment">Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias</p>
+                        </div>
+                        <div class="likesBox">
+                            <a class="curtidas" onclick="curtidas(12)">Curtir</a>
+                            <span class="numCurtidas"><span id="num">12</span> curtidas</span>
+                        </div>
                     </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
+                    <div class="comentBox">
+                        <div class="imgBox">
+                            <img class="imgComent" src="a"/>
+                            <h1 class="nameComent">Isabela</h1>
+                            <div class="rateComent">
+
+                            </div>
+                        </div>  
+                        <div class="textBox">
+                            <p class="coment">Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias</p>
+                        </div>
+                        <div class="likesBox">
+                            <a class="curtidas" onclick="curtidas(2)">Curtir</a>
+                            <span class="numCurtidas"><span id="num">2</span> curtidas</span>
+                        </div>
                     </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
+                    <div class="comentBox">
+                        <div class="imgBox">
+                            <img class="imgComent" src="a"/>
+                            <h1 class="nameComent">Isabela</h1>
+                            <div class="rateComent">
+
+                            </div>
+                        </div>  
+                        <div class="textBox">
+                            <p class="coment">Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias</p>
+                        </div>
+                        <div class="likesBox">
+                            <a class="curtidas" onclick="curtidas(15)">Curtir</a>
+                            <span class="numCurtidas"><span id="num">15</span> curtidas</span>
+                        </div>
                     </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
+                    <div class="comentBox">
+                        <div class="imgBox">
+                            <img class="imgComent" src="a"/>
+                            <h1 class="nameComent">Isabela</h1>
+                            <div class="rateComent">
+
+                            </div>
+                        </div>  
+                        <div class="textBox">
+                            <p class="coment">Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias</p>
+                        </div>
+                        <div class="likesBox">
+                            <a class="curtidas" onclick="curtidas(15)">Curtir</a>
+                            <span class="numCurtidas"><span id="num">9</span> curtidas</span>
+                        </div>
+                    </div>
+                    <div class="comentBox">
+                        <div class="imgBox">
+                            <img class="imgComent" src="img/Capturar.PNG"/>
+                            <h1 class="nameComent">Gabriel</h1>
+                            <div class="rateComent">
+
+                            </div>
+                        </div>  
+                        <div class="textBox">
+                            <p class="coment">Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias</p>
+                        </div>
+                        <div class="likesBox">
+                            <a class="curtidas" onclick="curtidas(11)">Curtir</a>
+                            <span class="numCurtidas"><span id="num">11</span> curtidas</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -243,40 +267,46 @@
 
     <script>
 
-        // function openNav() {
-        //     document.getElementById("mySidenav").style.width = "250px";
-        // }
+        function curtidas(numero){
+
+            numero = numero + 1;
+
+            console.log(numero);
+        }
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
         
-        // function closeNav() {
-        //     document.getElementById("mySidenav").style.width = "0";
-        // }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
 
-        // // Get the modal
-        // var modal = document.getElementById("myModal");
+        // Get the modal
+        var modal = document.getElementById("myModal");
 
-        // // Get the button that opens the modal
-        // var btn = document.getElementById("myBtn");
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
 
-        // // Get the <span> element that closes the modal
-        // var span = document.getElementsByClassName("close")[0];
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
 
-        // // When the user clicks the button, open the modal 
-        // btn.onclick = function() {
-        //     modal.style.display = "block";
-        // }
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
 
-        // // When the user clicks on <span> (x), close the modal
-        // span.onclick = function() {
-        //     modal.style.display = "none";
-        // }
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
 
-        // // When the user clicks anywhere outside of the modal, close it
-        // window.onclick = function(event) {
-        //     if (event.target == modal) {
-        //         modal.style.display = "none";
-        //     }
-        // }
-
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
 
         function Avaliar(estrela) {
             var url = window.location;
@@ -384,11 +414,10 @@
                 //     avaliacao = 0;
                 // }
             }
-        
-            document.getElementById('rating').innerHTML = avaliacao;
-        
+            
+        document.getElementById('rating').innerHTML = avaliacao;
         }
-    
+
     </script>
 </body>
 </html>
