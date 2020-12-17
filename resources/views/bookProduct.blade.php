@@ -2,11 +2,13 @@
 <head>
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="path_to/jquery.js"></script>
+    <script type="text/javascript" src="path_to/jquery.simplePagination.js"></script>
 </head>
 <body>
     <div class='headerProdutos'>
         <div class='headerConteudo'>
-            <img class="logo" src="/img//logo.png"><img/>
+            <img class="logo" src="img//logo.png"><img/>
             <a class="home">Home</a>
             <a class="books">Produtos</a>
             <select>
@@ -24,7 +26,7 @@
             <input type="text" placeholder="Buscar"/>
             <button class="buttonHeader">Sign In</button>
             <button class="buttonHeader">Join</button>
-            <button class="mobileOpen" onclick="openNav()"><img src="/img/menu.png" /></button>
+            <button class="mobileOpen" onclick="openNav()"><img src="img/menu.png" /></button>
         </div>
     </div>
 
@@ -39,27 +41,28 @@
     <div class="containerFundo">
         <div class="containerContent">
             <div class="sideContainerContent">
-                <span class="itemImg"><img class="imgSide" src="/img/principal.jpg" /></span>
-                <h3 class="itemBusca">Maquiagem</h3>
-                <h3 class="itemBusca">Batom</h3>
-                <h3 class="itemBusca">outro</h3>
-                <h3 class="itemBusca">Po</h3>
-                <h3 class="itemBusca">saddsadas</h3>
-                <h3 class="itemBusca">Batom</h3>
-                <h3 class="itemBusca">Masafdfregrequiagem</h3>
-                <h3 class="itemBusca">Po</h3>
+                <span class="itemImg"><img class="imgSide" src="img/principal.jpg" /></span>
+                <!-- <h3 class="itemBusca">Paleta</h3>
+                <h3 class="itemBusca">Rosto</h3>
+                <h3 class="itemBusca">Olhos</h3>
+                <h3 class="itemBusca">Sobrancelhas</h3>
+                <h3 class="itemBusca">Boca</h3>
+                <h3 class="itemBusca">Corpo</h3>
+                <h3 class="itemBusca">Acessórios</h3>
+                <h3 class="itemBusca">Pincéis</h3>
+                <h3 class="itemBusca">Unhas</h3> -->
             </div>
             <div class="listaContainerContent">
                 <div class="voltarBox">
                     <a class="linkButton" href="books.blade.html"><button class="buttonVoltar"><img src="img/retorna.png"/><span class="textButton">voltar</span></button></a>
                 </div>
                 <div class="titleContent">
-                    <h1>Maquiagem</h1>
+                    <h1>Produto</h1>
                 </div>
 
                 <div class="cardWinner">
                     <div class="imgCardWinner">
-                        <img src="/img/produto1.jpg"/>
+                        <img src="img/produto1.jpg"/>
                     </div>
                     <div class="textCardWinner">
                         <h1 class="h1TextCardWinner">Modern Comfort Food: A Barefoot Contessa Cookbook</h1>
@@ -101,7 +104,7 @@
 
                     <div class="comentBox">
                         <div class="imgBox">
-                            <img class="imgComent" src="a"/>
+                            <img class="imgComent" src="img/Capturar.PNG"/>
                             <h1 class="nameComent">Isabela</h1>
                         </div>  
                         <div class="textBox">
@@ -110,11 +113,12 @@
                         <div class="likesBox">
                             <a class="curtidas" onclick="curtidas(7)">Curtir</a>
                             <span class="numCurtidas"><span id="num">7</span> curtidas</span>
+                                
                         </div>
                     </div>
                     <div class="comentBox">
                         <div class="imgBox">
-                            <img class="imgComent" src="a"/>
+                            <img class="imgComent" src="img/Capturar.PNG"/>
                             <h1 class="nameComent">Bruna</h1>
                             <div class="rateComent">
 
@@ -130,7 +134,7 @@
                     </div>
                     <div class="comentBox">
                         <div class="imgBox">
-                            <img class="imgComent" src="a"/>
+                            <img class="imgComent" src="img/Capturar.PNG"/>
                             <h1 class="nameComent">Ana</h1>
                             <div class="rateComent">
 
@@ -146,7 +150,7 @@
                     </div>
                     <div class="comentBox">
                         <div class="imgBox">
-                            <img class="imgComent" src="a"/>
+                            <img class="imgComent" src="img/Capturar.PNG"/>
                             <h1 class="nameComent">Isabela</h1>
                             <div class="rateComent">
 
@@ -162,7 +166,7 @@
                     </div>
                     <div class="comentBox">
                         <div class="imgBox">
-                            <img class="imgComent" src="a"/>
+                            <img class="imgComent" src="img/Capturar.PNG"/>
                             <h1 class="nameComent">Isabela</h1>
                             <div class="rateComent">
 
@@ -178,7 +182,7 @@
                     </div>
                     <div class="comentBox">
                         <div class="imgBox">
-                            <img class="imgComent" src="a"/>
+                            <img class="imgComent" src="img/Capturar.PNG"/>
                             <h1 class="nameComent">Isabela</h1>
                             <div class="rateComent">
 
@@ -207,6 +211,9 @@
                             <a class="curtidas" onclick="curtidas(11)">Curtir</a>
                             <span class="numCurtidas"><span id="num">11</span> curtidas</span>
                         </div>
+                    </div>
+                    <div class=espacoFim>
+
                     </div>
                 </div>
             </div>
@@ -247,9 +254,9 @@
             <ul>
                 <li>CONNECT</li>
                 <div class="ulSocial">
-                    <li class="liFirstSocial"><img src="/img/instagram.png"/></li>
-                    <li class="liSecondSocial"><img src="/img/twitter.png"/></li>
-                    <li><img src="/img/facebook.png"/></li>
+                    <li class="liFirstSocial"><img src="img/instagram.png"/></li>
+                    <li class="liSecondSocial"><img src="img/twitter.png"/></li>
+                    <li><img src="img/facebook.png"/></li>
                 </div>
             </ul>
         </div>
@@ -267,13 +274,22 @@
 
     <script>
 
+        $(function() {
+            $('#containerComents').pagination({
+                items: 100,
+                itemsOnPage: 10,
+                cssStyle: 'light-theme'
+            });
+        });
+
+
         function curtidas(numero){
 
             numero = numero + 1;
 
-            console.log(numero);
+            console.log(numero)
         }
-
+        
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
         }

@@ -6,7 +6,7 @@
 <body>
     <div class='headerProdutos'>
         <div class='headerConteudo'>
-            <img class="logo" src="/img//logo.png"><img/>
+            <img class="logo" src="img//logo.png"><img/>
             <a class="home">Home</a>
             <a class="books">Produtos</a>
             <select>
@@ -24,7 +24,7 @@
             <input type="text" placeholder="Buscar"/>
             <button class="buttonHeader">Sign In</button>
             <button class="buttonHeader">Join</button>
-            <button class="mobileOpen" onclick="openNav()"><img src="/img/menu.png" /></button>
+            <button class="mobileOpen" onclick="openNav()"><img src="img/menu.png" /></button>
         </div>
     </div>
 
@@ -39,7 +39,7 @@
     <div class="containerFundo">
         <div class="containerContent">
             <div class="sideContainerContent">
-                <span class="itemImg"><img class="imgSide" src="/img/principal.jpg" /></span>
+                <span class="itemImg"><img class="imgSide" src="img/principal.jpg" /></span>
                 <h3 class="itemBusca">Paleta</h3>
                 <h3 class="itemBusca">Rosto</h3>
                 <h3 class="itemBusca">Olhos</h3>
@@ -57,7 +57,7 @@
 
                 <div class="cardWinner">
                     <div class="imgCardWinner">
-                        <img src="/img/produto1.jpg"/>
+                        <img src="img/produto1.jpg"/>
                     </div>
                     <div class="textCardWinner">
                         <h1 class="h1TextCardWinner">Modern Comfort Food: A Barefoot Contessa Cookbook</h1>
@@ -89,7 +89,7 @@
                 </div>
                 <div class="listaCardBox">
                     <div class="imgCardBox">
-                        <img class="imgCard" src="/img/produto1.jpg"/>
+                        <img class="imgCard" src="img/produto1.jpg"/>
                     </div>
                     <div class="lerMaisCardbox">
                         <button id="myBtn" class="buttonLerMais">ver mais</button>
@@ -100,7 +100,7 @@
                 </div>
                 <div class="listaCardBox">
                     <div class="imgCardBox">
-                        <img class="imgCard" src="/img/produto2.jpg"/>
+                        <img class="imgCard" src="img/produto2.jpg"/>
                     </div>
                     <div class="lerMaisCardbox">
                         <button id="myBtn" class="buttonLerMais">ver mais</button>
@@ -111,7 +111,7 @@
                 </div>
                 <div class="listaCardBox">
                     <div class="imgCardBox">
-                        <img class="imgCard" src="/img/produto3.jpg"/>
+                        <img class="imgCard" src="img/produto3.jpg"/>
                     </div>
                     <div class="lerMaisCardbox">
                         <button id="myBtn" class="buttonLerMais">ver mais</button>
@@ -122,7 +122,7 @@
                 </div>
                 <div class="listaCardBox">
                     <div class="imgCardBox">
-                        <img class="imgCard" src="/img/produto4.jpg"/>
+                        <img class="imgCard" src="img/produto4.jpg"/>
                     </div>
                     <div class="lerMaisCardbox">
                         <button id="myBtn" class="buttonLerMais">ver mais</button>
@@ -133,7 +133,7 @@
                 </div>
                 <div class="listaCardBox">
                     <div class="imgCardBox">
-                        <img class="imgCard" src="/img/produto5.jpg"/>
+                        <img class="imgCard" src="img/produto5.jpg"/>
                     </div>
                     <div class="lerMaisCardbox">
                         <button id="myBtn" class="buttonLerMais">ver mais</button>
@@ -144,7 +144,105 @@
                 </div>
                 <div class="listaCardBox">
                     <div class="imgCardBox">
-                        <img class="imgCard" src="/img/produto6.jpg"/>
+                        <img class="imgCard" src="img/produto6.jpg"/>
+                    </div>
+                    <div class="lerMaisCardbox">
+                        <button id="myBtn" class="buttonLerMais">ver mais</button>
+                    </div>
+                    <div class=avaliarCard>
+                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
+                    </div>
+                </div>
+                <div class="listaCardBox">
+                    <div class="imgCardBox">
+
+                    </div>
+                    <div class="lerMaisCardbox">
+                        <button id="myBtn" class="buttonLerMais">ver mais</button>
+                    </div>
+                    <div class=avaliarCard>
+                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
+                    </div>
+                </div>
+                <div class="listaCardBox">
+                    <div class="imgCardBox">
+
+                    </div>
+                    <div class="lerMaisCardbox">
+                        <button id="myBtn" class="buttonLerMais">ver mais</button>
+                    </div>
+                    <div class=avaliarCard>
+                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
+                    </div>
+                </div>
+                <div class="listaCardBox">
+                    <div class="imgCardBox">
+                    </div>
+                    <div class="lerMaisCardbox">
+                        <button id="myBtn" class="buttonLerMais">ver mais</button>
+                    </div>
+                    <div class=avaliarCard>
+                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
+                    </div>
+                </div>
+                <div class="listaCardBox">
+                    <div class="imgCardBox">
+                        <img class="imgCard" src="img/produto1.jpg"/>
+                    </div>
+                    <div class="lerMaisCardbox">
+                        <button id="myBtn" class="buttonLerMais">ver mais</button>
+                    </div>
+                    <div class=avaliarCard>
+                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
+                    </div>
+                </div>
+                <div class="listaCardBox">
+                    <div class="imgCardBox">
+                        <img class="imgCard" src="img/produto2.jpg"/>
+                    </div>
+                    <div class="lerMaisCardbox">
+                        <button id="myBtn" class="buttonLerMais">ver mais</button>
+                    </div>
+                    <div class=avaliarCard>
+                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
+                    </div>
+                </div>
+                <div class="listaCardBox">
+                    <div class="imgCardBox">
+                        <img class="imgCard" src="img/produto3.jpg"/>
+                    </div>
+                    <div class="lerMaisCardbox">
+                        <button id="myBtn" class="buttonLerMais">ver mais</button>
+                    </div>
+                    <div class=avaliarCard>
+                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
+                    </div>
+                </div>
+                <div class="listaCardBox">
+                    <div class="imgCardBox">
+                        <img class="imgCard" src="img/produto4.jpg"/>
+                    </div>
+                    <div class="lerMaisCardbox">
+                        <button id="myBtn" class="buttonLerMais">ver mais</button>
+                    </div>
+                    <div class=avaliarCard>
+                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
+                    </div>
+                </div>
+                <div class="listaCardBox">
+                    <div class="imgCardBox">
+                        <img class="imgCard" src="img/produto5.jpg"/>
+                    </div>
+                    <div class="lerMaisCardbox">
+                        <button id="myBtn" class="buttonLerMais">ver mais</button>
+                    </div>
+                    <div class=avaliarCard>
+                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
+                    </div>
+                </div>
+                <div class="listaCardBox">
+                    <div class="imgCardBox">
+                        <img class="imgCard" src="img/produto6.jpg"/>
                     </div>
                     <div class="lerMaisCardbox">
                         <button id="myBtn" class="buttonLerMais">ver mais</button>
@@ -195,7 +293,7 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <div class="modalImg">
-                <img class="imgModal" src="/img//produto1.jpg"/>
+                <img class="imgModal" src="img//produto1.jpg"/>
             </div>
         </div>
     </div>
@@ -223,9 +321,9 @@
             <ul>
                 <li>CONNECT</li>
                 <div class="ulSocial">
-                    <li class="liFirstSocial"><img src="/img/instagram.png"/></li>
-                    <li class="liSecondSocial"><img src="/img/twitter.png"/></li>
-                    <li><img src="/img/facebook.png"/></li>
+                    <li class="liFirstSocial"><img src="img/instagram.png"/></li>
+                    <li class="liSecondSocial"><img src="img/twitter.png"/></li>
+                    <li><img src="img/facebook.png"/></li>
                 </div>
             </ul>
         </div>
@@ -243,13 +341,13 @@
 
     <script>
 
-        // function openNav() {
-        //     document.getElementById("mySidenav").style.width = "250px";
-        // }
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
         
-        // function closeNav() {
-        //     document.getElementById("mySidenav").style.width = "0";
-        // }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
 
         // // Get the modal
         // var modal = document.getElementById("myModal");

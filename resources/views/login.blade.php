@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
     <!-- <title>Animated Login Form</title> -->
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="css/login.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
 
@@ -39,7 +39,7 @@
         </div>
     </div>
     <div class="signup">
-        Não possui cadastro? <a href="#">Cadastre-se agora</a>
+        NÃ£o possui cadastro? <a href="#">Cadastre-se agora</a>
     </div>
 </div>
 
