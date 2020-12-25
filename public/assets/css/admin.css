@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.headerComponent {
+    height: 35px;
+    padding: 10px !important;
+    /* border-bottom: 1px solid #111; */
+    background:  #ffdd8d;
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.rightContent {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.titleLeft {
+    color: rgb(87, 87, 87)
+}
+
+.titleLeft:hover {
+    cursor: pointer;
+}
+
+.optionHeader {
+    display: flex;
+    justify-content: center;
+    /* width: 70px;
+    height: 25px; */
+    /* border: 1px solid #ffce5c; */
+    font-size: 19px;
+    font-weight: 450;
+}
+
+.optionHeader:hover {
+    cursor: pointer;
+    /* background: #fae2a9; */
+    border-bottom: 3px solid #FFFFFF;
+} 
+
+.lastHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    background: #f1f1f1; 
+    color: rgb(87, 87, 87)
+
+}
+
+.lastHeader:hover {
+    cursor: pointer;
+    background: #f8e2ae;
+    color: #FFFFFF;
+    border: none;
+}
+
+.divMobileOption {
+    display: none;
+}
+
+.containerAdmin {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+
+}
+
+.resumoAdmin{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    background: rgba(228, 228, 228, 0.658);;
+    border: 3px solid rgb(224, 224, 224);
+    border-radius: 5px;
+}
+
+.textTitleTop {
+    font-size: 48px;
+    font-weight: normal;
+}
+
+.dados {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.quantidade {
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
+    flex-direction: column;
+    /* background: #FFFFFF; */
+    width: 300px;
+    height: 300px; 
+}
+
+.valueQuantidade {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.titleQuantidade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    color: #ffce5c;
+}
+
+.linhaTop {
+    width: 20px;
+    border: 2px solid #ffce5c;
+}
+
+.divQuantidade {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1150px) {
+
+    .headerComponent {
+    }
+
+    .optionHeader {
+        display: none;
+    }
+
+    .lastHeader {
+        display: none;
+    }
+
+    .divMobileOption {
+        display: flex;
+        align-items: center;
+        width: 40px;
+    }
+
+    .mobileMenu:hover {
+        cursor: pointer;
+    }
+}
+
+
+/* --------- SIDE MENU ---------- */
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(61, 61, 61);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav .linkMobile {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f7f7f7;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+  }
+
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 55px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #2b2b2b;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    height: 60%;
+  }
+
+  .imgModal {
+      width: 50%;
+      height: 60%;
+  }
+  
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+/* --------- Produtos Page -------- */

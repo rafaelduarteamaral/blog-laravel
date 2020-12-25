@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Home</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script type="text/javascript" src="path_to/jquery.js"></script>
     <script type="text/javascript" src="path_to/jquery.simplePagination.js"></script>
 </head>
@@ -9,7 +9,7 @@
     <div class='headerProdutos'>
         <div class='headerConteudo'>
             <img class="logo" src="img//logo.png"><img/>
-            <a class="home">Home</a>
+            <a href="/index" class="home">Home</a>
             <a class="books">Produtos</a>
             <select>
                 <option>Browse</option>
@@ -54,7 +54,7 @@
             </div>
             <div class="listaContainerContent">
                 <div class="voltarBox">
-                    <a class="linkButton" href="books.blade.html"><button class="buttonVoltar"><img src="img/retorna.png"/><span class="textButton">voltar</span></button></a>
+                    <a class="linkButton" href="/books"><button class="buttonVoltar"><img src="img/retorna.png"/><span class="textButton">voltar</span></button></a>
                 </div>
                 <div class="titleContent">
                     <h1>Produto</h1>
