@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Projeto</title>
+    <title>Pagina 1 - Inicio</title>
     <link rel="stylesheet" href="assets/css/index.css">
 </head>
 

@@ -1,41 +1,25 @@
 <html>
 <head>
-    <title>Home</title>
+    <title>Pagina 5 - ProdComentarios</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="text/javascript" src="path_to/jquery.js"></script>
     <script type="text/javascript" src="path_to/jquery.simplePagination.js"></script>
 </head>
 <body>
-    <div class='headerProdutos'>
+<div class='headerProdutos'>
         <div class='headerConteudo'>
-            <img class="logo" src="img//logo.png"><img/>
-            <a href="/index" class="home">Home</a>
-            <a class="books">Produtos</a>
-            <select>
-                <option>Browse</option>
-                <option>Teste</option>
-                <option>Teste</option>
-                <option>Teste</option>
-            </select>
-            <select>
-                <option>Comunidade</option>
-                <option>Teste</option>
-                <option>Teste</option>
-                <option>Teste</option>
-            </select>
-            <input type="text" placeholder="Buscar"/>
-            <button class="buttonHeader">Sign In</button>
-            <button class="buttonHeader">Join</button>
+            <img class="logo" src="storage/logo.png"><img />
+            <a href="/" class="home">Inicio</a>
+            <a href="/books" class="books">Produtos</a>
+            <input type="text" placeholder="Buscar" />
             <button class="mobileOpen" onclick="openNav()"><img src="img/menu.png" /></button>
         </div>
     </div>
 
     <div id="mySidenav" class="sidenav">
         <a class="linkMobile" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a class="linkMobile" href="#">Home</a>
-        <a class="linkMobile" href="#">My Books</a>
-        <a class="linkMobile" href="#">Browse</a>
-        <a class="linkMobile" href="#">Community</a>
+        <a class="linkMobile" href="/">Inicio</a>
+        <a class="linkMobile" href="/books">Produtos</a>
     </div>
 
     <div class="containerFundo">

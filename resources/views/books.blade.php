@@ -1,41 +1,31 @@
 <html>
 
 <head>
-    <title>Home</title>
+    <title>Pagina 4 - Produtos</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <div class='headerProdutos'>
         <div class='headerConteudo'>
-            <img class="logo" src="img//logo.png"><img />
-            <a href="/" class="home">Home</a>
-            <a class="books">Produtos</a>
-            <select>
-                <option>Browse</option>
-                <option>Teste</option>
-                <option>Teste</option>
-                <option>Teste</option>
-            </select>
-            <select>
-                <option>Comunidade</option>
-                <option>Teste</option>
-                <option>Teste</option>
-                <option>Teste</option>
-            </select>
+            <img class="logo" src="storage/logo.png"><img />
+            <a href="/" class="home">Inicio</a>
+            <a href="/books" class="books">Produtos</a>
             <input type="text" placeholder="Buscar" />
-            <button class="buttonHeader">Sign In</button>
-            <button class="buttonHeader">Join</button>
+            <?php if(!isset($_SESSION)) {?>
+            <button class="buttonHeader"><a href="/login">Login</a></button>
+            <button class="buttonHeader"><a href="/cadastro">Cadastro</a></button>
+            <?php } else {?>
+                <p>{{$_SESSION['name']}}</p>
+            <?php } ?>
             <button class="mobileOpen" onclick="openNav()"><img src="img/menu.png" /></button>
         </div>
     </div>
 
     <div id="mySidenav" class="sidenav">
         <a class="linkMobile" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a class="linkMobile" href="#">Home</a>
-        <a class="linkMobile" href="#">My Books</a>
-        <a class="linkMobile" href="#">Browse</a>
-        <a class="linkMobile" href="#">Community</a>
+        <a class="linkMobile" href="#">Inicio</a>
+        <a class="linkMobile" href="#">Produtos</a>
     </div>
 
     <div class="containerFundo">
@@ -48,8 +38,8 @@
                 <h3 class="itemBusca">Sobrancelhas</h3>
                 <h3 class="itemBusca">Boca</h3>
                 <h3 class="itemBusca">Corpo</h3>
-                <h3 class="itemBusca">Acessórios</h3>
-                <h3 class="itemBusca">Pincéis</h3>
+                <h3 class="itemBusca">AcessÃ³rios</h3>
+                <h3 class="itemBusca">PincÃ©is</h3>
                 <h3 class="itemBusca">Unhas</h3>
             </div>
             <div class="listaContainerContent">
@@ -333,7 +323,7 @@
             <div class="rightFooter">
                 <ul>
                     <div class="ulSocialFooter">
-                        <li class="liFirstSocial">© Ambiente Consultoria - Todos os direitos reservados<br/ </li> <li class="liSecondSocial"></li>
+                        <li class="liFirstSocial">Â© Ambiente Consultoria - Todos os direitos reservados<br/ </li> <li class="liSecondSocial"></li>
                         <li></li>
                     </div>
                 </ul>

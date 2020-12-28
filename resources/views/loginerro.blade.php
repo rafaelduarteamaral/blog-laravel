@@ -16,8 +16,9 @@
     <div class="container">
       <header>Bem -vindo(a)</header>
 
-      <form method="post" action="{{route('user.login')}}">
+      <form method="post" action="">
        @csrf
+            Email ou Senha não conferem.
             <div class="input-field">
                 <input type="email" name="email" required>
                 <label>Email</label>
@@ -44,7 +45,7 @@
         </div>
     </div>
     <div class="signup">
-        Não possui cadastro? <a href="#">Cadastre-se agora</a>
+        NÃ£o possui cadastro? <a href="#">Cadastre-se agora</a>
     </div>
 </div>
 

@@ -22,8 +22,8 @@
                     <h1 class="titleLeft">admin Blog</h1>
                 </div>
                 <div class="rightContent">
-                    <a class="optionHeader ativado">Produtos</a>
-                    <a href="/adminUsuarios" class="optionHeader">Usuários</a>
+                <a href="/adminProdutos" class="optionHeader">Produtos</a>
+                    <a class="optionHeader ativado">Usuários</a>
                     <a href="/adminPublicacoes" class="optionHeader">Publicações</a>
                     <a class="optionHeader lastHeader">Sair</a>
                 </div>
@@ -36,9 +36,9 @@
 
     <div class="containerContent">
         <div class="boxContent">
-            <form action="" class="formBox">
+            <!-- <form action="" class="formBox">
                 <div class="titleBox">
-                    <h1 class="title">Cadastrar Produto</h1>
+                    <h1 class="title">Cadastrar Usuário</h1>
                 </div>
                 <input type="text" class="input" placeholder="Nome">
                 <input type="text" class="input" placeholder="Descrição">
@@ -56,36 +56,30 @@
                 </select>
                 <textarea name="" id="" class="textArea" cols="30" rows="10" placeholder="Texto Apresentação"></textarea>
                 <div class="imgProduto">
-                    <img src="storage/foto.png" class="img" alt="" />
+                    <img src="img/foto.png" class="img" alt="" />
                     <input type="file" class="input">
                 </div>
                 <button class="buttonEnviar" type="submit">Enviar</button>
-            </form>
+            </form> -->
+            
             <div class="tableContainer">
+                <div class="titleTable">
+                    <h1 class="titleText">Tabela de Usuários</h1>
+                </div>
                 <div class="tableBox">
                     <table id="table_id">
                         <thead>
                             <tr>
                                 <th>Nome</th>
-                                <th>Categoria</th>
-                                <th>Descrição</th>
-                                <th>Texto Apresentação</th>
-                                <th>Imagem</th>
-                                <th>Avaliação</th>
+                                <th>Qntd Comentários</th>
+                                <th>Logins</th>
+                                <th>Data Cadastro</th>
+                                <th>E-mail</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
+                                <td>Row 3 Data 1</td>
                                 <td>Row 1 Data 2</td>
                                 <td>Row 1 Data 2</td>
                                 <td>Row 1 Data 2</td>
@@ -97,19 +91,9 @@
                                 <td>Row 1 Data 2</td>
                                 <td>Row 1 Data 2</td>
                                 <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
                             </tr>
                             <tr>
                                 <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
                                 <td>Row 1 Data 2</td>
                                 <td>Row 1 Data 2</td>
                                 <td>Row 1 Data 2</td>
@@ -121,19 +105,9 @@
                                 <td>Row 1 Data 2</td>
                                 <td>Row 1 Data 2</td>
                                 <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
                             </tr>
                             <tr>
                                 <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
                                 <td>Row 1 Data 2</td>
                                 <td>Row 1 Data 2</td>
                                 <td>Row 1 Data 2</td>
@@ -145,11 +119,30 @@
                                 <td>Row 1 Data 2</td>
                                 <td>Row 1 Data 2</td>
                                 <td>Row 1 Data 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Row 1 Data 2</td>
+                                <td>Row 1 Data 2</td>
+                                <td>Row 1 Data 2</td>
                                 <td>Row 1 Data 2</td>
                             </tr>
                             <tr>
                                 <td>Row 1 Data 1</td>
                                 <td>Row 1 Data 2</td>
+                                <td>Row 1 Data 2</td>
+                                <td>Row 1 Data 2</td>
+                                <td>Row 1 Data 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Row 1 Data 2</td>
+                                <td>Row 1 Data 2</td>
+                                <td>Row 1 Data 2</td>
+                                <td>Row 1 Data 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
                                 <td>Row 1 Data 2</td>
                                 <td>Row 1 Data 2</td>
                                 <td>Row 1 Data 2</td>

@@ -2,6 +2,7 @@
 <!-- Created By CodingNepal -->
 <html lang="en" dir="ltr">
   <head>
+  <title>Cadastro</title>
     <meta charset="utf-8">
     <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
     <!-- <title>Animated Login Form</title> -->
