@@ -43,4 +43,6 @@ use Illuminate\Support\Facades\Route;
    Route::post('/login', [\App\Http\Controllers\UserController::class, 'login'])->name('user.login');
    Route::post('/loginerro', [\App\Http\Controllers\UserController::class, 'login'])->name('user.login');
    Route::post('/cadastro', [\App\Http\Controllers\CadastroController::class, 'inserir'])->name('cadastro.inserir');
+   Route::post('/adminProdutos', [\App\Http\Controllers\ProdutosController::class, 'inserir'])->name('produtos.inserir');
+   
    

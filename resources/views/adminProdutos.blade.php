@@ -36,13 +36,14 @@
 
     <div class="containerContent">
         <div class="boxContent">
-            <form action="" class="formBox">
+            <form method="post"  class="formBox" action="{{route('produtos.inserir')}}" enctype="multipart/form-data">
+            @csrf
                 <div class="titleBox">
                     <h1 class="title">Cadastrar Produto</h1>
                 </div>
-                <input type="text" class="input" placeholder="Nome">
-                <input type="text" class="input" placeholder="Descrição">
-                <select class="select">
+                <input id="produto_nome" name="produto_nome" type="text" class="input" placeholder="Nome">
+                <input id="descricao" name="descricao" type="text" class="input" placeholder="Descrição">
+                <select id="categoria" name="categoria"  class="select">
                     <option class="optionDisabled" selected disabled>Categoria</option>
                     <option>Paleta</option>
                     <option>Rosto</option>
@@ -54,10 +55,10 @@
                     <option>Pincéis</option>
                     <option>Unhas</option>
                 </select>
-                <textarea name="" id="" class="textArea" cols="30" rows="10" placeholder="Texto Apresentação"></textarea>
+                <textarea  class="textArea" name="texto_prod" cols="30" rows="10" placeholder="Texto Apresentação"></textarea>
                 <div class="imgProduto">
                     <img src="storage/foto.png" class="img" alt="" />
-                    <input type="file" class="input">
+                    <input id="imagem" name="imagem" type="file" class="input">
                 </div>
                 <button class="buttonEnviar" type="submit">Enviar</button>
             </form>
