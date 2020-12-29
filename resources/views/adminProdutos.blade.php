@@ -58,7 +58,7 @@
                 <textarea  class="textArea" name="texto_prod" cols="30" rows="10" placeholder="Texto Apresentação"></textarea>
                 <div class="imgProduto">
                     <img src="storage/foto.png" class="img" alt="" />
-                    <input id="imagem" name="imagem" type="file" class="input">
+                    <input type="file" id="imagem" name="imagem"  class="input">
                 </div>
                 <button class="buttonEnviar" type="submit">Enviar</button>
             </form>

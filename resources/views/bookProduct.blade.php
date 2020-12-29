@@ -1,49 +1,44 @@
 <html>
 <head>
-    <title>Pagina 5 - ProdComentarios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="text/javascript" src="path_to/jquery.js"></script>
     <script type="text/javascript" src="path_to/jquery.simplePagination.js"></script>
 </head>
 <body>
-<div class='headerProdutos'>
+    <div class='headerProdutos'>
         <div class='headerConteudo'>
-            <img class="logo" src="storage/logo.png"><img />
-            <a href="/" class="home">Inicio</a>
-            <a href="/books" class="books">Produtos</a>
-            <input type="text" placeholder="Buscar" />
+            <img class="logo" src="img//logo.png"><img/>
+            <a class="home">Home</a>
+            <a class="books">Produtos</a>
+            <input type="text" placeholder="Buscar"/>
+            <button class="buttonHeader">Sign In</button>
+            <button class="buttonHeader">Join</button>
             <button class="mobileOpen" onclick="openNav()"><img src="img/menu.png" /></button>
         </div>
     </div>
 
     <div id="mySidenav" class="sidenav">
         <a class="linkMobile" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a class="linkMobile" href="/">Inicio</a>
-        <a class="linkMobile" href="/books">Produtos</a>
+        <a class="linkMobile" href="#">Home</a>
+        <a class="linkMobile" href="#">My Books</a>
+        <a class="linkMobile" href="#">Browse</a>
+        <a class="linkMobile" href="#">Community</a>
     </div>
 
     <div class="containerFundo">
         <div class="containerContent">
             <div class="sideContainerContent">
                 <span class="itemImg"><img class="imgSide" src="img/principal.jpg" /></span>
-                <!-- <h3 class="itemBusca">Paleta</h3>
-                <h3 class="itemBusca">Rosto</h3>
-                <h3 class="itemBusca">Olhos</h3>
-                <h3 class="itemBusca">Sobrancelhas</h3>
-                <h3 class="itemBusca">Boca</h3>
-                <h3 class="itemBusca">Corpo</h3>
-                <h3 class="itemBusca">Acessórios</h3>
-                <h3 class="itemBusca">Pincéis</h3>
-                <h3 class="itemBusca">Unhas</h3> -->
             </div>
             <div class="listaContainerContent">
                 <div class="voltarBox">
-                    <a class="linkButton" href="/books"><button class="buttonVoltar"><img src="img/retorna.png"/><span class="textButton">voltar</span></button></a>
+                    <a class="linkButton" href="books.blade.html"><button class="buttonVoltar"><img src="img/retorna.png"/><span class="textButton">voltar</span></button></a>
                 </div>
                 <div class="titleContent">
-                    <h1>Produto</h1>
+                    <h1 class="titleText">Produto</h1>
                 </div>
-
                 <div class="cardWinner">
                     <div class="imgCardWinner">
                         <img src="img/produto1.jpg"/>

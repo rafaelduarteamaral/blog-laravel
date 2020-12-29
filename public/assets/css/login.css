@@ -164,3 +164,6 @@
         text-decoration: underline;
     }
     
+    .input {
+        width: 80%;
+    }
