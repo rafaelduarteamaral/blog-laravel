@@ -4,43 +4,51 @@ namespace App\Http\Controllers;
 
 use App\Models\user;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
-    public function login(Request $request){
 
-        $email = $request->email;
-        $password = $request->password;
+    public function buscarUsuarios(){
 
-        $usuarios = user::where('email', '=', "$email")->where('password', '=', "$password")->first();
-        if(@$usuarios->id != null){
+        $data = user::all();
+        return view('user', ['usuarios'=>$data]);
+    }
+    
+    // public function login(Request $request){
 
-            @session_start();
-            $_SESSION['id'] = $usuarios->id;
-            $_SESSION['email'] = $usuarios->email;
-            $_SESSION['level'] = $usuarios->level;
-            $_SESSION['name'] = $usuarios->name;
+    //     $email = $request->email;
+    //     $password = $request->password;
+
+    //     $usuarios = user::where('email', '=', "$email")->where('password', '=', "$password")->first();
+    //     if(@$usuarios->id != null){
+
+    //         @session_start();
+    //         $_SESSION['id'] = $usuarios->id;
+    //         $_SESSION['email'] = $usuarios->email;
+    //         $_SESSION['level'] = $usuarios->level;
+    //         $_SESSION['name'] = $usuarios->name;
             
 
-            if($_SESSION['level'] == 'admin'){
-                return view('admin');
-            }
+    //         if($_SESSION['level'] == 'admin'){
+    //             return view('admin');
+    //         }
 
-            if($_SESSION['level'] == 'normal'){
-                return view('books', $_SESSION);
-            }
-        }
+    //         if($_SESSION['level'] == 'normal'){
+    //             return view('catalogo', $_SESSION);
+    //         }
+    //     }
         
-        else {
-            return view('loginerro');
-        }
+    //     else {
+    //         return view('loginerro');
+    //     }
 
 
-    }
+    // }
 
-    public function logout(){
-        @session_start();
-        @session_destroy();
-        return view('login');
-    }
+    // public function logout(){
+    //     @session_start();
+    //     @session_destroy();
+    //     return view('login');
+    // }
 }

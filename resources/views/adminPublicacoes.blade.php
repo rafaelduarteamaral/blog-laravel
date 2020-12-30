@@ -23,7 +23,7 @@
                 </div>
                 <div class="rightContent">
                     <a href="/adminProdutos" class="optionHeader">Produtos</a>
-                    <a href="/adminUsuarios" class="optionHeader">Usuários</a>
+                    <a href="/user" class="optionHeader">Usuários</a>
                     <a class="optionHeader ativado">Publicações</a>
                     <a class="optionHeader lastHeader">Sair</a>
                 </div>

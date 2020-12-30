@@ -11,7 +11,7 @@
         <div class='headerConteudo'>
             <img class="logo" src="img//logo.png"><img/>
             <a class="home">Home</a>
-            <a class="books">Produtos</a>
+            <a class="/catalogo">Produtos</a>
             <input type="text" placeholder="Buscar"/>
             <button class="buttonHeader">Sign In</button>
             <button class="buttonHeader">Join</button>
@@ -70,25 +70,7 @@
                         <p class="pTextCardWinner">Author and alpha foodie Ina Garten takes the Food & Cookbooks prize with a collection of recipes perfect for the quarantined lifestyle of 2020. The 85 dishes featured here?many of them childhood favorites?are easy to make and meant to provide culinary comfort in this strangest of times. Cheddar and Chutney Grilled Cheese! Creamy Tomato Bisque! Banana Rum Trifle! We?re feeling better already.</p>
                     </div>
                     <div class="lerMaisCardbox">
-                        <a href="bookProduct.blade.html"><button  class="buttonLerMais">ver mais</button></a>
-                        <div class="starRate">
-                            <a href="javascript:void(0)" onclick="Avaliar(1)">
-                            <img src="img/star0.png" id="s1"></a>
-                                
-                            <a href="javascript:void(0)" onclick="Avaliar(2)">
-                            <img src="img/star0.png" id="s2"></a>
-                                
-                            <a href="javascript:void(0)" onclick="Avaliar(3)">
-                            <img src="img/star0.png" id="s3"></a>
-                                
-                            <a href="javascript:void(0)" onclick="Avaliar(4)">
-                            <img src="img/star0.png" id="s4"></a>
-                                
-                            <a href="javascript:void(0)" onclick="Avaliar(5)">
-                            <img src="img/star0.png" id="s5"></a>
-                            
-                            <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                        </div>
+                        <a href="/produtos"><button  class="buttonLerMais">ver mais</button></a>
                     </div>
 
                 </div>

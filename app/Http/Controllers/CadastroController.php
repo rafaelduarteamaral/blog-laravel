@@ -21,7 +21,7 @@ class CadastroController extends Controller
                 $usuario->date = $date;
                 $usuario->level = "normal";
                 $usuario->save();
-                return view('books');
+                return view('catalogo');
         }
     }
 }

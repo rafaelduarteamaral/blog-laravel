@@ -11,7 +11,7 @@
         <div class='headerConteudo'>
             <img class="logo" src="img//logo.png"><img/>
             <a class="home">Home</a>
-            <a class="books">Produtos</a>
+            <a class="catalogo">Produtos</a>
             <input type="text" placeholder="Buscar"/>
             <button class="buttonHeader">Sign In</button>
             <button class="buttonHeader">Join</button>
@@ -34,7 +34,7 @@
             </div>
             <div class="listaContainerContent">
                 <div class="voltarBox">
-                    <a class="linkButton" href="books.blade.html"><button class="buttonVoltar"><img src="img/retorna.png"/><span class="textButton">voltar</span></button></a>
+                    <a class="linkButton" href="/catalogo"><button class="buttonVoltar"><img src="img/retorna.png"/><span class="textButton">voltar</span></button></a>
                 </div>
                 <div class="titleContent">
                     <h1 class="titleText">Produto</h1>
@@ -43,7 +43,7 @@
                     <div class="imgCardWinner">
                         <img src="img/produto1.jpg"/>
                     </div>
-                    <div class="textCardWinner">
+                    <div id="produto_1" name="produto" class="textCardWinner">
                         <h1 class="h1TextCardWinner">Modern Comfort Food: A Barefoot Contessa Cookbook</h1>
                         <h2 class="h2TextCardWinner">by Ina Garten (Goodreads Author)</h2>
                         <p class="pTextCardWinner">Author and alpha foodie Ina Garten takes the Food & Cookbooks prize with a collection of recipes perfect for the quarantined lifestyle of 2020. The 85 dishes featured here?many of them childhood favorites?are easy to make and meant to provide culinary comfort in this strangest of times. Cheddar and Chutney Grilled Cheese! Creamy Tomato Bisque! Banana Rum Trifle! We?re feeling better already.</p>
@@ -74,9 +74,9 @@
                 <div class="containerComents">
 
                     <div class="writeComent">
-                        <form action="" class="">
+                        <form method="post"  action="{{route('comentarios.comentario')}}" >
                             <h1 class="writeText">Comentar</h1>
-                            <textarea class="textArea"></textarea>
+                            <textarea id="comentar" name="comentar" class="textArea"></textarea>
                             <button  class="buttonLerMais" type="submit">enviar</button>
                         </form>
                     </div>

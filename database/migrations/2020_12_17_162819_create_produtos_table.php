@@ -22,6 +22,7 @@ class CreateProdutosTable extends Migration
             $table->integer('avaliacao')->nullable();
             $table->string('categoria');
             $table->string('texto_prod');
+            $table->integer('id_categoria');
 
         });
     }
