@@ -16,7 +16,7 @@ class ProdutosController extends Controller
             $categoria      =    $req->input('categoria');
 
             if ($req->hasFile('imagem')) {
-                $path = $req->file('imagem')->store('public');
+                $path = $req->file('imagem')->store('public/storage');
             }
             $produto = new Produtos();
                 $produto->produto = $nome_prod;

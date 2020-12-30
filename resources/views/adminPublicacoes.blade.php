@@ -36,16 +36,16 @@
 
     <div class="containerContent">
         <div class="boxContent">
-            <form action="" class="formBox">
+            <form method="post" class="formBox" action="{{route('publicacoes.inserir')}}" enctype="multipart/form-data">
                 <div class="titleBox">
                     <h1 class="title">Criar Publicação</h1>
                 </div>
-                <input type="text" class="input" placeholder="Título">
-                <input type="text" class="input" placeholder="Descrição">
-                <textarea name="" id="paragrafo" class="textArea" cols="30" rows="10" placeholder="Texto Publicação"></textarea>
+                <input id="titulo" name="titulo" type="text" class="input" placeholder="Título">
+                <input id="descricao" name="descricao" type="text" class="input" placeholder="Descrição">
+                <textarea id="paragrafo" name="texto" class="textArea" cols="30" rows="10" placeholder="Texto Publicação"></textarea>
                 <div class="imgProduto">
                     <img src="storage/foto.png" class="img" alt="" />
-                    <input type="file" class="input">
+                    <input id="imagem" name="imagem" type="file" class="input">
                 </div>
                 <button class="buttonEnviar" type="submit">Enviar</button>
             </form>

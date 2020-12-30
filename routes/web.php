@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
    
    Route::get('/', \App\Http\Controllers\IndexController::class)->name('index');
    Route::post('/adminProdutos', [\App\Http\Controllers\ProdutosController::class, 'inserir'])->name('produtos.inserir');
+   Route::post('/adminPublicacoes', [\App\Http\Controllers\PublicacoesController::class, 'inserir'])->name('publicacoes.inserir');
 
    // Route::post('/adminProdutos', [\App\Http\Controllers\UploadController::class, 'inserirImagem'])->name('imagem.inserirImagem');
    
