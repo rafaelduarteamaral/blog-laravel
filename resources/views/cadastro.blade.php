@@ -43,10 +43,10 @@
         Ou entrar como</div>
     <div class="links">
         <div class="facebook">
-            <img src="img/facebookLogin.png" >
+            <img src="imagem/facebookLogin.png" >
         </div>
         <div class="google">
-            <img src="img/gmail.png" >
+            <img src="imagem/gmail.png" >
         </div>
     </div>
     <div class="signup">

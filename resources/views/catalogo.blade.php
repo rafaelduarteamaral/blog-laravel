@@ -9,13 +9,13 @@
 <body>
     <div class='headerProdutos'>
         <div class='headerConteudo'>
-            <img class="logo" src="img//logo.png"><img/>
+            <img class="logo" src="imagem//logo.png"><img/>
             <a class="home">Home</a>
             <a class="/catalogo">Produtos</a>
             <input type="text" placeholder="Buscar"/>
             <button class="buttonHeader">Sign In</button>
             <button class="buttonHeader">Join</button>
-            <button class="mobileOpen" onclick="openNav()"><img src="img/menu.png" /></button>
+            <button class="mobileOpen" onclick="openNav()"><img src="imagem/menu.png" /></button>
         </div>
     </div>
 
@@ -44,7 +44,7 @@
                 </select>
             </div>
             <div class="sideContainerContent">
-                <span class="itemImg"><img class="imgSide" src="img/principal.jpg" /></span>
+                <span class="itemImg"><img class="imgSide" src="imagem/principal.jpg" /></span>
                 <h3 class="itemBusca">Paleta</h3>
                 <h3 class="itemBusca">Rosto</h3>
                 <h3 class="itemBusca">Olhos</h3>
@@ -62,7 +62,7 @@
 
                 <div class="cardWinner">
                     <div class="imgCardWinner">
-                        <img src="img/produto1.jpg"/>
+                        <img src="imagem/produto1.jpg"/>
                     </div>
                     <div class="textCardWinner">
                         <h1 class="h1TextCardWinner">Modern Comfort Food: A Barefoot Contessa Cookbook</h1>
@@ -74,202 +74,13 @@
                     </div>
 
                 </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                        <img class="imgCard" src="img/produto1.jpg"/>
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                        <img class="imgCard" src="img/produto2.jpg"/>
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                        <img class="imgCard" src="img/produto3.jpg"/>
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                        <img class="imgCard" src="img/produto4.jpg"/>
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                        <img class="imgCard" src="img/produto5.jpg"/>
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                        <img class="imgCard" src="img/produto6.jpg"/>
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
 
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
+                @foreach($catalogo as $cat)
 
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                        <img class="imgCard" src="img/produto1.jpg"/>
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                        <img class="imgCard" src="img/produto2.jpg"/>
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                        <img class="imgCard" src="img/produto3.jpg"/>
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                        <img class="imgCard" src="img/produto4.jpg"/>
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                        <img class="imgCard" src="img/produto5.jpg"/>
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                        <img class="imgCard" src="img/produto6.jpg"/>
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
+                <th><img src="{{ asset("img/{$cat->imagem}") }}" width="300" height="300"></th>
+                @endforeach
 
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
-                <div class="listaCardBox">
-                    <div class="imgCardBox">
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <button id="myBtn" class="buttonLerMais">ver mais</button>
-                    </div>
-                    <div class=avaliarCard>
-                        <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                    </div>
-                </div>
+        
             </div>
         </div>
     </div>
@@ -280,7 +91,7 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <div class="modalImg">
-                <img class="imgModal" src="img//produto1.jpg"/>
+                <img class="imgModal" src="imagem/produto1.jpg"/>
             </div>
         </div>
     </div>
@@ -308,9 +119,9 @@
             <ul>
                 <li>CONNECT</li>
                 <div class="ulSocial">
-                    <li class="liFirstSocial"><img src="img/instagram.png"/></li>
-                    <li class="liSecondSocial"><img src="img/twitter.png"/></li>
-                    <li><img src="img/facebook.png"/></li>
+                    <li class="liFirstSocial"><img src="imagem/instagram.png"/></li>
+                    <li class="liSecondSocial"><img src="imagem/twitter.png"/></li>
+                    <li><img src="imagem/facebook.png"/></li>
                 </div>
             </ul>
         </div>

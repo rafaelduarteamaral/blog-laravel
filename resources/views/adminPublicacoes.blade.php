@@ -28,7 +28,7 @@
                     <a class="optionHeader lastHeader">Sair</a>
                 </div>
                 <div class="divMobileOption">
-                    <a class="mobileMenu" onclick="openNav()"><img src="img/menu.png"/></a>
+                    <a class="mobileMenu" onclick="openNav()"><img src="imagem/menu.png"/></a>
                 </div>
             </div>
         </div>
@@ -62,7 +62,7 @@
                             <h3 class="textDescricaoPreview">Descrição</h3>
                         </div>
                         <div class="imgPreview">
-                            <img class="imgPreviewElement" src="img/produto3.jpg">
+                            <img class="imgPreviewElement" src="imagem/produto3.jpg">
                         </div>
                         <div class="textoPreview">
                             <p id="paragrafo" class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>

@@ -16,7 +16,7 @@ class ProdutosController extends Controller
             $categoria      =    $req->input('categoria');
 
             if ($req->hasFile('imagem')) {
-                $path = $req->file('imagem')->store('public/storage');
+                $path = $req->file('imagem')->store('', 'imagem');
             }
             $produto = new Produtos();
                 $produto->produto = $nome_prod;
@@ -27,5 +27,10 @@ class ProdutosController extends Controller
                 $produto->save();
                 return view('adminProdutos');
         }
+    }
+    
+    public function buscarProdutos(){
+        $data = Produtos::all();
+        return view('catalogo', ['catalogo'=>$data]);
     }
 }

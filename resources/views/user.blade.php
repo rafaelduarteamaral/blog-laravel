@@ -29,7 +29,7 @@
                     <a class="optionHeader lastHeader">Sair</a>
                 </div>
                 <div class="divMobileOption">
-                    <a class="mobileMenu" onclick="openNav()"><img src="img/menu.png" /></a>
+                    <a class="mobileMenu" onclick="openNav()"><img src="imagem/menu.png" /></a>
                 </div>
             </div>
         </div>

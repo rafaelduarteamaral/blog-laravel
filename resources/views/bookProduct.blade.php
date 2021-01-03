@@ -9,13 +9,13 @@
 <body>
     <div class='headerProdutos'>
         <div class='headerConteudo'>
-            <img class="logo" src="img//logo.png"><img/>
+            <img class="logo" src="imagem//logo.png"><img/>
             <a class="home">Home</a>
             <a class="catalogo">Produtos</a>
             <input type="text" placeholder="Buscar"/>
             <button class="buttonHeader">Sign In</button>
             <button class="buttonHeader">Join</button>
-            <button class="mobileOpen" onclick="openNav()"><img src="img/menu.png" /></button>
+            <button class="mobileOpen" onclick="openNav()"><img src="imagem/menu.png" /></button>
         </div>
     </div>
 
@@ -30,18 +30,18 @@
     <div class="containerFundo">
         <div class="containerContent">
             <div class="sideContainerContent">
-                <span class="itemImg"><img class="imgSide" src="img/principal.jpg" /></span>
+                <span class="itemImg"><img class="imgSide" src="imagem/principal.jpg" /></span>
             </div>
             <div class="listaContainerContent">
                 <div class="voltarBox">
-                    <a class="linkButton" href="/catalogo"><button class="buttonVoltar"><img src="img/retorna.png"/><span class="textButton">voltar</span></button></a>
+                    <a class="linkButton" href="/catalogo"><button class="buttonVoltar"><img src="imagem/retorna.png"/><span class="textButton">voltar</span></button></a>
                 </div>
                 <div class="titleContent">
                     <h1 class="titleText">Produto</h1>
                 </div>
                 <div class="cardWinner">
                     <div class="imgCardWinner">
-                        <img src="img/produto1.jpg"/>
+                        <img src="imagem/produto1.jpg"/>
                     </div>
                     <div id="produto_1" name="produto" class="textCardWinner">
                         <h1 class="h1TextCardWinner">Modern Comfort Food: A Barefoot Contessa Cookbook</h1>
@@ -52,19 +52,19 @@
                         <!-- <button id="myBtn" class="buttonLerMais">ver mais</button> -->
                         <div class="starRate">
                             <a href="javascript:void(0)" onclick="Avaliar(1)">
-                            <img src="img/star0.png" id="s1"></a>
+                            <img src="imagem/star0.png" id="s1"></a>
                                 
                             <a href="javascript:void(0)" onclick="Avaliar(2)">
-                            <img src="img/star0.png" id="s2"></a>
+                            <img src="imagem/star0.png" id="s2"></a>
                                 
                             <a href="javascript:void(0)" onclick="Avaliar(3)">
-                            <img src="img/star0.png" id="s3"></a>
+                            <img src="imagem/star0.png" id="s3"></a>
                                 
                             <a href="javascript:void(0)" onclick="Avaliar(4)">
-                            <img src="img/star0.png" id="s4"></a>
+                            <img src="imagem/star0.png" id="s4"></a>
                                 
                             <a href="javascript:void(0)" onclick="Avaliar(5)">
-                            <img src="img/star0.png" id="s5"></a>
+                            <img src="imagem/star0.png" id="s5"></a>
                             
                             <h3 class="avaliarTexto">Avaliar esse produto</h3>
                         </div>
@@ -83,7 +83,7 @@
 
                     <div class="comentBox">
                         <div class="imgBox">
-                            <img class="imgComent" src="img/Capturar.PNG"/>
+                            <img class="imgComent" src="imagem/Capturar.PNG"/>
                             <h1 class="nameComent">Isabela</h1>
                         </div>  
                         <div class="textBox">
@@ -97,7 +97,7 @@
                     </div>
                     <div class="comentBox">
                         <div class="imgBox">
-                            <img class="imgComent" src="img/Capturar.PNG"/>
+                            <img class="imgComent" src="imagem/Capturar.PNG"/>
                             <h1 class="nameComent">Bruna</h1>
                             <div class="rateComent">
 
@@ -113,7 +113,7 @@
                     </div>
                     <div class="comentBox">
                         <div class="imgBox">
-                            <img class="imgComent" src="img/Capturar.PNG"/>
+                            <img class="imgComent" src="imagem/Capturar.PNG"/>
                             <h1 class="nameComent">Ana</h1>
                             <div class="rateComent">
 
@@ -129,7 +129,7 @@
                     </div>
                     <div class="comentBox">
                         <div class="imgBox">
-                            <img class="imgComent" src="img/Capturar.PNG"/>
+                            <img class="imgComent" src="imagem/Capturar.PNG"/>
                             <h1 class="nameComent">Isabela</h1>
                             <div class="rateComent">
 
@@ -145,7 +145,7 @@
                     </div>
                     <div class="comentBox">
                         <div class="imgBox">
-                            <img class="imgComent" src="img/Capturar.PNG"/>
+                            <img class="imgComent" src="imagem/Capturar.PNG"/>
                             <h1 class="nameComent">Isabela</h1>
                             <div class="rateComent">
 
@@ -161,7 +161,7 @@
                     </div>
                     <div class="comentBox">
                         <div class="imgBox">
-                            <img class="imgComent" src="img/Capturar.PNG"/>
+                            <img class="imgComent" src="imagem/Capturar.PNG"/>
                             <h1 class="nameComent">Isabela</h1>
                             <div class="rateComent">
 
@@ -177,7 +177,7 @@
                     </div>
                     <div class="comentBox">
                         <div class="imgBox">
-                            <img class="imgComent" src="img/Capturar.PNG"/>
+                            <img class="imgComent" src="imagem/Capturar.PNG"/>
                             <h1 class="nameComent">Gabriel</h1>
                             <div class="rateComent">
 
@@ -233,9 +233,9 @@
             <ul>
                 <li>CONNECT</li>
                 <div class="ulSocial">
-                    <li class="liFirstSocial"><img src="img/instagram.png"/></li>
-                    <li class="liSecondSocial"><img src="img/twitter.png"/></li>
-                    <li><img src="img/facebook.png"/></li>
+                    <li class="liFirstSocial"><img src="imagem/instagram.png"/></li>
+                    <li class="liSecondSocial"><img src="imagem/twitter.png"/></li>
+                    <li><img src="imagem/facebook.png"/></li>
                 </div>
             </ul>
         </div>

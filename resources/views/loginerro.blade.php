@@ -25,7 +25,7 @@
             </div>
             <div class="input-field">
                 <input class="pswrd" type="password" name="password" required>
-                <span class="show"><img src="img/eye.png"/></span>
+                <span class="show"><img src="imagem/eye.png"/></span>
                 <label>Senha</label>
             </div>
             <div class="button">
@@ -38,10 +38,10 @@
         Or login with</div>
     <div class="links">
         <div class="facebook">
-            <img src="img/facebookLogin.png" >
+            <img src="imagem/facebookLogin.png" >
         </div>
         <div class="google">
-            <img src="img/gmail.png" >
+            <img src="imagem/gmail.png" >
         </div>
     </div>
     <div class="signup">

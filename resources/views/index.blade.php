@@ -189,9 +189,9 @@
                 <ul>
                     <li>CONNECT</li>
                     <div class="ulSocial">
-                        <li class="liFirstSocial"><img src="img/instagram.png" /></li>
-                        <li class="liSecondSocial"><img src="img/twitter.png" /></li>
-                        <li><img src="img/facebook.png" /></li>
+                        <li class="liFirstSocial"><img src="imagem/instagram.png" /></li>
+                        <li class="liSecondSocial"><img src="imagem/twitter.png" /></li>
+                        <li><img src="imagem/facebook.png" /></li>
                     </div>
                 </ul>
             </div>

@@ -10,7 +10,6 @@ class UserController extends Controller
 {
 
     public function buscarUsuarios(){
-
         $data = user::all();
         return view('user', ['usuarios'=>$data]);
     }
