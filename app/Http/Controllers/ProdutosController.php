@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
 use App\Models\produtos;
 use Illuminate\Http\Request;
 
@@ -31,6 +32,14 @@ class ProdutosController extends Controller
     
     public function buscarProdutos(){
         $data = Produtos::all();
-        return view('catalogo', ['catalogo'=>$data]);
+        $data2 = Categoria::all();
+        return view('catalogo', ['catalogo'=>$data, 'categoria'=>$data2]);
+
     }
+
+    public function buscarProdutosTabela(){
+        $data = Produtos::all();
+        return view('RelatorioProduto', ['produtos'=>$data]);
+    }
+    
 }

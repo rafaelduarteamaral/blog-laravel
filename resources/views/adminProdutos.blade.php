@@ -23,7 +23,8 @@
                     <h1 class="titleLeft">admin Blog</h1>
                 </div>
                 <div class="rightContent">
-                    <a class="optionHeader ativado">Produtos</a>
+                    <a href="/adminProdutos" class="optionHeader">Produtos</a>
+                    <a href="/RelatorioProduto" class="optionHeader">Relatorio Produtos</a>
                     <a href="/user" class="optionHeader">Usuários</a>
                     <a href="/adminPublicacoes" class="optionHeader">Publicações</a>
                     <a class="optionHeader lastHeader">Sair</a>
@@ -78,108 +79,8 @@
                     </form>
                 </div>
             </div>
-
-            <div class="tableContainer">
-                <div class="tableBox">
-                    <table id="table_id">
-                        <thead>
-                            <tr>
-                                <th>Nome</th>
-                                <th>Categoria</th>
-                                <th>Descrição</th>
-                                <th>Texto Apresentação</th>
-                                <th>Imagem</th>
-                                <th>Avaliação</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
         </div>
     </div>
-
     <div id="mySidenav" class="sidenav">
         <a class="linkMobile" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a class="linkMobile" href="#">Produtos</a>
@@ -197,10 +98,7 @@
             document.getElementById("mySidenav").style.width = "0";
         }
 
-        $(document).ready(function() {
-            $('#table_id').DataTable();
-        });
-
+    
         // Get the modal
         var modal = document.getElementById("myModal");
 

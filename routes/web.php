@@ -30,11 +30,13 @@ Route::get('/produtos', function () {
 
 Route::get('/adminUsuarios', [\App\Http\Controllers\UserController::class, 'buscarUsuarios']);
 Route::post('/adminProdutos', [\App\Http\Controllers\ProdutosController::class, 'inserir'])->middleware(['auth'])->name('produtos.inserir');
+Route::get('/RelatorioProduto', [\App\Http\Controllers\ProdutosController::class, 'buscarProdutosTabela'])->middleware(['auth'])->name('produtos.buscar');
 Route::post('/adminPublicacoes', [\App\Http\Controllers\PublicacoesController::class, 'inserir'])->middleware(['auth'])->name('publicacoes.inserir');
 Route::post('/produtos', [\App\Http\Controllers\ComentariosController::class, 'comentario'])->middleware(['auth'])->name('comentarios.comentario');
 Route::get('/user', [\App\Http\Controllers\UserController::class, 'buscarUsuarios'])->middleware(['auth'])->name('usuarios.buscar');
 Route::post('', [\App\Http\Controllers\CategoriaController::class, 'categoria'])->middleware(['auth'])->name('inserir.categoria');
 Route::get('/catalogo', [\App\Http\Controllers\ProdutosController::class, 'buscarProdutos'])->middleware(['auth'])->name('produtos.buscar');
+// Route::get('/catalogo', [\App\Http\Controllers\CategoriaController::class, 'buscarUsuarios'])->middleware(['auth'])->name('visualizar.categoria');
 
 
 require __DIR__ . '/auth.php';

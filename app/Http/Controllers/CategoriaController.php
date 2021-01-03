@@ -18,4 +18,9 @@ class CategoriaController extends Controller
                 return view('adminProdutos');
         }
     }
+
+    public function buscarUsuarios(){
+        $data = categoria::all();
+        return view('catalogo', ['categoria'=>$data]);
+    }
 }

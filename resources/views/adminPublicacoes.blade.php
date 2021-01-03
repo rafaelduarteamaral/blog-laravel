@@ -23,8 +23,9 @@
                 </div>
                 <div class="rightContent">
                     <a href="/adminProdutos" class="optionHeader">Produtos</a>
+                    <a href="/RelatorioProduto" class="optionHeader">Relatorio Produtos</a>
                     <a href="/user" class="optionHeader">Usuários</a>
-                    <a class="optionHeader ativado">Publicações</a>
+                    <a href="/adminPublicacoes" class="optionHeader">Publicações</a>
                     <a class="optionHeader lastHeader">Sair</a>
                 </div>
                 <div class="divMobileOption">

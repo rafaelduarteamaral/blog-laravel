@@ -23,7 +23,7 @@
                     <h1 class="titleLeft">admin Blog</h1>
                 </div>
                 <div class="rightContent">
-                    <a href="/adminProdutos" class="optionHeader">Produtos</a>
+                <a href="/adminProdutos" class="optionHeader">Produtos</a>
                     <a href="/RelatorioProduto" class="optionHeader">Relatorio Produtos</a>
                     <a href="/user" class="optionHeader">Usuários</a>
                     <a href="/adminPublicacoes" class="optionHeader">Publicações</a>
@@ -35,14 +35,7 @@
             </div>
         </div>
     </header>
-
-    <div class="containerContent">
-        <div class="boxContent">
-
             <div class="tableContainer">
-                <div class="titleTable">
-                    <h1 class="titleText">Tabela de Usuários</h1>
-                </div>
                 <div class="tableBox">
                     <table id="table_id">
                         <thead>
@@ -50,33 +43,34 @@
                                 <th>ID</th>
                                 <th>Nome</th>
                                 <th>Data Cadastro</th>
-                                <th>E-mail</th>
+                                <th>Categoria</th>
+                                <th>Imagem</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($usuarios as $u)
+                            @foreach($produtos as $p)
                             <tr>
-                                <td>{{$u['id']}}</td>
-                                <td>{{$u['name']}}</td>
-                                <td>{{$u['created_at']}}</td>
-                                <td>{{$u['email']}}</td>
+                                <td>{{$p['id']}}</td>
+                                <td>{{$p['produto']}}</td>
+                                <td>{{$p['created_at']}}</td>
+                                <td>{{$p['categoria']}}</td>
+                                <td><img src="{{ asset("img/{$p->imagem}") }}" width="50" height="50"></td>
                             </tr>
                             @endforeach
 
                         </tbody>
                     </table>
-
                 </div>
             </div>
-        </div>
     </div>
 
     <div id="mySidenav" class="sidenav">
         <a class="linkMobile" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a class="linkMobile" href="#">Produtos</a>
-        <a class="linkMobile" href="#">Usuários</a>
-        <a class="linkMobile" href="#">Publicações</a>
-        <a class="linkMobile" href="#">Sair</a>
+        <a class="linkMobile" href="/adminProdutos">Produtos</a>
+        <a class="linkMobile" href="/RelatorioProduto">Lista de Produtos</a>
+        <a class="linkMobile" href="/user">Usuários</a>
+        <a class="linkMobile" href="/adminPublicacoers">Publicações</a>
+        <a class="linkMobile" href="/logout">Sair</a>
     </div>
 
     <script>
@@ -91,6 +85,32 @@
         $(document).ready(function() {
             $('#table_id').DataTable();
         });
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 </body>
 
