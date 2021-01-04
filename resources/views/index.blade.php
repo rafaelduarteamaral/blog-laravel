@@ -9,9 +9,9 @@
     <div class='headerProdutos'>
         <div class='headerConteudo'>
             <figure>
-                <img src="storage/logo.png" alt="Minha Figura">
+                <img src="imagem/logo.png" alt="Minha Figura">
             </figure>
-            <form class="Login" method="post" action="{{route('user.login')}}">
+            <form class="Login" method="post" action="">
                 <div id="email" class='headerEmail'>
                     <input type="email" placeholder="Email" /><br>
                     <input type="checkbox" name="Lembrar de mim">
@@ -29,7 +29,7 @@
     <div class="containerCadastro">
         <div class="imageminicial">
             <figure>
-                <img src="storage/inicial.png">
+                <img src="img/inicial.png">
             </figure>
         </div>
         <!-- <div class="novasContas">
@@ -69,7 +69,7 @@
             <!-- <h3>News & Interviews</h3></br>
             <p><a href="#">27 New Dystopian Novels for Your Post-Apocalyptic Reading List</a></p>
             <figure>
-                <a href="#"><img src="storage/logo.png" alt="Minha Figura">
+                <a href="#"><img src="img/logo.png" alt="Minha Figura">
             </figure>
 
             <div class="list">

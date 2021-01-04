@@ -23,7 +23,7 @@ class PublicacoesController extends Controller
                 $publicacao->texto = $texto;
                 $publicacao->imagem = $path;
                 $publicacao->save();
-                return view('adminPublicacoes');
+                return view('admin_publicacoes');
         }
     }
 }

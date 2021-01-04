@@ -23,8 +23,8 @@
                     <h1 class="titleLeft">admin Blog</h1>
                 </div>
                 <div class="rightContent">
-                <a href="/adminProdutos" class="optionHeader">Produtos</a>
-                    <a href="/RelatorioProduto" class="optionHeader">Relatorio Produtos</a>
+                <a href="/admin_produtos" class="optionHeader">Produtos</a>
+                    <a href="/produtos_cadastrados" class="optionHeader">Relatorio Produtos</a>
                     <a href="/user" class="optionHeader">Usuários</a>
                     <a href="/adminPublicacoes" class="optionHeader">Publicações</a>
                     <a class="optionHeader lastHeader">Sair</a>
@@ -66,8 +66,8 @@
 
     <div id="mySidenav" class="sidenav">
         <a class="linkMobile" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a class="linkMobile" href="/adminProdutos">Produtos</a>
-        <a class="linkMobile" href="/RelatorioProduto">Lista de Produtos</a>
+        <a class="linkMobile" href="/admin_produtos">Produtos</a>
+        <a class="linkMobile" href="/produtos_cadastrados">Lista de Produtos</a>
         <a class="linkMobile" href="/user">Usuários</a>
         <a class="linkMobile" href="/adminPublicacoers">Publicações</a>
         <a class="linkMobile" href="/logout">Sair</a>

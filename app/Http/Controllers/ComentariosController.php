@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
 use App\Models\Comentarios;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,7 +18,13 @@ class ComentariosController extends Controller
                 $comentario->comentario = $texto;
                 $comentario->id_pessoa = $id;
                 $comentario->save();
-                return view('bookProduct');
+                return view('produtos');
         }
+        
+    }   
+     public function buscarCategorias(){
+        $data = Categoria::all();
+        return view('produtos', ['categoria'=>$data]);
     }
+
 }

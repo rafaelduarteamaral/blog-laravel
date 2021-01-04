@@ -19,7 +19,7 @@
                     <h1 class="titleLeft">admin Blog</h1>
                 </div>
                 <div class="rightContent">
-                    <a href="/adminProdutos" class="optionHeader">Produtos</a>
+                    <a href="/admin_produtos" class="optionHeader">Produtos</a>
                     <a href="/user" class="optionHeader">Usuários</a>
                     <a href="/adminPublicacoes" class="optionHeader">Publicações</a>
                     <a class="optionHeader lastHeader">Sair</a>

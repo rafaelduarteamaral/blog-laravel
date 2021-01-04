@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\produtos;
+use Illuminate\Support\Facades\DB;
 use App\Models\Categoria;
 use Illuminate\Http\Request;
 
@@ -15,12 +17,26 @@ class CategoriaController extends Controller
                 $categorias = new Categoria();
                 $categorias->nome = $categoria;
                 $categorias->save();
-                return view('adminProdutos');
+                return view('admin_produtos');
         }
     }
 
-    public function buscarUsuarios(){
-        $data = categoria::all();
-        return view('catalogo', ['categoria'=>$data]);
+    public function getCategoria(){
+        $data = Categoria::all();
+        return view('admin_produtos', ['categoria'=>$data]);
+    }
+
+    
+    public function selectCategoria($nome){
+        $users = db::table('categorias as c')
+            ->select('p.id', 'p.produto', 'p.categoria', 'p.imagem', 'p.descricao', 'p.texto_prod')
+            ->leftJoin('produtos as p', 'c.nome', '=', 'p.categoria')
+            ->where('p.categoria', $nome)
+            ->get();
+            print_r($nome);
+        $data = Produtos::all();
+        $data2 = Categoria::all();
+
+        return view('categoria', ['categoi'=>$data2, 'catalogo'=>$data, 'categoria'=>$users]);
     }
 }

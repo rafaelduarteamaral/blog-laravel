@@ -2,73 +2,61 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/style.css')}}">
     <script type="text/javascript" src="path_to/jquery.js"></script>
     <script type="text/javascript" src="path_to/jquery.simplePagination.js"></script>
 </head>
 <body>
-    <div class='headerProdutos'>
-        <div class='headerConteudo'>
-            <img class="logo" src="imagem//logo.png"><img/>
-            <a class="home">Home</a>
-            <a class="catalogo">Produtos</a>
-            <input type="text" placeholder="Buscar"/>
-            <button class="buttonHeader">Sign In</button>
-            <button class="buttonHeader">Join</button>
-            <button class="mobileOpen" onclick="openNav()"><img src="imagem/menu.png" /></button>
-        </div>
-    </div>
 
-    <div id="mySidenav" class="sidenav">
-        <a class="linkMobile" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a class="linkMobile" href="#">Home</a>
-        <a class="linkMobile" href="#">My Books</a>
-        <a class="linkMobile" href="#">Browse</a>
-        <a class="linkMobile" href="#">Community</a>
-    </div>
+    @include('layouts.navigation')
+
 
     <div class="containerFundo">
         <div class="containerContent">
-            <div class="sideContainerContent">
-                <span class="itemImg"><img class="imgSide" src="imagem/principal.jpg" /></span>
-            </div>
+        <div class="sideContainerContent">
+                <span class="itemImg"><img class="imgSide" src="{{URL::asset('imagem/principal.jpg')}}" /></span>
+        </div>
             <div class="listaContainerContent">
                 <div class="voltarBox">
-                    <a class="linkButton" href="/catalogo"><button class="buttonVoltar"><img src="imagem/retorna.png"/><span class="textButton">voltar</span></button></a>
+                    <a class="linkButton" href="/catalogo"><button class="buttonVoltar"><img src="{{URL::asset('imagem/retorna.png')}}"/><span class="textButton">voltar</span></button></a>
                 </div>
                 <div class="titleContent">
                     <h1 class="titleText">Produto</h1>
                 </div>
                 <div class="cardWinner">
+                    
+                    @foreach($produtos as $p)
                     <div class="imgCardWinner">
-                        <img src="imagem/produto1.jpg"/>
+                        <img src="{{ asset("img/{$p->imagem}") }}"  width="300" height="300"/>
                     </div>
-                    <div id="produto_1" name="produto" class="textCardWinner">
-                        <h1 class="h1TextCardWinner">Modern Comfort Food: A Barefoot Contessa Cookbook</h1>
-                        <h2 class="h2TextCardWinner">by Ina Garten (Goodreads Author)</h2>
-                        <p class="pTextCardWinner">Author and alpha foodie Ina Garten takes the Food & Cookbooks prize with a collection of recipes perfect for the quarantined lifestyle of 2020. The 85 dishes featured here?many of them childhood favorites?are easy to make and meant to provide culinary comfort in this strangest of times. Cheddar and Chutney Grilled Cheese! Creamy Tomato Bisque! Banana Rum Trifle! We?re feeling better already.</p>
+                    
+                    <div id="{{$p->id}}" name="produto" class="textCardWinner">
+                        <h1 class="h1TextCardWinner">{{$p->produto}}</h1>
+                        <h2 class="h2TextCardWinner">{{$p->descricao}}</h2>
+                        <p class="pTextCardWinner">{{$p->texto_prod}}</p>
                     </div>
                     <div class="lerMaisCardbox">
                         <!-- <button id="myBtn" class="buttonLerMais">ver mais</button> -->
                         <div class="starRate">
                             <a href="javascript:void(0)" onclick="Avaliar(1)">
-                            <img src="imagem/star0.png" id="s1"></a>
+                            <img src="{{URL::asset('imagem/star0.png')}}" id="s1"></a>
                                 
                             <a href="javascript:void(0)" onclick="Avaliar(2)">
-                            <img src="imagem/star0.png" id="s2"></a>
+                            <img src="{{URL::asset('imagem/star0.png')}}" id="s2"></a>
                                 
                             <a href="javascript:void(0)" onclick="Avaliar(3)">
-                            <img src="imagem/star0.png" id="s3"></a>
+                            <img src="{{URL::asset('imagem/star0.png')}}" id="s3"></a>
                                 
                             <a href="javascript:void(0)" onclick="Avaliar(4)">
-                            <img src="imagem/star0.png" id="s4"></a>
+                            <img src="{{URL::asset('imagem/star0.png')}}" id="s4"></a>
                                 
                             <a href="javascript:void(0)" onclick="Avaliar(5)">
-                            <img src="imagem/star0.png" id="s5"></a>
+                            <img src="{{URL::asset('imagem/star0.png')}}" id="s5"></a>
                             
                             <h3 class="avaliarTexto">Avaliar esse produto</h3>
                         </div>
                     </div>
+                    @endforeach
                 </div>
 
                 <div class="containerComents">
@@ -214,21 +202,9 @@
         <div class="contentFooter">
             <ul>
                 <li>COMPANY</li>
-                <li>About us</li>
-                <li>Careers</li>
-                <li>Terms</li>
-                <li>Privacy</li>
-                <li>Interest Based Ads</li>
-                <li>Interest Based Ads</li>
-                <li>Ad Preferences</li>
-                <li>Help</li>
             </ul>
             <ul>
                 <li>WORK WITH US</li>
-                <li>Authors</li>
-                <li>Advertise</li>
-                <li>Authors & ads blog</li>
-                <li>API</li>
             </ul>
             <ul>
                 <li>CONNECT</li>

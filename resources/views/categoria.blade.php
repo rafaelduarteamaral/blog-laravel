@@ -15,8 +15,8 @@
         <div class="containerContent">
             <div class="sideContainerContent">
                 <span class="itemImg"><img class="imgSide" src="imagem/principal.jpg" /></span>
-                @foreach($categoria as $cat)
-                <a class="itemBusca" href="categoria/{{$cat->nome}}"><h3 class="itemBusca">{{$cat->nome}}</h3></a>
+                @foreach($categoi as $cat)
+                <a class="itemBusca" href="{{$cat->nome}}"><h3 class="itemBusca">{{$cat->nome}}</h3></a>
                 @endforeach
             </div>
             <div class="listaContainerContent">
@@ -26,7 +26,7 @@
 
                 <?php
                 $count = 0;
-                foreach ($catalogo as $c) { ?>
+                foreach ($categoria as $c) { ?>
                     <div class="cardWinner">
                         <div class="imgCardWinner">
                             <img src="{{ asset("img/{$c->imagem}") }}" width="200" height="200">
@@ -44,8 +44,7 @@
                     if ($count == 1) break;
                 } ?>
 
-                @foreach($catalogo as $cat)
-
+                @foreach($categoria as $cat)
                 <th><a href="/produtos/{{$cat->id}}"><img id="/produtos/{{$cat->id}}" src="{{ asset("img/{$cat->imagem}") }}" width="200" height="200"></a></th>
                 @endforeach
 

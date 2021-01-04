@@ -26,20 +26,31 @@ class ProdutosController extends Controller
                 $produto->texto_prod = $texto_prod;
                 $produto->imagem = $path;
                 $produto->save();
-                return view('adminProdutos');
+                return view('admin_produtos');
+
         }
+    }
+
+
+    public function getCategoria(){
+        $data = Categoria::all();
+        return view('admin_produtos', ['categoria'=>$data]);
     }
     
     public function buscarProdutos(){
         $data = Produtos::all();
         $data2 = Categoria::all();
         return view('catalogo', ['catalogo'=>$data, 'categoria'=>$data2]);
-
     }
 
     public function buscarProdutosTabela(){
         $data = Produtos::all();
-        return view('RelatorioProduto', ['produtos'=>$data]);
+        return view('produtos_cadastrados', ['produtos'=>$data]);
     }
-    
+
+    public function getProduto($id){
+        $data = Produtos::where('id', $id)->get();
+        return view('produtos', ['produtos'=>$data]);
+    }
+
 }

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <!-- Created By CodingNepal -->
 <html lang="en" dir="ltr">
@@ -23,8 +25,8 @@
                     <h1 class="titleLeft">admin Blog</h1>
                 </div>
                 <div class="rightContent">
-                    <a href="/adminProdutos" class="optionHeader">Produtos</a>
-                    <a href="/RelatorioProduto" class="optionHeader">Relatorio Produtos</a>
+                    <a href="/admin_produtos" class="optionHeader">Produtos</a>
+                    <a href="/produtos_cadastrados" class="optionHeader">Relatorio Produtos</a>
                     <a href="/user" class="optionHeader">Usuários</a>
                     <a href="/adminPublicacoes" class="optionHeader">Publicações</a>
                     <a class="optionHeader lastHeader">Sair</a>
@@ -49,14 +51,12 @@
                 <select id="categoria" name="categoria" class="select">
                     <option class="optionDisabled" selected disabled>Categoria</option>
                     <option>Paleta</option>
-                    <option>Rosto</option>
-                    <option>Olhos</option>
-                    <option>Sobrancelhas</option>
-                    <option>Boca</option>
-                    <option>Corpo</option>
-                    <option>Acessórios</option>
-                    <option>Pincéis</option>
-                    <option>Unhas</option>
+                    <?php 
+                    use App\Models\Categoria;
+                    $data = Categoria::all();
+                    foreach($data as $c){ ?>
+                    <option><?=$c->nome ?></option>
+                    <?php } ?>
                 </select>
                 <textarea class="textArea" name="texto_prod" cols="30" rows="10" placeholder="Texto Apresentação"></textarea>
                 <div class="imgProduto">
