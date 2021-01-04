@@ -1,0 +1,387 @@
+body{
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: 'Arvo', serif;
+
+
+    color: #333333;
+    margin: 0 0 12px 0;
+    font-style: italic;
+
+}
+
+*, button, input {
+    font-family: 'Arvo', serif;
+    font-style: italic;
+}
+
+.headerBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    width: 75%;
+    height: 60px;
+}
+
+.optionMenu {
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(85, 85, 85);
+}
+
+.optionMenu:hover {
+    font-size: 14px;
+    color: rgb(166, 237, 255);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.buscarMenu {
+    border: none;
+    outline: none;
+}
+
+.Logo {
+    font-size: 28px;
+    color:rgb(22, 255, 80);
+}
+
+.leftMenu {
+    display: flex;
+    justify-content: center;
+}
+
+.centerMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.rightMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15%;
+}
+
+.borderBottom {
+    height: 10px;
+    width: 75%;
+    background: rgb(166, 237, 255);
+    border-radius: 10px;
+}
+
+.mobileMenuOpen {
+    display: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.containerSubHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 50vh;
+    width: 75%;
+    background: rgb(166, 237, 255);
+}
+
+.containerSubHeaderLeft {
+    display: flex;
+    align-items: center;
+    height: 80%;
+    width: 50%;
+    margin-left: 20px;
+}
+
+.containerSubHeaderRight {
+    width: 50%;
+    height: 95%;
+}
+
+.textContentSubHeader {
+    font-size: 24px;
+    font-weight: lighter;
+    color: #000000;
+}
+
+.text2ContentSubHeader {
+    font-size: 20px;
+    font-weight: lighter;
+    color: #000000;
+}
+
+.buttonConheca {
+    font-size: 18px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background: rgba(1, 1, 1, 0.7);
+    border-radius: 5px;
+    color:#FFFF;
+
+}
+
+.buttonConheca:hover {
+    cursor: pointer;
+}
+
+
+.postsContainer {
+    display: flex;
+    justify-content: center;
+    /* background: red; */
+    width: 75%;
+    margin-top: 100px;
+
+}
+
+.boxPost {
+    width: 70%;
+    background: #FFFF;
+}
+
+.containerTituloPost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 75%;
+    margin-top: 150px;
+}
+
+.textTituloPost {
+    font-size: 24px;
+    text-align: center;
+}
+
+.bordaTituloPost {
+    background: #16FF50;
+    width: 55%;
+    height: 10px;
+    border-radius: 10px;
+}
+
+.imagemPostContent {
+    width: 100%;
+    height: 50vh;  
+    border-radius: 5px;
+}
+
+.imgSliderBox {
+    width: 100%;
+}
+
+.imgSlider {
+    width: 97%;
+    height: 90%;
+}
+
+.titlePost {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: rgb(63, 215, 253);
+}
+
+.descricaoPost {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 11px;
+    color: #111;
+}
+
+.textPost {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: rgb(80, 80, 80);
+}
+
+.boxBorda {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.bordaConteudoPost {
+    background: #16FF50;
+    width: 15%;
+    height: 10px;
+    border-radius: 10px;
+}
+
+
+.buttonSlider {
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background: rgb(138, 138, 138, 0.3);
+    outline: none;
+}
+
+.buttonSlider:hover {
+    cursor: pointer;
+}
+
+.containerSubPub {
+    margin-top: 100px;
+    background: rgb(255 128 141) !important;
+    border-radius: 5px;
+}
+
+.buttonSubCadastro {
+    background: #a6edff !important;
+    color: rgb(255, 0, 0);
+}
+
+.containerSubHeaderLeftLast {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+}
+
+/* MOBILE HEADER */
+@media only screen and (max-width: 1100px) {
+    .optionMenu {
+        display: none;
+    }
+
+    .centerMenu {
+        justify-content: center;
+    }
+
+    .rightMenu {
+        justify-content: center;
+    }
+
+    .mobileMenuOpen {
+        display: block;
+    }
+}
+
+
+
+.footer {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    height: 270px;
+    background-color: #ffffff;
+}
+
+.contentFooter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.rightFooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 30%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li:first-child {
+    margin-bottom: 15px;;
+    font-size: 16px;
+    color: #333232;
+}
+
+li {
+    font-size: 14px;
+    font-weight: 500;
+    color: #595959;
+    margin-bottom: 5px;
+}
+
+li:hover {
+    border-bottom: 1px solid #595959;
+    cursor: pointer;
+}
+
+li:first-child {
+    border: none;
+}
+
+.ulSocial{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.liFirstSocial {
+    font-size: 14px !important;
+    color: #595959 !important;
+    margin-right: 10px;
+}
+
+.liSecondSocial {
+    margin-right: 10px;
+}
+
+.borderFooter {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.formMargin {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.buttonLogin {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.buttonGustavo {
+    border: none;
+    background: rgb(117, 116, 116, 0.00001);
+    font-weight: bold;
+    color: rgb(85 85 85);
+}
+
+.buttonGustavo:hover {
+    cursor: pointer;
+}

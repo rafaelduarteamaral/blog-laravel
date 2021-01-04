@@ -15,25 +15,7 @@
   </head>
 
   <body>
-    <header class="headerComponent">
-        <div class="headerContainer">
-            <div class="headerContent">
-                <div class="leftContent">
-                    <h1 class="titleLeft">admin Blog</h1>
-                </div>
-                <div class="rightContent">
-                    <a href="/admin_produtos" class="optionHeader">Produtos</a>
-                    <a href="/produtos_cadastrados" class="optionHeader">Relatorio Produtos</a>
-                    <a href="/user" class="optionHeader">Usuários</a>
-                    <a href="/adminPublicacoes" class="optionHeader">Publicações</a>
-                    <a class="optionHeader lastHeader">Sair</a>
-                </div>
-                <div class="divMobileOption">
-                    <a class="mobileMenu" onclick="openNav()"><img src="imagem/menu.png"/></a>
-                </div>
-            </div>
-        </div>
-    </header>
+  @include('layouts.admin_header');
 
     <div class="containerContent">
         <div class="boxContent">
@@ -45,7 +27,7 @@
                 <input id="descricao" name="descricao" type="text" class="input" placeholder="Descrição">
                 <textarea id="paragrafo" name="texto" class="textArea" cols="30" rows="10" placeholder="Texto Publicação"></textarea>
                 <div class="imgProduto">
-                    <img src="storage/foto.png" class="img" alt="" />
+                    <img src="imagem/foto.png" class="img" alt="" />
                     <input id="imagem" name="imagem" type="file" class="input">
                 </div>
                 <button class="buttonEnviar" type="submit">Enviar</button>

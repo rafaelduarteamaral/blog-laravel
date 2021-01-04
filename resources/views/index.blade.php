@@ -1,211 +1,204 @@
 <html>
 
 <head>
-    <title>Pagina 1 - Inicio</title>
-    <link rel="stylesheet" href="assets/css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/css/indexPage.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class='headerProdutos'>
-        <div class='headerConteudo'>
-            <figure>
-                <img src="imagem/logo.png" alt="Minha Figura">
-            </figure>
-            <form class="Login" method="post" action="">
-                <div id="email" class='headerEmail'>
-                    <input type="email" placeholder="Email" /><br>
-                    <input type="checkbox" name="Lembrar de mim">
-                    <label for="Lembrar de mim">Lembrar de mim</label>
+    @include('layouts.navigationNew')
+
+    <div class="container">
+        <div class="containerSubHeader">
+            <div class="containerSubHeaderLeft">
+                <div class="textContainerSubHeader">
+                    <h1 class="textContentSubHeader">Conheça os melhores produtos do mercado</h1>
+                    <h1 class="text2ContentSubHeader">Com avaliações de clientes</h1>
+                    <button class="buttonConheca">conheça</button>
                 </div>
-                <div id="senha" class="headerSenha">
-                    <input type="password" placeholder="Senha" /></br>
-                    <a href="resources/views/books.blade.php">Esqueceu?</a>
+            </div>
+            <div class="containerSubHeaderRight">
+                <div class="imgSliderBox mySlides">
+                    <img class="imgSlider" src="./imagem/slide1.jpg" />
                 </div>
-                    <button tyrpe="submit" class="buttonHeader">Conectar</button>
-            </form>
+                <div class="imgSliderBox mySlides">
+                    <img class="imgSlider " src="./imagem/slide2.jpg" />
+                </div>
+                <div class="imgSliderBox mySlides">
+                    <img class="imgSlider" src="./imagem/slide3.jpg" />
+                </div>
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <button class="buttonSlider" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="buttonSlider" onclick="plusDivs(+1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="containerTituloPost">
+            <div class="bordaTituloPost"></div>
+            <h1 class="textTituloPost">Veja as principais informações sobre</br> o mundo da maquiagem</h1>
+        </div>
+
+        <div class="postsContainer">
+            <div class="boxPost">
+                <div class="boxBorda">
+                    <div class="bordaConteudoPost"></div>
+                </div>
+                <div class="titlePost">
+                    <h1>Título do Post</h1>
+                </div>
+                <div class="imagemPost">
+                    <img class="imagemPostContent" src="./imagem/post1.jpg" />
+                </div>
+                <div class="descricaoPost">
+                    <h1>Essa é uma descrição do post, algumas informaçoes breves</h1>
+                </div>
+                <div class="textPost">
+                    <p>It is a long established fact that a reader will be distracted by the readable
+                        content of a page when looking at its layout. The point of using Lorem Ipsum is
+                        that it has a more-or-less normal distribution of letters, as opposed to using
+                        'Content here, content here', making it look like readable English. Many desktop
+                        publishing packages and web page editors now use Lorem Ipsum as their default model
+                        text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+                        Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                        (injected humour and the like).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="postsContainer">
+            <div class="boxPost">
+                <div class="boxBorda">
+                    <div class="bordaConteudoPost"></div>
+                </div>
+                <div class="titlePost">
+                    <h1>Título do segundo Post</h1>
+                </div>
+                <div class="imagemPost">
+                    <img class="imagemPostContent" src="./imagem/post1.jpg" />
+                </div>
+                <div class="descricaoPost">
+                    <h1>Essa é outra descrição do post, algumas informaçoes breves</h1>
+                </div>
+                <div class="textPost">
+                    <p>It is a long established fact that a reader will be distracted by the readable
+                        content of a page when looking at its layout. The point of using Lorem Ipsum is
+                        that it has a more-or-less normal distribution of letters, as opposed to using
+                        'Content here, content here', making it look like readable English. Many desktop
+                        publishing packages and web page editors now use Lorem Ipsum as their default model
+                        text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+                        Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                        (injected humour and the like).</p>
+                </div>
+            </div>
+        </div>
+
+        @if(empty(Auth::user()->name))
+        <div class="containerSubHeader containerSubPub">
+            <div class="containerSubHeaderLeft containerSubHeaderLeftLast">
+                <div class="textContainerSubHeader">
+                    <h1 class="textContentSubHeader">Novo aqui?</h1>
+                    <h1 class="text2ContentSubHeader">Faça seu cadastro e fique por dentro das novidades</h1>
+                    <button class="buttonConheca buttonSubCadastro">Cadastrar-se</button>
+                </div>
+            </div>
+        </div>
+        @endif
+    </div>
+
+
+
+    <div class="borderFooter">
+        <div class="borderBottom"></div>
+    </div>
+    <div class="footer">
+        
+        <div class="contentFooter">
+            <ul>
+                <li>COMPANY</li>
+                <li>About us</li>
+                <li>Careers</li>
+                <li>Terms</li>
+                <li>Privacy</li>
+                <li>Interest Based Ads</li>
+                <li>Interest Based Ads</li>
+                <li>Ad Preferences</li>
+                <li>Help</li>
+            </ul>
+            <ul>
+                <li>WORK WITH US</li>
+                <li>Authors</li>
+                <li>Advertise</li>
+                <li>Authors & ads blog</li>
+                <li>API</li>
+            </ul>
+            <ul>
+                <li>CONNECT</li>
+                <div class="ulSocial">
+                    <li class="liFirstSocial"><img src="img/instagram.png"/></li>
+                    <li class="liSecondSocial"><img src="img/twitter.png"/></li>
+                    <li><img src="img/facebook.png"/></li>
+                </div>
+            </ul>
+        </div>
+
+        <div class="rightFooter">
+            <ul>
+                <div class="ulSocialFooter">
+                    <li class="liFirstSocial">© Ambiente Consultoria - Todos os direitos reservados<br/</li>
+                    <li class="liSecondSocial"></li>
+                    <li></li>
+                </div>
+            </ul>
         </div>
     </div>
-    <hr class="Separacao">
-    <div class="containerCadastro">
-        <div class="imageminicial">
-            <figure>
-                <img src="img/inicial.png">
-            </figure>
-        </div>
-        <!-- <div class="novasContas">
-            <h2>Novo Aqui? Cria sua conta gratuíta</h2>
-            <input type="text" placeholder="Nome"> <br>
-            <input type="email" placeholder="E-mail"> <br>
-            <input type="password" placeholder="Senha"> <br>
-            <button class="buttonCadastra">Cadastrar</button>
-            <div class="termos">By clicking “Sign up” I agree to the Goodreads Terms of Service and confirm that I am at least 13 years old.</div>
-        </div> -->
-    </div>
 
-    <div class="conteudoPagina">
-        <div id="esquerda" class="esquerda"></div>
-        <div id="direita" class="direita"></div>
-        <div id="grid1" class="grid1">
-            <h2><b>
-                    <center>12th Annual Goodreads Choice Awards</center>
-                </b>
-            </h2>
-            <center>See the winners in the only major book awards decided by readers.<center>
-                    <center><button class="buttonConteudo">See the winners</button></center>
-                    <div class="links">
-                        <li><a href="#">Best Fiction</a></li>
-                        <li><a href="#">Best Romance</a></li>
-                        <li><a href="#">Best Science Fiction</a></li>
-                        <li><a href="#">Best Mystery & Thriller</a></li>
-                        <li><a href="#">Best Nonfiction</a></li>
-                        <li><a href="#">Best Humor</a></li>
-                        <li><a href="#">Best Fantasy</a></li>
-                        <li><a href="#">Best Young Adult Fiction</a></li>
-                        <li><a href="#">Best Historical Fiction</a></li>
-                    </div>
-        </div>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
 
-        <div id="grid2" class="grid2">
-            <!-- <h3>News & Interviews</h3></br>
-            <p><a href="#">27 New Dystopian Novels for Your Post-Apocalyptic Reading List</a></p>
-            <figure>
-                <a href="#"><img src="img/logo.png" alt="Minha Figura">
-            </figure>
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
 
-            <div class="list">
-                <h2>Love lists?<h2></br>
-                        <div class="listTeaser">
-                            <a href="#">Best Books of the 20th Century</a>
-                        </div>
-            </div> -->
-        </div>
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
 
-        <div id="grid3" class="grid3">
-            <div class="boxEsquerda">
-                <h3>Deciding what to read next?</h3>
-                <p>You’re in the right place. Tell us what titles or genres you’ve enjoyed in the past, and we’ll give you surprisingly insightful recommendations.</p>
-            </div>
-            <div class="boxDireita">
-                <h3>What are your friends reading?</h3>
-                <p>Chances are your friends are discussing their favorite (and least favorite) books on Goodreads.</p>
-            </div>
-        </div>
-        <div id="grid4" class="grid4">
-            Search and browse books
-            <input type="text" id="pesquisa" placeholder="Title / Author / ISBN">
-        </div>
-        <div class="boxPesquisar">
-            <div class="left" style="width: 25%">
-                <a class="links" href="/genres/art">Art</a><br>
+        var slideIndex = 0;
+        carousel();
 
-                <a class="links" href="/genres/biography">Biography</a><br>
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {
+                slideIndex = 1
+            }
+            x[slideIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000); // Change image every 2 seconds
+        }
+    </script>
 
-                <a class="links" href="/genres/business">Business</a><br>
-
-                <a class="links" href="/genres/children-s">Children&#39;s</a><br>
-
-                <a class="links" href="/genres/christian">Christian</a><br>
-
-                <a class="links" href="/genres/classics">Classics</a><br>
-
-                <a class="links" href="/genres/comics">Comics</a><br>
-
-                <a class="links" href="/genres/cookbooks">Cookbooks</a><br>
-            </div>
-            <div class="left" style="width: 25%">
-                <a class="links" href="/genres/ebooks">Ebooks</a><br>
-
-                <a class="links" href="/genres/fantasy">Fantasy</a><br>
-
-                <a class="links" href="/genres/fiction">Fiction</a><br>
-
-                <a class="links" href="/genres/graphic-novels">Graphic Novels</a><br>
-
-                <a class="links" href="/genres/historical-fiction">Historical Fiction</a><br>
-
-                <a class="links" href="/genres/history">History</a><br>
-
-                <a class="links" href="/genres/horror">Horror</a><br>
-
-                <a class="links" href="/genres/memoir">Memoir</a><br>
-
-            </div>
-            <div class="left" style="width: 25%">
-                <a class="links" href="/genres/music">Music</a><br>
-
-                <a class="links" href="/genres/mystery">Mystery</a><br>
-
-                <a class="links" href="/genres/non-fiction">Nonfiction</a><br>
-
-                <a class="links" href="/genres/poetry">Poetry</a><br>
-
-                <a class="links" href="/genres/psychology">Psychology</a><br>
-
-                <a class="links" href="/genres/romance">Romance</a><br>
-
-                <a class="links" href="/genres/science">Science</a><br>
-
-                <a class="links" href="/genres/science-fiction">Science Fiction</a><br>
-
-            </div>
-            <div class="left" style="width: 25%">
-                <a class="links" href="/genres/self-help">Self Help</a><br>
-
-                <a class="links" href="/genres/sports">Sports</a><br>
-
-                <a class="links" href="/genres/thriller">Thriller</a><br>
-
-                <a class="links" href="/genres/travel">Travel</a><br>
-
-                <a class="links" href="/genres/young-adult">Young Adult</a><br>
-
-                <a class="links" href="/genres">More genres</a>
-
-            </div>
-        </div>
-
-    </div>
-    <footer>
-        <div class="footer">
-            <div class="contentFooter">
-                <ul>
-                    <li>COMPANY</li>
-                    <li>About us</li>
-                    <li>Careers</li>
-                    <li>Terms</li>
-                    <li>Privacy</li>
-                    <li>Interest Based Ads</li>
-                    <li>Interest Based Ads</li>
-                    <li>Ad Preferences</li>
-                    <li>Help</li>
-                </ul>
-                <ul>
-                    <li>WORK WITH US</li>
-                    <li>Authors</li>
-                    <li>Advertise</li>
-                    <li>Authors & ads blog</li>
-                    <li>API</li>
-                </ul>
-                <ul>
-                    <li>CONNECT</li>
-                    <div class="ulSocial">
-                        <li class="liFirstSocial"><img src="imagem/instagram.png" /></li>
-                        <li class="liSecondSocial"><img src="imagem/twitter.png" /></li>
-                        <li><img src="imagem/facebook.png" /></li>
-                    </div>
-                </ul>
-            </div>
-
-            <div class="rightFooter">
-                <ul>
-                    <div class="ulSocialFooter">
-                        <li class="liFirstSocial">© Ambiente Consultoria - Todos os direitos reservados<br/ </li> <li class="liSecondSocial"></li>
-                        <li></li>
-                    </div>
-                </ul>
-            </div>
-        </div>
-    </footer>
 
 </body>
 

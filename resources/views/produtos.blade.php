@@ -31,6 +31,7 @@
                     </div>
                     
                     <div id="{{$p->id}}" name="produto" class="textCardWinner">
+                        <p id="cod_prod" name="cod_prod">{{$p->id}}</p>
                         <h1 class="h1TextCardWinner">{{$p->produto}}</h1>
                         <h2 class="h2TextCardWinner">{{$p->descricao}}</h2>
                         <p class="pTextCardWinner">{{$p->texto_prod}}</p>
@@ -56,18 +57,19 @@
                             <h3 class="avaliarTexto">Avaliar esse produto</h3>
                         </div>
                     </div>
-                    @endforeach
-                </div>
-
-                <div class="containerComents">
-
-                    <div class="writeComent">
-                        <form method="post"  action="{{route('comentarios.comentario')}}" >
-                            <h1 class="writeText">Comentar</h1>
-                            <textarea id="comentar" name="comentar" class="textArea"></textarea>
-                            <button  class="buttonLerMais" type="submit">enviar</button>
-                        </form>
                     </div>
+
+                        <div class="containerComents">
+                            
+                            <div class="writeComent">
+                                <form method="post" action="{{route('comentarios.comentario')}}" >
+                                    <h1 class="writeText">Comentar</h1>
+                                    <textarea id="comentar" name="comentar" class="textArea"></textarea>
+                                    <button  class="buttonLerMais" type="submit">enviar</button>
+                                </form>
+                            </div>      
+                    @endforeach
+
 
                     <div class="comentBox">
                         <div class="imgBox">

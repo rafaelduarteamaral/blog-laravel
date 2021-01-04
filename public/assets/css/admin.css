@@ -54,7 +54,7 @@ body {
     font-size: 19px;
     font-weight: 450;
     text-decoration: none;
-    color: #111;
+    color: rgb(39, 39, 39);
 }
 
 .optionHeader:hover {
@@ -190,6 +190,11 @@ body {
         height: 175px;
     }
 
+    .inputCategoria {
+      width: 80% !important;
+      margin-left: 15px !important;
+    }
+
 }
 
 
@@ -270,7 +275,7 @@ body {
       height: 60%;
   }
   
-  .close {
+  .close{
     color: #aaaaaa;
     float: right;
     font-size: 28px;
@@ -322,7 +327,6 @@ body {
 .titleTable {
     display: flex;
     justify-content: center;
-    width: 40%;
     border-bottom: 2px solid #FFDD8D;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -368,6 +372,10 @@ body {
     height: 4vh;
     width: 90%;
     outline-color: #FFDD8D;
+}
+
+.select:hover {
+  cursor: pointer;
 }
 
 .textArea {
@@ -452,8 +460,21 @@ body {
 
 .textDescricaoPreview {
     color: rgb(150, 150, 150);
-
 }
+
+.cadastrarCategoria {
+    width: 90%;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #FFDD8D;
+    margin-bottom: 20px;
+}
+
+.cadastrarCategoria:hover {
+    cursor: pointer;
+}
+
+
 
 
 /* MODEL CADASTRAR CATEGORIA */
@@ -491,7 +512,6 @@ body {
   font-size: 28px;
   font-weight: bold;
 }
-
 
 .close:hover,
 .close:focus {
@@ -542,18 +562,6 @@ body {
   outline-color: #FFDD8D;
 }
 
-.cadastrarCategoria {
-  width: 90%;
-  height: 25px;
-  border-radius: 5px;
-  border: 1px solid #FFDD8D;
-  margin-bottom: 20px;
-  margin-left: 5%;
-}
-
-.cadastrarCategoria:hover {
-  cursor: pointer;
-}
 
 
 

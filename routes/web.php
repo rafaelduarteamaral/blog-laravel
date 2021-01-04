@@ -15,6 +15,12 @@ Route::get('/admin', function () {
 })->middleware(['auth'])->name('dashboard');
 
 
+Route::get('/usuarioPerfil', function () {
+   return view('usuarioPerfil');
+})->middleware(['auth'])->name('dashboard');
+
+
+
 Route::get('/admin_produtos', function () {
    return view('admin_produtos');
 })->middleware(['auth'])->name('adminProdutos');
@@ -30,7 +36,7 @@ Route::get('/produtos', function () {
 
 Route::get('/adminUsuarios', [\App\Http\Controllers\UserController::class, 'buscarUsuarios']);
 Route::post('/admin_produtos', [\App\Http\Controllers\ProdutosController::class, 'inserir'])->middleware(['auth'])->name('produtos.inserir');
-Route::get('', [\App\Http\Controllers\CategoriaController::class, 'getCategoria'])->middleware(['auth'])->name('categoria.categoria');
+// Route::get('', [\App\Http\Controllers\CategoriaController::class, 'getCategoria'])->middleware(['auth'])->name('categoria.categoria');
 Route::get('/produtos_cadastrados', [\App\Http\Controllers\ProdutosController::class, 'buscarProdutosTabela'])->middleware(['auth'])->name('produtos.buscar');
 Route::post('/admin_publicacoes', [\App\Http\Controllers\PublicacoesController::class, 'inserir'])->middleware(['auth'])->name('publicacoes.inserir');
 Route::post('/produtos', [\App\Http\Controllers\ComentariosController::class, 'comentario'])->middleware(['auth'])->name('comentarios.comentario');
