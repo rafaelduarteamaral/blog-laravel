@@ -17,6 +17,9 @@
 
 <body>
 @include('layouts.admin_header');
+ 
+<div class="containerContent">
+        <div class="boxContent">
             <div class="tableContainer">
                 <div class="tableBox">
                     <table id="table_id">
@@ -44,15 +47,17 @@
                     </table>
                 </div>
             </div>
-    </div>
+        </div>
+</div>
 
-    <div id="mySidenav" class="sidenav">
+<div id="mySidenav" class="sidenav">
         <a class="linkMobile" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a class="linkMobile" href="/admin_produtos">Produtos</a>
-        <a class="linkMobile" href="/produtos_cadastrados">Lista de Produtos</a>
+        <a class="linkMobile" href="/produtos_cadastrados">Prod. Cadastrados</a>
         <a class="linkMobile" href="/user">Usuários</a>
-        <a class="linkMobile" href="/adminPublicacoers">Publicações</a>
-        <a class="linkMobile" href="/logout">Sair</a>
+        <a class="linkMobile" href="/admin_publicacoes">Publicações</a>
+        <a class="linkMobile" href="/">Site</a>
+        <a class="linkMobile" href="#">Sair</a>
     </div>
 
     <script>

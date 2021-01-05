@@ -4,8 +4,8 @@
         <a href="/">Home</a>
         <a href="/catalogo">Produtos</a>
         <input type="text" placeholder="Buscar" />
-        <button class="buttonHeader">{{ Auth::user()->name }}</button>
-        <form method="POST" action="{{ route('logout') }}">
+        <a href="/usuarioPerfil"> <button class="buttonHeader">{{ Auth::user()->name }}</button> </a>
+        <form class="formMargin"  method="POST" action="{{ route('logout') }}">
                 @csrf
                 <x-responsive-nav-link class="buttonHeader" :href="route('logout')"
                         onclick="event.preventDefault();

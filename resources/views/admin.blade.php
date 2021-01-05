@@ -27,11 +27,6 @@
                 </div>
                 <div class="quantidade">
                     <span class="linhaTop"></span>
-                    <h1 class="titleQuantidade">Logins (24hrs)</h1>
-                    <p class="valueQuantidade">41</p>
-                </div>
-                <div class="quantidade">
-                    <span class="linhaTop"></span>
                     <h1 class="titleQuantidade">Total Comentários</h1>
                     <p class="valueQuantidade">1844</p>
                 </div>
@@ -63,9 +58,11 @@
     
     <div id="mySidenav" class="sidenav">
         <a class="linkMobile" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a class="linkMobile" href="#">Produtos</a>
-        <a class="linkMobile" href="#">Usuários</a>
-        <a class="linkMobile" href="#">Publicações</a>
+        <a class="linkMobile" href="/admin_produtos">Produtos</a>
+        <a class="linkMobile" href="/produtos_cadastrados">Prod. Cadastrados</a>
+        <a class="linkMobile" href="/user">Usuários</a>
+        <a class="linkMobile" href="/admin_publicacoes">Publicações</a>
+        <a class="linkMobile" href="/">Site</a>
         <a class="linkMobile" href="#">Sair</a>
     </div>
 

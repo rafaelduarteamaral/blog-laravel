@@ -18,7 +18,7 @@
                 <div class="textContainerSubHeader">
                     <h1 class="textContentSubHeader">Conheça os melhores produtos do mercado</h1>
                     <h1 class="text2ContentSubHeader">Com avaliações de clientes</h1>
-                    <button class="buttonConheca">conheça</button>
+                    <a href="/catalogo"><button class="buttonConheca">conheça</button></a>
                 </div>
             </div>
             <div class="containerSubHeaderRight">
@@ -104,7 +104,7 @@
                 <div class="textContainerSubHeader">
                     <h1 class="textContentSubHeader">Novo aqui?</h1>
                     <h1 class="text2ContentSubHeader">Faça seu cadastro e fique por dentro das novidades</h1>
-                    <button class="buttonConheca buttonSubCadastro">Cadastrar-se</button>
+                    <a href="/register"><button class="buttonConheca buttonSubCadastro">Cadastrar-se</button></a>
                 </div>
             </div>
         </div>

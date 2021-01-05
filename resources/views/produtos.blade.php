@@ -77,7 +77,7 @@
                             <h1 class="nameComent">Isabela</h1>
                         </div>  
                         <div class="textBox">
-                            <p class="coment">Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias</p>
+                            <p class="coment">Produto muito bom, Produto muito bom, Produto muito bom, Produto muito bom</p>
                         </div>
                         <div class="likesBox">
                             <a class="curtidas" onclick="curtidas(7)">Curtir</a>
@@ -94,7 +94,7 @@
                             </div>
                         </div>  
                         <div class="textBox">
-                            <p class="coment">Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias</p>
+                            <p class="coment">Produto muito bom, Produto muito bom, Produto muito bom, Produto muito bom</p>
                         </div>
                         <div class="likesBox">
                             <a class="curtidas" onclick="curtidas(32)">Curtir</a>
@@ -110,7 +110,7 @@
                             </div>
                         </div>  
                         <div class="textBox">
-                            <p class="coment">Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias</p>
+                            <p class="coment">Produto muito bom, Produto muito bom, Produto muito bom, Produto muito bom</p>
                         </div>
                         <div class="likesBox">
                             <a class="curtidas" onclick="curtidas(12)">Curtir</a>
@@ -126,7 +126,7 @@
                             </div>
                         </div>  
                         <div class="textBox">
-                            <p class="coment">Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias</p>
+                            <p class="coment">Produto muito bom, Produto muito bom, Produto muito bom, Produto muito bom</p>
                         </div>
                         <div class="likesBox">
                             <a class="curtidas" onclick="curtidas(2)">Curtir</a>
@@ -142,7 +142,7 @@
                             </div>
                         </div>  
                         <div class="textBox">
-                            <p class="coment">Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias</p>
+                            <p class="coment">Produto muito bom, Produto muito bom, Produto muito bom, Produto muito bom</p>
                         </div>
                         <div class="likesBox">
                             <a class="curtidas" onclick="curtidas(15)">Curtir</a>
@@ -158,7 +158,7 @@
                             </div>
                         </div>  
                         <div class="textBox">
-                            <p class="coment">Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias</p>
+                            <p class="coment">Produto muito bom, Produto muito bom, Produto muito bom, Produto muito bom</p>
                         </div>
                         <div class="likesBox">
                             <a class="curtidas" onclick="curtidas(15)">Curtir</a>
@@ -174,7 +174,7 @@
                             </div>
                         </div>  
                         <div class="textBox">
-                            <p class="coment">Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias, Produto pika das galaxias</p>
+                            <p class="coment">Produto muito bom, Produto muito bom, Produto muito bom, Produto muito bom</p>
                         </div>
                         <div class="likesBox">
                             <a class="curtidas" onclick="curtidas(11)">Curtir</a>

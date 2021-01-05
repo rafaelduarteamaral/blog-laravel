@@ -12,8 +12,8 @@
             <div class="rightMenu">
                 @if(!empty(Auth::user()->name))
                 <div class="buttonLogin">
-                    <button class="buttonGustavo">{{ Auth::user()->name }}</button>
-                    <img src="./imagem/user.png"/>
+                <a href="/usuarioPerfil" ><p class="buttonGustavo">{{ Auth::user()->name }}</p></a>
+
                 </div>
 
                 <form class="formMargin" method="POST" action="{{ route('logout') }}">

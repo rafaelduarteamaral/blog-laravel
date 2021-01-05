@@ -3,27 +3,16 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/style.css')}}">
     <script type="text/javascript" src="path_to/jquery.js"></script>
     <script type="text/javascript" src="path_to/jquery.simplePagination.js"></script>
 </head>
 
 <body>
-    <div class='headerProdutos'>
-        <div class='headerConteudo'>
-            <img class="logo" src="imagem//logo.png"><img />
-            <a class="home">Home</a>
-            <a class="books">Produtos</a>
-            <input type="text" placeholder="Buscar" />
-            <button class="buttonHeader">Sign In</button>
-            <button class="buttonHeader">Join</button>
-            <button class="mobileOpen" onclick="openNav()"><img src="imagem/menu.png" /></button>
-        </div>
-    </div>
-
+    @include('layouts.navigation')
     <div id="mySidenav" class="sidenav">
         <a class="linkMobile" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a class="linkMobile" href="#">Home</a>
+        <a class="linkMobile" href="/">Home</a>
         <a class="linkMobile" href="#">My Books</a>
         <a class="linkMobile" href="#">Browse</a>
         <a class="linkMobile" href="#">Community</a>
@@ -32,32 +21,32 @@
     <div class="containerFundo">
         <div class="containerContent">
             <div class="sideContainerContent">
-                <span class="itemImg"><img class="imgSide" src="imagem/principal.jpg" /></span>
+                <span class="itemImg"><img class="imgSide" src="{{URL::asset('imagem/principal.jpg')}}" /></span>
             </div>
             <div class="listaContainerContent">
                 <div class="voltarBox">
-                    <a class="linkButton" href="books.blade.html"><button class="buttonVoltar"><img src="imagem/retorna.png" /><span class="textButton">voltar</span></button></a>
+                    <a class="linkButton" href="/catalogo"><button class="buttonVoltar"><img src="imagem/retorna.png" /><span class="textButton">voltar</span></button></a>
                 </div>
 
                 <div class="boxProfile">
                     <div class="boxProfileLeft">
                         <div class="imgProfile">
-                            <img class="imgProfileElement" src="./imagem/CAPTURAR.PNG" />
+                            <img class="imgProfileElement" src="{{URL::asset('imagem/gustavo.jpg')}}" />
                         </div>
                         <button type="file" class="alterarImagem" id="myBtn">Alterar Imagem</button>
                     </div>
                     <div class="boxProfileRight">
                         <h2 class="titleInput">Nome</h2>
                         <span class="lineProfile">
-                            <p class="nome">Gabriel Pinheiro</p><img src="./imagem/editar.png" />
+                            <p class="nome">Gustavo</p>
                         </span>
                         <h2 class="titleInput">Email</h2>
                         <span class="lineProfile">
-                            <p class="nome">gabriel@hotmail.com</p><img src="./imagem/editar.png" />
+                            <p class="nome">gustavo@hotmail.com</p>
                         </span>
                         <h2 class="titleInput">Data Nascimento</h2>
                         <span class="lineProfile">
-                                <p class="nome">20/08/1998</p><img src="./imagem/editar.png"/>
+                                <p class="nome">13/01/1998</p>
                         </span>
                     </div>
                 </div>

@@ -3,12 +3,17 @@
             <div class="headerContent">
                 <div class="leftContent">
                     <h1 class="titleLeft">ADMIN Blog</h1>
+                    <div class="buttonLogin" style="text-align:center">
+                    <a href="/usuarioPerfil" ><p class="buttonGustavo">{{ Auth::user()->name }}</p></a>
+                </div>
                 </div>
                 <div class="rightContent">
                     <a href="/admin_produtos" class="optionHeader">Produtos</a>
-                    <a href="/produtos_cadastrados" class="optionHeader">Prod. Cadastrados</a>
+                    <a href="/produtos_cadastrados" class="optionHeader">Cadastrados</a>
                     <a href="/user" class="optionHeader">Usuarios</a>
                     <a href="/adminPublicacoes" class="optionHeader">Publicacoes</a>
+                <a href="/" class="optionHeader">Site</a>
+
                 <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <x-responsive-nav-link class="optionHeader" :href="route('logout')"
