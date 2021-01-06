@@ -28,28 +28,31 @@
                     <a class="linkButton" href="/catalogo"><button class="buttonVoltar"><img src="imagem/retorna.png" /><span class="textButton">voltar</span></button></a>
                 </div>
 
+
+
                 <div class="boxProfile">
-                    <div class="boxProfileLeft">
-                        <div class="imgProfile">
-                            <img class="imgProfileElement" src="{{URL::asset('imagem/gustavo.jpg')}}" />
-                        </div>
-                        <button type="file" class="alterarImagem" id="myBtn">Alterar Imagem</button>
-                    </div>
                     <div class="boxProfileRight">
-                        <h2 class="titleInput">Nome</h2>
-                        <span class="lineProfile">
-                            <p class="nome">Gustavo</p>
-                        </span>
-                        <h2 class="titleInput">Email</h2>
-                        <span class="lineProfile">
-                            <p class="nome">gustavo@hotmail.com</p>
-                        </span>
-                        <h2 class="titleInput">Data Nascimento</h2>
-                        <span class="lineProfile">
-                                <p class="nome">13/01/1998</p>
-                        </span>
+                        <form action="{{route('usuario.atualizar')}}" method="post" enctype="multipart/form-data">
+                            <h2 class="titleInput">Nome</h2>
+                            <span class="lineProfile">
+                                <input class="inputProfile" value="{{$usuarios['name']}}" name="nome_usuario" id="inputName" disabled/>
+                                <img onclick="ativaInputName()" src="{{URL::asset('imagem/editar.png')}}"/>
+                            </span>
+                            <h2 class="titleInput">Email</h2>
+                            <span class="lineProfile">
+                                <input class="inputProfile" value="{{$usuarios['email']}}" name="email_usuario" id="inputEmail" disabled/>
+                                <img onclick="ativaInputEmail()" src="{{URL::asset('imagem/editar.png')}}"/>
+                            </span>
+                            <h2 class="titleInput">Foto</h2>
+                            <div class="imgProfile">
+                                <img class="imgProfileElement" src="{{ asset("img/{$usuarios->imagem}") }}" />
+                            </div>  
+                            <input class="inputFile" type="file" name= "imagem" id="imagem" >
+                            <button class="buttonEnviarAlteracao" id="buttonEnviarAlteracao" style="display: none;">Enviar</button>
+                        </form>
                     </div>
                 </div>
+
 
 
                 <div class=espacoFim>
@@ -155,6 +158,29 @@
             if (event.target == modal) {
                 modal.style.display = "none";
             }
+        }
+
+        var input = document.getElementById("inputName")
+
+        function ativaInputName() {
+            document.getElementById("inputName").disabled = false;
+            document.getElementById("inputName").style.background = '#fff8e9';
+            document.getElementById("buttonEnviarAlteracao").style.display = 'block';
+
+        }
+
+        
+        function ativaInputEmail() {
+            document.getElementById("inputEmail").disabled = false;
+            document.getElementById("inputEmail").style.background = '#fff8e9';
+            document.getElementById("buttonEnviarAlteracao").style.display = 'block';
+        }
+
+        
+        function ativaInputData() {
+            document.getElementById("inputData").disabled = false;
+            document.getElementById("inputData").style.background = '#fff8e9';
+            document.getElementById("buttonEnviarAlteracao").style.display = 'block';
         }
     </script>
 </body>

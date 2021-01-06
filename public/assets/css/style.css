@@ -591,7 +591,26 @@ li:first-child {
         width: 80% !important;
     } */
 }
+.inputProfile {
+    border: none !important;
+}
 
+.buttonEnviarAlteracao {
+    background: rgb(97, 194, 97);
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100px;
+    height: 25px;
+    
+}
+
+.buttonEnviarAlteracao:hover {
+    cursor: pointer;
+} 
+  
+  
 
 /* --------- SIDE MENU ---------- */
 
@@ -802,6 +821,7 @@ li:first-child {
   .imgProfileElement {
     border-radius: 50%;
     width: 90%;
+    height: 90%;
   }
 
   .alterarImagem {
@@ -928,10 +948,25 @@ li:first-child {
   
   .inputFile {
       border: none;
-      margin-left: 25%;
+      margin-top: 15px;
   }
 
   .titleInput {
       color: rgb(102, 100, 100);
       font-size: 18px;
+  }
+
+  .buttonLogar {
+      border: none !important;
+      border-radius: 5px !important;
+      width: 150px !important;
+      height: 25px !important;
+      background: #FFFFFF !important;
+  }
+
+  .BoxInputsLogin {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
   }

@@ -2,9 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-   return view('index');
-});
 
 Route::get('/catalogo', function () {
    return view('catalogo');
@@ -14,10 +11,6 @@ Route::get('/admin', function () {
    return view('admin');
 })->middleware(['auth'])->name('dashboard');
 
-
-Route::get('/usuarioPerfil', function () {
-   return view('usuarioPerfil');
-})->middleware(['auth'])->name('dashboard');
 
 
 
@@ -45,7 +38,12 @@ Route::get('/user', [\App\Http\Controllers\UserController::class, 'buscarUsuario
 Route::post('', [\App\Http\Controllers\CategoriaController::class, 'categoria'])->middleware(['auth'])->name('inserir.categoria');
 Route::get('/catalogo', [\App\Http\Controllers\ProdutosController::class, 'buscarProdutos'])->middleware(['auth'])->name('produtos.buscar');
 Route::get('/categoria/{id}', [\App\Http\Controllers\CategoriaController::class, 'selectCategoria'])->middleware(['auth'])->name('categoria.buscar');
+// Route::post('/comentarios', [\App\Http\Controllers\ComentariosController::class, 'curtidas'])->middleware(['auth'])->name('curtidas.inserir');
 // Route::get('/catalogo', [\App\Http\Controllers\CategoriaController::class, 'buscarUsuarios'])->middleware(['auth'])->name('visualizar.categoria');
-
-
+Route::get('/usuarioPerfil', [\App\Http\Controllers\UserController::class, 'getUsuarios'])->middleware(['auth'])->name('usuario.atualizar');
+Route::post('/usuarioPerfil/', [\App\Http\Controllers\UserController::class, 'updateUsuarios'])->middleware(['auth'])->name('usuario.atualizar');
+Route::get('/', [\App\Http\Controllers\PublicacoesController::class, 'getPublicacoes'])->middleware(['auth'])->name('publicacoes.buscar');
+Route::delete('/produtos_cadastrados/{id}', [\App\Http\Controllers\ProdutosController::class, 'deletarProduto'])->middleware(['auth'])->name('excluir.produto');
+Route::get('/publicacoes_cadastradas', [\App\Http\Controllers\PublicacoesController::class, 'buscarPublicacoesTabela'])->middleware(['auth'])->name('publicacoes.buscar');
+Route::delete('/publicacoes_cadastradas/{id}', [\App\Http\Controllers\PublicacoesController::class, 'deletarPublicacao'])->middleware(['auth'])->name('excluir.publicacoes');
 require __DIR__ . '/auth.php';

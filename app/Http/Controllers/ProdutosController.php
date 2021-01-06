@@ -17,8 +17,9 @@ class ProdutosController extends Controller
             $categoria      =    $req->input('categoria');
 
             if ($req->hasFile('imagem')) {
-                $path = $req->file('imagem')->store('', 'imagem');
+                $path = $req->file('imagem')->store('', 'imagemPublicacao');
             }
+
             $produto = new Produtos();
                 $produto->produto = $nome_prod;
                 $produto->descricao = $descricao;
@@ -46,6 +47,12 @@ class ProdutosController extends Controller
     public function buscarProdutosTabela(){
         $data = Produtos::all();
         return view('produtos_cadastrados', ['produtos'=>$data]);
+    }
+
+    public function deletarProduto($id){
+        $id = Produtos::findorfail($id);
+        $id->delete();
+        return redirect('produtos_cadastrados');
     }
 
     public function getProduto($id){

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use App\Models\user;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -14,40 +15,29 @@ class UserController extends Controller
         return view('user', ['usuarios'=>$data]);
     }
     
-    // public function login(Request $request){
+    public function getUsuarios(){
+        $data = auth::user();
+        return view('usuarioPerfil', ['usuarios'=>$data]);
 
-    //     $email = $request->email;
-    //     $password = $request->password;
+    }
 
-    //     $usuarios = user::where('email', '=', "$email")->where('password', '=', "$password")->first();
-    //     if(@$usuarios->id != null){
+    public function updateUsuarios(Request $req){
+        $user = User::find(Auth::user()->id);
 
-    //         @session_start();
-    //         $_SESSION['id'] = $usuarios->id;
-    //         $_SESSION['email'] = $usuarios->email;
-    //         $_SESSION['level'] = $usuarios->level;
-    //         $_SESSION['name'] = $usuarios->name;
+
+            $user->name = $req['nome_usuario'];
+            $user->email = $req['email_usuario'];
             
+            if ($req->hasFile('imagem')) {
+                $path = $req->file('imagem')->store('', 'imagemUsuario');
+            }
+            $user->imagem = $path;
 
-    //         if($_SESSION['level'] == 'admin'){
-    //             return view('admin');
-    //         }
+            $user->save();
 
-    //         if($_SESSION['level'] == 'normal'){
-    //             return view('catalogo', $_SESSION);
-    //         }
-    //     }
-        
-    //     else {
-    //         return view('loginerro');
-    //     }
+            return redirect()->back();
 
+     }
+    
 
-    // }
-
-    // public function logout(){
-    //     @session_start();
-    //     @session_destroy();
-    //     return view('login');
-    // }
 }

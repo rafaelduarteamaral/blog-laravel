@@ -405,8 +405,9 @@ body {
 }
 
 .img {
-    width: 40%;
-    height: 65%;
+    width: 150px;
+    height: 100px;
+    margin-bottom: 10px;
 }
 
 .boxPreview {
@@ -436,6 +437,7 @@ body {
     font-size: 26px;
     color: #FFDD8D;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .imgPreview {
@@ -443,7 +445,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 60%;
-    height: 45%;
+    height: 40vh;
     border: 3px solid rgb(224, 224, 224);
     margin-bottom: 15px;
 }
@@ -562,13 +564,19 @@ body {
   outline-color: #FFDD8D;
 }
 
+.paragraph {
+  width: 90%;
+  flex-wrap: wrap;
+}
 
+.buttonExcluirProduto {
+  border: none;
+  background: rgb(29, 29, 29, 0.00000001);
+}
 
-
-
-
-
-
+.buttonExcluirProduto:hover {
+  cursor: pointer;
+}
 
 
 

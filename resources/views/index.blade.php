@@ -44,59 +44,36 @@
             <h1 class="textTituloPost">Veja as principais informações sobre</br> o mundo da maquiagem</h1>
         </div>
 
-        <div class="postsContainer">
-            <div class="boxPost">
-                <div class="boxBorda">
-                    <div class="bordaConteudoPost"></div>
-                </div>
-                <div class="titlePost">
-                    <h1>Título do Post</h1>
-                </div>
-                <div class="imagemPost">
-                    <img class="imagemPostContent" src="./imagem/post1.jpg" />
-                </div>
-                <div class="descricaoPost">
-                    <h1>Essa é uma descrição do post, algumas informaçoes breves</h1>
-                </div>
-                <div class="textPost">
-                    <p>It is a long established fact that a reader will be distracted by the readable
-                        content of a page when looking at its layout. The point of using Lorem Ipsum is
-                        that it has a more-or-less normal distribution of letters, as opposed to using
-                        'Content here, content here', making it look like readable English. Many desktop
-                        publishing packages and web page editors now use Lorem Ipsum as their default model
-                        text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
-                        Various versions have evolved over the years, sometimes by accident, sometimes on purpose
-                        (injected humour and the like).</p>
-                </div>
-            </div>
-        </div>
+        <?php 
+        $count = 0;
+        foreach($publicacoes as $p){ ?>
 
-        <div class="postsContainer">
-            <div class="boxPost">
-                <div class="boxBorda">
-                    <div class="bordaConteudoPost"></div>
-                </div>
-                <div class="titlePost">
-                    <h1>Título do segundo Post</h1>
-                </div>
-                <div class="imagemPost">
-                    <img class="imagemPostContent" src="./imagem/post1.jpg" />
-                </div>
-                <div class="descricaoPost">
-                    <h1>Essa é outra descrição do post, algumas informaçoes breves</h1>
-                </div>
-                <div class="textPost">
-                    <p>It is a long established fact that a reader will be distracted by the readable
-                        content of a page when looking at its layout. The point of using Lorem Ipsum is
-                        that it has a more-or-less normal distribution of letters, as opposed to using
-                        'Content here, content here', making it look like readable English. Many desktop
-                        publishing packages and web page editors now use Lorem Ipsum as their default model
-                        text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
-                        Various versions have evolved over the years, sometimes by accident, sometimes on purpose
-                        (injected humour and the like).</p>
+            <div class="postsContainer">
+                <div class="boxPost">
+                    <div class="boxBorda">
+                        <div class="bordaConteudoPost"></div>
+                    </div>
+                    <div class="titlePost">
+                        <h1>{{$p->titulo}}</h1>
+                    </div>
+                    <div class="imagemPost">
+                        <img class="imagemPostContent" src="{{ asset("img/{$p->imagem}") }}" />
+                    </div>
+                    <div class="descricaoPost">
+                        <h1>{{$p->descricao}}</h1>
+                    </div>
+                    <div class="textPost">
+                        <p>{{$p->texto}}</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        <?php $count++;
+             } ?>
+
+                    <div class="textPost">
+                        <a href="/blog"><p>VER MAIS PUBLICAÇÕES</p></a>
+                    </div>
+ 
 
         @if(empty(Auth::user()->name))
         <div class="containerSubHeader containerSubPub">

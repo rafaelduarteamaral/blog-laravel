@@ -41,14 +41,14 @@
                         </div>
                     </div>
                 <?php $count++;
-                    if ($count == 1) break;
+                    if ($count == 10) break;
                 } ?>
 
-                @foreach($catalogo as $cat)
+                <!-- @foreach($catalogo as $cat)
 
                 <th><a href="/produtos/{{$cat->id}}"><img id="/produtos/{{$cat->id}}" src="{{ asset("img/{$cat->imagem}") }}" width="200" height="200"></a></th>
                 @endforeach
-
+ -->
 
             </div>
         </div>

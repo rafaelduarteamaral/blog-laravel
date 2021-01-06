@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <!-- Created By CodingNepal -->
 <html lang="en" dir="ltr">
@@ -18,38 +16,40 @@
 </head>
 
 <body>
- @include('layouts.admin_header');
+    @include('layouts.admin_header');
 
     <div class="containerContent">
         <div class="boxContent">
-        <div>
-            <form method="post" class="formBox" action="{{route('produtos.inserir')}}" enctype="multipart/form-data">
-                @csrf
-                <div class="titleBox">
-                    <h1 class="title">Cadastrar Produto</h1>
-                </div>
-                <input id="produto_nome" name="produto_nome" type="text" class="input" placeholder="Nome">
-                <input id="descricao" name="descricao" type="text" class="input" placeholder="Descrição">
-                <select id="categoria" name="categoria" class="select">
-                    <option class="optionDisabled" selected disabled>Categoria</option>
-                    <option>Paleta</option>
-                    <?php 
-                    use App\Models\Categoria;
-                    $data = Categoria::all();
-                    foreach($data as $c){ ?>
-                    <option><?=$c->nome ?></option>
-                    <?php } ?>
-                </select>
-                <textarea class="textArea" name="texto_prod" cols="30" rows="10" placeholder="Texto Apresentação"></textarea>
-                <div class="imgProduto">
-                    <img src="imagem/foto.png" class="img" alt="" />
-                    <input type="file" id="imagem" name="imagem" class="input">
-                </div>
-                <button class="buttonEnviar" type="submit">Enviar</button>
-            </form>
-            <button class="cadastrarCategoria" id="myBtn">Cadastrar Nova Categoria</button>
+            <div>
+                <form method="post" class="formBox" action="{{route('produtos.inserir')}}" enctype="multipart/form-data">
+                    @csrf
+                    <div class="titleBox">
+                        <h1 class="title">Cadastrar Produto</h1>
+                    </div>
+                    <input id="produto_nome" name="produto_nome" type="text" class="input" placeholder="Nome">
+                    <input id="descricao" name="descricao" type="text" class="input" placeholder="Descrição">
+                    <select id="categoria" name="categoria" class="select">
+                        <option class="optionDisabled" selected disabled>Categoria</option>
+                        <option>Paleta</option>
+                        <?php
 
-        </div>
+                        use App\Models\Categoria;
+
+                        $data = Categoria::all();
+                        foreach ($data as $c) { ?>
+                            <option><?= $c->nome ?></option>
+                        <?php } ?>
+                    </select>
+                    <textarea class="textArea" name="texto_prod" cols="30" rows="10" placeholder="Texto Apresentação"></textarea>
+                    <div class="imgProduto">
+                        <img id="img_preview" src="" alt="Image Preview" class="img" />
+                        <input id="img_input" name="imagem" type="file" class="input">
+                    </div>
+                    <button class="buttonEnviar" type="submit">Enviar</button>
+                </form>
+                <button class="cadastrarCategoria" id="myBtn">Cadastrar Nova Categoria</button>
+
+            </div>
             <!-- The Modal -->
             <div id="myModal" class="modal">
                 <!-- Modal content -->
@@ -82,7 +82,7 @@
             document.getElementById("mySidenav").style.width = "0";
         }
 
-    
+
         // Get the modal
         var modal = document.getElementById("myModal");
 
@@ -108,6 +108,43 @@
                 modal.style.display = "none";
             }
         }
+
+
+
+        function ImagePreview(input) {
+
+            if (input.files && input.files[0]) {
+
+                var r = new FileReader();
+
+                r.onload = function(e) {
+                    $("#img_preview").show();
+                    $("#img_preview").attr("src", e.target.result);
+                }
+
+                r.readAsDataURL(input.files[0]);
+
+            }
+        }
+
+        $().ready(function() {
+
+            hide_empty_image = false;
+            set_blank_to_empty_image = false;
+            set_image_border = true;
+
+            if (hide_empty_image)
+                $("#img_preview").hide();
+
+            if (set_blank_to_empty_image)
+                $("#img_preview").attr("src", "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=");
+
+
+            $("#img_input").change(function() {
+                ImagePreview(this);
+            });
+
+        });
     </script>
 </body>
 

@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
@@ -6,6 +7,7 @@
     <script type="text/javascript" src="path_to/jquery.js"></script>
     <script type="text/javascript" src="path_to/jquery.simplePagination.js"></script>
 </head>
+
 <body>
 
     @include('layouts.navigation')
@@ -13,23 +15,23 @@
 
     <div class="containerFundo">
         <div class="containerContent">
-        <div class="sideContainerContent">
+            <div class="sideContainerContent">
                 <span class="itemImg"><img class="imgSide" src="{{URL::asset('imagem/principal.jpg')}}" /></span>
-        </div>
+            </div>
             <div class="listaContainerContent">
                 <div class="voltarBox">
-                    <a class="linkButton" href="/catalogo"><button class="buttonVoltar"><img src="{{URL::asset('imagem/retorna.png')}}"/><span class="textButton">voltar</span></button></a>
+                    <a class="linkButton" href="/catalogo"><button class="buttonVoltar"><img src="{{URL::asset('imagem/retorna.png')}}" /><span class="textButton">voltar</span></button></a>
                 </div>
                 <div class="titleContent">
                     <h1 class="titleText">Produto</h1>
                 </div>
                 <div class="cardWinner">
-                    
+
                     @foreach($produtos as $p)
                     <div class="imgCardWinner">
-                        <img src="{{ asset("img/{$p->imagem}") }}"  width="300" height="300"/>
+                        <img src="{{ asset("img/{$p->imagem}") }}" width="300" height="300" />
                     </div>
-                    
+
                     <div id="{{$p->id}}" name="produto" class="textCardWinner">
                         <p id="cod_prod" name="cod_prod">{{$p->id}}</p>
                         <h1 class="h1TextCardWinner">{{$p->produto}}</h1>
@@ -40,147 +42,54 @@
                         <!-- <button id="myBtn" class="buttonLerMais">ver mais</button> -->
                         <div class="starRate">
                             <a href="javascript:void(0)" onclick="Avaliar(1)">
-                            <img src="{{URL::asset('imagem/star0.png')}}" id="s1"></a>
-                                
+                                <img src="{{URL::asset('imagem/star0.png')}}" id="s1"></a>
+
                             <a href="javascript:void(0)" onclick="Avaliar(2)">
-                            <img src="{{URL::asset('imagem/star0.png')}}" id="s2"></a>
-                                
+                                <img src="{{URL::asset('imagem/star0.png')}}" id="s2"></a>
+
                             <a href="javascript:void(0)" onclick="Avaliar(3)">
-                            <img src="{{URL::asset('imagem/star0.png')}}" id="s3"></a>
-                                
+                                <img src="{{URL::asset('imagem/star0.png')}}" id="s3"></a>
+
                             <a href="javascript:void(0)" onclick="Avaliar(4)">
-                            <img src="{{URL::asset('imagem/star0.png')}}" id="s4"></a>
-                                
+                                <img src="{{URL::asset('imagem/star0.png')}}" id="s4"></a>
+
                             <a href="javascript:void(0)" onclick="Avaliar(5)">
-                            <img src="{{URL::asset('imagem/star0.png')}}" id="s5"></a>
-                            
+                                <img src="{{URL::asset('imagem/star0.png')}}" id="s5"></a>
+
                             <h3 class="avaliarTexto">Avaliar esse produto</h3>
                         </div>
                     </div>
-                    </div>
+                </div>
 
-                        <div class="containerComents">
-                            
-                            <div class="writeComent">
-                                <form method="post" action="{{route('comentarios.comentario')}}" >
-                                    <h1 class="writeText">Comentar</h1>
-                                    <textarea id="comentar" name="comentar" class="textArea"></textarea>
-                                    <button  class="buttonLerMais" type="submit">enviar</button>
-                                </form>
-                            </div>      
+                <div class="containerComents">
+                    <div class="writeComent">
+                        <form method="post" action="{{route('comentarios.comentario')}}">
+                            <input name="id" type="hidden" value="{{$p->id}}"></input>
+                            <h1 class="writeText">Comentar</h1>
+                            <textarea id="comentar" name="comentar" class="textArea"></textarea>
+                            <button class="buttonLerMais" type="submit">enviar</button>
+                        </form>
+                    </div>
                     @endforeach
 
 
                     <div class="comentBox">
                         <div class="imgBox">
-                            <img class="imgComent" src="imagem/Capturar.PNG"/>
+                            <img class="imgComent" src="imagem/Capturar.PNG" />
                             <h1 class="nameComent">Isabela</h1>
-                        </div>  
+                        </div>
                         <div class="textBox">
-                            <p class="coment">Produto muito bom, Produto muito bom, Produto muito bom, Produto muito bom</p>
+                            <p class="coment"></p>
                         </div>
                         <div class="likesBox">
-                            <a class="curtidas" onclick="curtidas(7)">Curtir</a>
-                            <span class="numCurtidas"><span id="num">7</span> curtidas</span>
-                                
+                            <form action="" method="post">
+                                <input type="number" name="curtida" />
+                                <buttom class="curtidas">Curtir</buttom>
+                                <span class="numCurtidas"><span id="num">7</span> curtidas</span>
+                            </form>
                         </div>
                     </div>
-                    <div class="comentBox">
-                        <div class="imgBox">
-                            <img class="imgComent" src="imagem/Capturar.PNG"/>
-                            <h1 class="nameComent">Bruna</h1>
-                            <div class="rateComent">
 
-                            </div>
-                        </div>  
-                        <div class="textBox">
-                            <p class="coment">Produto muito bom, Produto muito bom, Produto muito bom, Produto muito bom</p>
-                        </div>
-                        <div class="likesBox">
-                            <a class="curtidas" onclick="curtidas(32)">Curtir</a>
-                            <span class="numCurtidas"><span id="num">32</span> curtidas</span>
-                        </div>
-                    </div>
-                    <div class="comentBox">
-                        <div class="imgBox">
-                            <img class="imgComent" src="imagem/Capturar.PNG"/>
-                            <h1 class="nameComent">Ana</h1>
-                            <div class="rateComent">
-
-                            </div>
-                        </div>  
-                        <div class="textBox">
-                            <p class="coment">Produto muito bom, Produto muito bom, Produto muito bom, Produto muito bom</p>
-                        </div>
-                        <div class="likesBox">
-                            <a class="curtidas" onclick="curtidas(12)">Curtir</a>
-                            <span class="numCurtidas"><span id="num">12</span> curtidas</span>
-                        </div>
-                    </div>
-                    <div class="comentBox">
-                        <div class="imgBox">
-                            <img class="imgComent" src="imagem/Capturar.PNG"/>
-                            <h1 class="nameComent">Isabela</h1>
-                            <div class="rateComent">
-
-                            </div>
-                        </div>  
-                        <div class="textBox">
-                            <p class="coment">Produto muito bom, Produto muito bom, Produto muito bom, Produto muito bom</p>
-                        </div>
-                        <div class="likesBox">
-                            <a class="curtidas" onclick="curtidas(2)">Curtir</a>
-                            <span class="numCurtidas"><span id="num">2</span> curtidas</span>
-                        </div>
-                    </div>
-                    <div class="comentBox">
-                        <div class="imgBox">
-                            <img class="imgComent" src="imagem/Capturar.PNG"/>
-                            <h1 class="nameComent">Isabela</h1>
-                            <div class="rateComent">
-
-                            </div>
-                        </div>  
-                        <div class="textBox">
-                            <p class="coment">Produto muito bom, Produto muito bom, Produto muito bom, Produto muito bom</p>
-                        </div>
-                        <div class="likesBox">
-                            <a class="curtidas" onclick="curtidas(15)">Curtir</a>
-                            <span class="numCurtidas"><span id="num">15</span> curtidas</span>
-                        </div>
-                    </div>
-                    <div class="comentBox">
-                        <div class="imgBox">
-                            <img class="imgComent" src="imagem/Capturar.PNG"/>
-                            <h1 class="nameComent">Isabela</h1>
-                            <div class="rateComent">
-
-                            </div>
-                        </div>  
-                        <div class="textBox">
-                            <p class="coment">Produto muito bom, Produto muito bom, Produto muito bom, Produto muito bom</p>
-                        </div>
-                        <div class="likesBox">
-                            <a class="curtidas" onclick="curtidas(15)">Curtir</a>
-                            <span class="numCurtidas"><span id="num">9</span> curtidas</span>
-                        </div>
-                    </div>
-                    <div class="comentBox">
-                        <div class="imgBox">
-                            <img class="imgComent" src="imagem/Capturar.PNG"/>
-                            <h1 class="nameComent">Gabriel</h1>
-                            <div class="rateComent">
-
-                            </div>
-                        </div>  
-                        <div class="textBox">
-                            <p class="coment">Produto muito bom, Produto muito bom, Produto muito bom, Produto muito bom</p>
-                        </div>
-                        <div class="likesBox">
-                            <a class="curtidas" onclick="curtidas(11)">Curtir</a>
-                            <span class="numCurtidas"><span id="num">11</span> curtidas</span>
-                        </div>
-                    </div>
                     <div class=espacoFim>
 
                     </div>
@@ -191,11 +100,11 @@
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
-    <!-- Modal content -->
+        <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
             <div class="modalImg">
-                <img class="imgModal" src="/img//produto1.jpg"/>
+                <img class="imgModal" src="/img//produto1.jpg" />
             </div>
         </div>
     </div>
@@ -211,9 +120,9 @@
             <ul>
                 <li>CONNECT</li>
                 <div class="ulSocial">
-                    <li class="liFirstSocial"><img src="imagem/instagram.png"/></li>
-                    <li class="liSecondSocial"><img src="imagem/twitter.png"/></li>
-                    <li><img src="imagem/facebook.png"/></li>
+                    <li class="liFirstSocial"><img src="imagem/instagram.png" /></li>
+                    <li class="liSecondSocial"><img src="imagem/twitter.png" /></li>
+                    <li><img src="imagem/facebook.png" /></li>
                 </div>
             </ul>
         </div>
@@ -221,7 +130,7 @@
         <div class="rightFooter">
             <ul>
                 <div class="ulSocialFooter">
-                    <li class="liFirstSocial">© Ambiente Consultoria - Todos os direitos reservados<br/</li>
+                    <li class="liFirstSocial">© Ambiente Consultoria - Todos os direitos reservados<br /</li>
                     <li class="liSecondSocial"></li>
                     <li></li>
                 </div>
@@ -230,7 +139,6 @@
     </div>
 
     <script>
-
         $(function() {
             $('#containerComents').pagination({
                 items: 100,
@@ -240,17 +148,17 @@
         });
 
 
-        function curtidas(numero){
+        function curtidas(numero) {
 
             numero = numero + 1;
 
             console.log(numero)
         }
-        
+
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
         }
-        
+
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
@@ -294,14 +202,14 @@
             var s5 = document.getElementById("s5").src;
             var avaliacao = 0;
 
-            if (estrela == 5){ 
+            if (estrela == 5) {
                 // if (s5 == url + "img/star0.png") {
-                    document.getElementById("s1").src = "img/star1.png";
-                    document.getElementById("s2").src = "img/star1.png";
-                    document.getElementById("s3").src = "img/star1.png";
-                    document.getElementById("s4").src = "img/star1.png";
-                    document.getElementById("s5").src = "img/star1.png";
-                    avaliacao = 5;
+                document.getElementById("s1").src = "img/star1.png";
+                document.getElementById("s2").src = "img/star1.png";
+                document.getElementById("s3").src = "img/star1.png";
+                document.getElementById("s4").src = "img/star1.png";
+                document.getElementById("s5").src = "img/star1.png";
+                avaliacao = 5;
                 // } else {
                 //     document.getElementById("s1").src = "img/star1.png";
                 //     document.getElementById("s2").src = "img/star1.png";
@@ -311,16 +219,16 @@
                 //     avaliacao = 4;
                 // }
             }
-            
+
             //ESTRELA 4
-            if (estrela == 4){ 
+            if (estrela == 4) {
                 // if (s4 == url + "img/star0.png") {
-                    document.getElementById("s1").src = "img/star1.png";
-                    document.getElementById("s2").src = "img/star1.png";
-                    document.getElementById("s3").src = "img/star1.png";
-                    document.getElementById("s4").src = "img/star1.png";
-                    document.getElementById("s5").src = "img/star0.png";
-                    avaliacao = 4;
+                document.getElementById("s1").src = "img/star1.png";
+                document.getElementById("s2").src = "img/star1.png";
+                document.getElementById("s3").src = "img/star1.png";
+                document.getElementById("s4").src = "img/star1.png";
+                document.getElementById("s5").src = "img/star0.png";
+                avaliacao = 4;
                 // } else {
                 //     document.getElementById("s1").src = "img/star1.png";
                 //     document.getElementById("s2").src = "img/star1.png";
@@ -332,14 +240,14 @@
             }
 
             //ESTRELA 3
-            if (estrela == 3){ 
+            if (estrela == 3) {
                 // if (s3 == url + "img/star0.png") {
-                    document.getElementById("s1").src = "img/star1.png";
-                    document.getElementById("s2").src = "img/star1.png";
-                    document.getElementById("s3").src = "img/star1.png";
-                    document.getElementById("s4").src = "img/star0.png";
-                    document.getElementById("s5").src = "img/star0.png";
-                    avaliacao = 3;
+                document.getElementById("s1").src = "img/star1.png";
+                document.getElementById("s2").src = "img/star1.png";
+                document.getElementById("s3").src = "img/star1.png";
+                document.getElementById("s4").src = "img/star0.png";
+                document.getElementById("s5").src = "img/star0.png";
+                avaliacao = 3;
                 // } else {
                 //     document.getElementById("s1").src = "img/star1.png";
                 //     document.getElementById("s2").src = "img/star1.png";
@@ -349,16 +257,16 @@
                 //     avaliacao = 2;
                 // }
             }
-            
+
             //ESTRELA 2
-            if (estrela == 2){ 
+            if (estrela == 2) {
                 // if (s2 == url + "img/star0.png") {
-                    document.getElementById("s1").src = "img/star1.png";
-                    document.getElementById("s2").src = "img/star1.png";
-                    document.getElementById("s3").src = "img/star0.png";
-                    document.getElementById("s4").src = "img/star0.png";
-                    document.getElementById("s5").src = "img/star0.png";
-                    avaliacao = 2;
+                document.getElementById("s1").src = "img/star1.png";
+                document.getElementById("s2").src = "img/star1.png";
+                document.getElementById("s3").src = "img/star0.png";
+                document.getElementById("s4").src = "img/star0.png";
+                document.getElementById("s5").src = "img/star0.png";
+                avaliacao = 2;
                 // } else {
                 //     document.getElementById("s1").src = "img/star1.png";
                 //     document.getElementById("s2").src = "img/star0.png";
@@ -368,16 +276,16 @@
                 //     avaliacao = 1;
                 // }
             }
-            
+
             //ESTRELA 1
-            if (estrela == 1){ 
+            if (estrela == 1) {
                 // if (s1 == url + "img/star0.png") {
-                    document.getElementById("s1").src = "img/star1.png";
-                    document.getElementById("s2").src = "img/star0.png";
-                    document.getElementById("s3").src = "img/star0.png";
-                    document.getElementById("s4").src = "img/star0.png";
-                    document.getElementById("s5").src = "img/star0.png";
-                    avaliacao = 1;
+                document.getElementById("s1").src = "img/star1.png";
+                document.getElementById("s2").src = "img/star0.png";
+                document.getElementById("s3").src = "img/star0.png";
+                document.getElementById("s4").src = "img/star0.png";
+                document.getElementById("s5").src = "img/star0.png";
+                avaliacao = 1;
                 // } else {
                 //     document.getElementById("s1").src = "img/star0.png";
                 //     document.getElementById("s2").src = "img/star0.png";
@@ -387,10 +295,10 @@
                 //     avaliacao = 0;
                 // }
             }
-            
-        document.getElementById('rating').innerHTML = avaliacao;
-        }
 
+            document.getElementById('rating').innerHTML = avaliacao;
+        }
     </script>
 </body>
+
 </html>

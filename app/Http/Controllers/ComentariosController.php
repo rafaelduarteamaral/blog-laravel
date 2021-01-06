@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use App\Models\Produtos;
 use App\Models\Categoria;
 use App\Models\Comentarios;
@@ -13,8 +14,7 @@ class ComentariosController extends Controller
                 
         if($req->has('comentar')){
             $texto          =    $req->input('comentar');
-            $id_produto = $req->input('cod_prod');
-            print_r($id_produto);
+            $id_produto     =    $req->input('id');
 
             $id = Auth::id(); 
 
@@ -23,13 +23,20 @@ class ComentariosController extends Controller
                 $comentario->id_pessoa = $id;
                 $comentario->id_produto = $id_produto;
                 $comentario->save();
-                return view('produtos/{id}');
+                return redirect('/produtos/'.$id_produto);
         }
         
     }   
      public function buscarCategorias(){
         $data = Categoria::all();
         return view('produtos', ['categoria'=>$data]);
+    }
+
+    public function curtidas(){
+        $id = Auth::id(); 
+            DB::table('comentarios')
+            ->where('id_pessoa', $id)
+            ->update(['curtidas' => 1]);
     }
 
 }

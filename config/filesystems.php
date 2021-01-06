@@ -72,6 +72,20 @@ return [
             'visibility' => 'public',
         ],
 
+        'imagemPublicacao' => [
+            'driver' => 'local',
+            'root' => 'img',
+            'url' => env('APP_URL').'/img',
+            'visibility' => 'public',
+        ],
+
+        'imagemUsuario' => [
+            'driver' => 'local',
+            'root' => 'img',
+            'url' => env('APP_URL').'/img',
+            'visibility' => 'public',
+        ],
+
     ],
 
     /*

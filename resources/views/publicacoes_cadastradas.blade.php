@@ -26,9 +26,9 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Nome</th>
+                                <th>Titulo</th>
                                 <th>Data Cadastro</th>
-                                <th>Categoria</th>
+                                <th>Descriçãoo</th>
                                 <th>Imagem</th>
                                 <th>Excluir</th>
                             </tr>
@@ -36,17 +36,18 @@
                         <tbody>
                         
                         
-                            @foreach($produtos as $p)
+                            @foreach($publicacoes as $p)
                             <tr>
                                 <td>{{$p['id']}}</td>
-                                <td>{{$p['produto']}}</td>
+                                <td>{{$p['titulo']}}</td>
                                 <td>{{$p['created_at']}}</td>
-                                <td>{{$p['categoria']}}</td>
+                                <td>{{$p['descricao']}}</td>
+
                                 <td><img src="{{asset("img/{$p->imagem}") }}" width="50" height="50"></td>
-                                <td><form action="/produtos_cadastrados/{{$p['id']}}" method="POST">
+                                <td><form action="/publicacoes_cadastradas/{{$p['id']}}" method="POST">
                                 @csrf
                                 @method('delete')
-                                        <button type="submit" onclick="alerta()" class="buttonExcluirProduto"><img class="imgSlider" src="./imagem/lixeira.png" /></button>
+                                        <button type="submit" onclick="alerta()" id="buttonExcluir" class="buttonExcluirProduto"><img class="imgSlider" src="./imagem/lixeira.png" /></button>
                                     </form>
                                 </td>
 
@@ -108,8 +109,9 @@
                 modal.style.display = "none";
             }
         }
+
         function alerta() {
-            alert("Produto excluido");
+            alert("Publicação excluida");
         }
     </script>
 </body>
