@@ -18,7 +18,8 @@ class CreateComentariosTable extends Migration
             $table->timestamps();
             $table->integer('id_produto');
             $table->integer('id_pessoa');
-            $table->string('comentario');
+            $table->longText('comentario');
+            $table->integer('curtidas');
         });
     }
 

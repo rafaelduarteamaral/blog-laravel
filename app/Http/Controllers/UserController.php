@@ -33,7 +33,7 @@ class UserController extends Controller
             }
             $user->imagem = $path;
 
-            $user->save();
+            $user->update();
 
             return redirect()->back();
 

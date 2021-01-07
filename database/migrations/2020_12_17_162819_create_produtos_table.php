@@ -18,10 +18,10 @@ class CreateProdutosTable extends Migration
             $table->timestamps();
             $table->string('produto');
             $table->string('imagem')->nullable();
-            $table->string('descricao');
+            $table->longText('descricao');
             $table->integer('avaliacao')->nullable();
             $table->string('categoria');
-            $table->string('texto_prod');
+            $table->longText('texto_prod');
 
         });
     }

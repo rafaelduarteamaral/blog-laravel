@@ -18,8 +18,9 @@ class CreatePublicacoesTable extends Migration
             $table->timestamps();
             $table->string('titulo');
             $table->string('descricao');
-            $table->string('texto');
+            $table->longText('texto');
             $table->string('imagem');
+            $table->string('categoria')->nullable();
         });
     }
 

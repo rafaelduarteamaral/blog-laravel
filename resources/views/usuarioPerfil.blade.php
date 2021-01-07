@@ -35,12 +35,12 @@
                         <form action="{{route('usuario.atualizar')}}" method="post" enctype="multipart/form-data">
                             <h2 class="titleInput">Nome</h2>
                             <span class="lineProfile">
-                                <input class="inputProfile" value="{{$usuarios['name']}}" name="nome_usuario" id="inputName" disabled/>
+                                <input type="text" class="inputProfile" value="{{$usuarios['name']}}" name="nome_usuario" id="inputName" disabled/>
                                 <img onclick="ativaInputName()" src="{{URL::asset('imagem/editar.png')}}"/>
                             </span>
                             <h2 class="titleInput">Email</h2>
                             <span class="lineProfile">
-                                <input class="inputProfile" value="{{$usuarios['email']}}" name="email_usuario" id="inputEmail" disabled/>
+                                <input type="email" class="inputProfile" value="{{$usuarios['email']}}" name="email_usuario" id="inputEmail" disabled/>
                                 <img onclick="ativaInputEmail()" src="{{URL::asset('imagem/editar.png')}}"/>
                             </span>
                             <h2 class="titleInput">Foto</h2>

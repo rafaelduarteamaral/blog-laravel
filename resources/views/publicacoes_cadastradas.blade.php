@@ -30,7 +30,8 @@
                                 <th>Data Cadastro</th>
                                 <th>Descriçãoo</th>
                                 <th>Imagem</th>
-                                <th>Excluir</th>
+                                <th></th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -42,8 +43,10 @@
                                 <td>{{$p['titulo']}}</td>
                                 <td>{{$p['created_at']}}</td>
                                 <td>{{$p['descricao']}}</td>
-
                                 <td><img src="{{asset("img/{$p->imagem}") }}" width="50" height="50"></td>
+                                <td> 
+                                    <a href="{{url("/editar_publicacao/{$p->id}")}}"><img src="./imagem/editar.png"/></a>
+                                </td>
                                 <td><form action="/publicacoes_cadastradas/{{$p['id']}}" method="POST">
                                 @csrf
                                 @method('delete')

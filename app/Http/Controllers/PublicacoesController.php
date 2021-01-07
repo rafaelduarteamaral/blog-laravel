@@ -46,4 +46,28 @@ class PublicacoesController extends Controller
         $id->delete();
         return redirect('publicacoes_cadastradas');
     }
+
+    public function editPub($id)
+    {
+        $publicacoes = publicacoes::where('id', $id)->get();
+        return view('editar_publicacao', ['publicacoes' => $publicacoes]);
+    }
+
+    public function updatePub(Request $req, $id)
+    {
+        $publicacoes = publicacoes::where('id', $id)->first();
+
+        $publicacoes->titulo = $req['titulo'];
+        $publicacoes->descricao = $req['descricao'];
+        $publicacoes->texto = $req['texto'];
+
+        if ($req->hasFile('imagem')) {
+            $path = $req->file('imagem')->store('', 'imagemPublicacao');
+        }
+        $publicacoes->imagem = $path;
+        $publicacoes->update();
+
+
+        return redirect()->back();
+    }
 }

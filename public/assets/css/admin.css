@@ -33,7 +33,7 @@ body {
 .rightContent {
     display: flex;
     align-items: center;
-    width: 30%;
+    width: 50%;
     justify-content: space-between;
 }
 
@@ -379,7 +379,7 @@ body {
 }
 
 .textArea {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     border-radius: 5px;
     width: 90%;
     outline-color: #FFDD8D;
@@ -578,8 +578,68 @@ body {
   cursor: pointer;
 }
 
+.selectMenu {
+  border: none;
+  font-size: 19px;
+  width: 30%;
+  background: rgb(29, 29, 29, 0.0000001);
+  color: rgb(39, 39, 39);
+  font-weight: 400;
+}
+
+.selectMenu:hover {
+  cursor: pointer;
+  border-bottom: 3px solid #FFFFFF;
+}
 
 
+.inputEditar {
+  width: 25vw;
+  height: 30px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  -webkit-box-shadow: 1px 1px 28px -3px rgba(0,0,0,0.32); 
+  box-shadow: 1px 1px 28px -3px rgba(0,0,0,0.32);
+}
+
+
+.imgPreviewEdit {
+  width: 25vw;
+  margin-top: 20px;
+}
+
+.textAreaEditar {
+  width: 25vw;
+  height: 200px;
+  margin-top: 20px;
+}
+
+.inputImageEdit {
+  width: 25vw;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.textEditar {
+  width: 25vw;
+  font-size: 16px !important;
+  color: #585858;
+  margin-top: 20px;
+}
+
+.buttonEnviarEdit {
+  border: none;
+  width: 50%;
+  height: 4vh;
+  background: #FFDD8D;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 
 /* DATA TABLE */
 /*

@@ -9,9 +9,10 @@
                 </div>
                 <div class="rightContent">
                     <a href="/admin_produtos" class="optionHeader">Produtos</a>
-                    <a href="/produtos_cadastrados" class="optionHeader">Cadastrados</a>
+                    <a href="/produtos_cadastrados" class="optionHeader">Prod. Cadastrados</a>
                     <a href="/user" class="optionHeader">Usuarios</a>
                     <a href="/adminPublicacoes" class="optionHeader">Publicacoes</a>
+                    <a href="/publicacoes_cadastradas" class="optionHeader">Publ. Cadastradas</a>
                 <a href="/" class="optionHeader">Site</a>
 
                 <form method="POST" action="{{ route('logout') }}">

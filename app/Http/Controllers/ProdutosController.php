@@ -8,9 +8,17 @@ use Illuminate\Http\Request;
 
 class ProdutosController extends Controller
 {
-    public function inserir(Request $req){
-                
-        if($req->has('produto_nome')){
+
+    public function index(produtos $produto)
+    {
+        $produtos = $produto->all();
+        return view('editar', ['editar' => $produtos]);
+    }
+
+    public function inserir(Request $req)
+    {
+
+        if ($req->has('produto_nome')) {
             $nome_prod      =    $req->input('produto_nome');
             $descricao      =    $req->input('descricao');
             $texto_prod     =    $req->input('texto_prod');
@@ -21,43 +29,69 @@ class ProdutosController extends Controller
             }
 
             $produto = new Produtos();
-                $produto->produto = $nome_prod;
-                $produto->descricao = $descricao;
-                $produto->categoria = $categoria;
-                $produto->texto_prod = $texto_prod;
-                $produto->imagem = $path;
-                $produto->save();
-                return view('admin_produtos');
-
+            $produto->produto = $nome_prod;
+            $produto->descricao = $descricao;
+            $produto->categoria = $categoria;
+            $produto->texto_prod = $texto_prod;
+            $produto->imagem = $path;
+            $produto->save();
+            return view('admin_produtos');
         }
     }
 
 
-    public function getCategoria(){
+    public function getCategoria()
+    {
         $data = Categoria::all();
-        return view('admin_produtos', ['categoria'=>$data]);
+        return view('admin_produtos', ['categoria' => $data]);
     }
-    
-    public function buscarProdutos(){
+
+    public function buscarProdutos()
+    {
         $data = Produtos::all();
         $data2 = Categoria::all();
-        return view('catalogo', ['catalogo'=>$data, 'categoria'=>$data2]);
+        return view('catalogo', ['catalogo' => $data, 'categoria' => $data2]);
     }
 
-    public function buscarProdutosTabela(){
+    public function buscarProdutosTabela()
+    {
         $data = Produtos::all();
-        return view('produtos_cadastrados', ['produtos'=>$data]);
+        return view('produtos_cadastrados', ['produtos' => $data]);
     }
 
-    public function deletarProduto($id){
+    public function deletarProduto($id)
+    {
         $id = Produtos::findorfail($id);
         $id->delete();
         return redirect('produtos_cadastrados');
     }
 
-    public function getProduto($id){
+    public function getProduto($id)
+    {
         $data = Produtos::where('id', $id)->get();
-        return view('produtos', ['produtos'=>$data]);
+        return view('produtos', ['produtos' => $data]);
     }
 
+    public function edit($id)
+    {
+        $produto = Produtos::where('id', $id)->get();
+        return view('editar', ['editar' => $produto]);
+    }
+
+    public function update(Request $req, $id)
+    {
+        $produto = Produtos::where('id', $id)->first();
+
+        $produto->produto = $req['titulo'] ? $req['titulo'] : $req['titulo'];
+        $produto->descricao = $req['descricao'];
+        $produto->categoria = $req['categoria'];
+
+        $produto->texto_prod = $req['texto'];
+
+
+        $produto->update();
+
+
+        return redirect()->back();
+    }
 }

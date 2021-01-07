@@ -86,6 +86,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'imagemProduto' => [
+            'driver' => 'local',
+            'root' => 'img',
+            'url' => env('APP_URL').'/img',
+            'visibility' => 'public',
+        ],
+
     ],
 
     /*

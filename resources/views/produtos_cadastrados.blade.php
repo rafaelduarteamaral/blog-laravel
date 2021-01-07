@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
     <!-- <title>Animated Login Form</title> -->
-    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/admin.css')}}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css" />
@@ -30,7 +30,8 @@
                                 <th>Data Cadastro</th>
                                 <th>Categoria</th>
                                 <th>Imagem</th>
-                                <th>Excluir</th>
+                                <th></th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -43,6 +44,9 @@
                                 <td>{{$p['created_at']}}</td>
                                 <td>{{$p['categoria']}}</td>
                                 <td><img src="{{asset("img/{$p->imagem}") }}" width="50" height="50"></td>
+                                <td> 
+                                    <a href="{{url("/editar/{$p->id}")}}"><img src="./imagem/editar.png"/></a>
+                                </td>
                                 <td><form action="/produtos_cadastrados/{{$p['id']}}" method="POST">
                                 @csrf
                                 @method('delete')
