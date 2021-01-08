@@ -4,14 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     <link rel="stylesheet" href="{{URL::asset('assets/css/style.css')}}">
-    <script type="text/javascript" src="path_to/jquery.js"></script>
-    <script type="text/javascript" src="path_to/jquery.simplePagination.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
     @include('layouts.navigation')
-
 
     <div class="containerFundo">
         <div class="containerContent">
@@ -20,81 +18,31 @@
                 <a class="itemBusca" href="/catalogo"><h3 class="itemBusca">Todos</h3></a>
             </div>
             <div class="listaContainerContent">
-                <div class="voltarBox">
-                    <a class="linkButton" href="/catalogo"><button class="buttonVoltar"><img src="{{URL::asset('imagem/retorna.png')}}" /><span class="textButton">voltar</span></button></a>
-                </div>
                 <div class="titleContent">
-                    <h1 class="titleText">Produto</h1>
-                </div>
-                <div class="cardWinner">
-
-                    @foreach($produtos as $p)
-                    <div class="imgCardWinner">
-                        <img src="{{ asset("img/{$p->imagem}") }}" width="300" height="300" />
-                    </div>
-
-                    <div id="{{$p->id}}" name="produto" class="textCardWinner">
-                        <p id="cod_prod" name="cod_prod">{{$p->id}}</p>
-                        <h1 class="h1TextCardWinner">{{$p->produto}}</h1>
-                        <h2 class="h2TextCardWinner">{{$p->descricao}}</h2>
-                        <p class="pTextCardWinner">{{$p->texto_prod}}</p>
-                    </div>
-                    <div class="lerMaisCardbox">
-                        <!-- <button id="myBtn" class="buttonLerMais">ver mais</button> -->
-                        <div class="starRate">
-                            <a href="javascript:void(0)" onclick="Avaliar(1)">
-                                <img src="{{URL::asset('imagem/star0.png')}}" id="s1"></a>
-
-                            <a href="javascript:void(0)" onclick="Avaliar(2)">
-                                <img src="{{URL::asset('imagem/star0.png')}}" id="s2"></a>
-
-                            <a href="javascript:void(0)" onclick="Avaliar(3)">
-                                <img src="{{URL::asset('imagem/star0.png')}}" id="s3"></a>
-
-                            <a href="javascript:void(0)" onclick="Avaliar(4)">
-                                <img src="{{URL::asset('imagem/star0.png')}}" id="s4"></a>
-
-                            <a href="javascript:void(0)" onclick="Avaliar(5)">
-                                <img src="{{URL::asset('imagem/star0.png')}}" id="s5"></a>
-
-                            <h3 class="avaliarTexto">Avaliar esse produto</h3>
-                        </div>
-                    </div>
+                    <h1 class="titleText">Maquiagem</h1>
                 </div>
 
-                <div class="containerComents">
-                    <div class="writeComent">
-                        <form method="post" action="{{route('comentarios.comentario')}}">
-                            <input name="id" type="hidden" value="{{$p->id}}"></input>
-                            <h1 class="writeText">Comentar</h1>
-                            <textarea id="comentar" name="comentar" class="textArea"></textarea>
-                            <button class="buttonLerMais" type="submit">enviar</button>
-                        </form>
-                    </div>
-                    @endforeach
-
-
-                    <div class="comentBox">
-                        <div class="imgBox">
-                            <img class="imgComent" src="imagem/Capturar.PNG" />
-                            <h1 class="nameComent">Isabela</h1>
+                <?php
+                $count = 0;
+                foreach ($pesquisar as $c) { ?>
+                    <div class="cardWinner">
+                        <div class="imgCardWinner">
+                            <img src="{{ asset("img/{$c->imagem}") }}" width="200" height="200">
                         </div>
-                        <div class="textBox">
-                            <p class="coment"></p>
+                        <div class="textCardWinner">
+                            <h1 id="{{$c->id}}" class="h1TextCardWinner">{{$c->produto}}</h1>
+                            <h1 class="h1TextCardWinner">{{$c->descricao}}</h1>
+                            <p class="pTextCardWinner">{{$c->texto_prod}}</p>
                         </div>
-                        <div class="likesBox">
-                            <form action="" method="post">
-                                <input type="number" name="curtida" />
-                                <buttom class="curtidas">Curtir</buttom>
-                                <span class="numCurtidas"><span id="num">7</span> curtidas</span>
-                            </form>
+                        <div class="lerMaisCardbox">
+                            <a href="/produtos/{{$c->id}}"><button class="buttonLerMais">ver mais</button></a>
                         </div>
                     </div>
+                <?php $count++;
+                    if ($count == 10) break;
+                } ?>
 
-                    <div class=espacoFim>
 
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -105,7 +53,7 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <div class="modalImg">
-                <img class="imgModal" src="/img//produto1.jpg" />
+                <img class="imgModal" src="imagem/produto1.jpg" />
             </div>
         </div>
     </div>
@@ -114,9 +62,21 @@
         <div class="contentFooter">
             <ul>
                 <li>COMPANY</li>
+                <li>About us</li>
+                <li>Careers</li>
+                <li>Terms</li>
+                <li>Privacy</li>
+                <li>Interest Based Ads</li>
+                <li>Interest Based Ads</li>
+                <li>Ad Preferences</li>
+                <li>Help</li>
             </ul>
             <ul>
                 <li>WORK WITH US</li>
+                <li>Authors</li>
+                <li>Advertise</li>
+                <li>Authors & ads blog</li>
+                <li>API</li>
             </ul>
             <ul>
                 <li>CONNECT</li>
@@ -131,8 +91,7 @@
         <div class="rightFooter">
             <ul>
                 <div class="ulSocialFooter">
-                    <li class="liFirstSocial">© Ambiente Consultoria - Todos os direitos reservados<br /</li>
-                    <li class="liSecondSocial"></li>
+                    <li class="liFirstSocial">© Ambiente Consultoria - Todos os direitos reservados<br/ </li> <li class="liSecondSocial"></li>
                     <li></li>
                 </div>
             </ul>
@@ -140,22 +99,6 @@
     </div>
 
     <script>
-        $(function() {
-            $('#containerComents').pagination({
-                items: 100,
-                itemsOnPage: 10,
-                cssStyle: 'light-theme'
-            });
-        });
-
-
-        function curtidas(numero) {
-
-            numero = numero + 1;
-
-            console.log(numero)
-        }
-
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
         }
@@ -164,31 +107,32 @@
             document.getElementById("mySidenav").style.width = "0";
         }
 
-        // Get the modal
-        var modal = document.getElementById("myModal");
+        // // Get the modal
+        // var modal = document.getElementById("myModal");
 
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
+        // // Get the button that opens the modal
+        // var btn = document.getElementById("myBtn");
 
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+        // // Get the <span> element that closes the modal
+        // var span = document.getElementsByClassName("close")[0];
 
-        // When the user clicks the button, open the modal 
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
+        // // When the user clicks the button, open the modal 
+        // btn.onclick = function() {
+        //     modal.style.display = "block";
+        // }
 
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
+        // // When the user clicks on <span> (x), close the modal
+        // span.onclick = function() {
+        //     modal.style.display = "none";
+        // }
 
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
+        // // When the user clicks anywhere outside of the modal, close it
+        // window.onclick = function(event) {
+        //     if (event.target == modal) {
+        //         modal.style.display = "none";
+        //     }
+        // }
+
 
         function Avaliar(estrela) {
             var url = window.location;
@@ -298,6 +242,7 @@
             }
 
             document.getElementById('rating').innerHTML = avaliacao;
+
         }
     </script>
 </body>

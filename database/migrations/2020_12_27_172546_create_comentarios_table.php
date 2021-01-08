@@ -19,7 +19,7 @@ class CreateComentariosTable extends Migration
             $table->integer('id_produto');
             $table->integer('id_pessoa');
             $table->longText('comentario');
-            $table->integer('curtidas');
+            $table->integer('curtidas')->nullable();
         });
     }
 

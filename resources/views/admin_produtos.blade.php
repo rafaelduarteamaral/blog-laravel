@@ -30,7 +30,6 @@
                     <input id="descricao" name="descricao" type="text" class="input" placeholder="Descrição">
                     <select id="categoria" name="categoria" class="select">
                         <option class="optionDisabled" selected disabled>Categoria</option>
-                        <option>Paleta</option>
                         <?php
 
                         use App\Models\Categoria;

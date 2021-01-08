@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+
 use App\Models\Categoria;
 use App\Models\produtos;
 use Illuminate\Http\Request;
@@ -93,5 +95,18 @@ class ProdutosController extends Controller
 
 
         return redirect()->back();
+    }
+
+    public function Pesquisar(Request $req)
+    {
+      $texto = $req->get('buscar');
+      $pesquisa = Produtos::where('produto', 'like', '%'.$texto.'%')
+     ->orWhere('produto','like','%'.$texto.'%')
+     ->orWhere('produto','like','%'.$texto.'%')
+     ->orWhere('id','like','%'.$texto.'%')
+     ->orderBy('produto')
+     ->paginate(20);
+
+     return view('pesquisar', ['pesquisar' => $pesquisa]);
     }
 }

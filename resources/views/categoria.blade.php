@@ -15,6 +15,7 @@
         <div class="containerContent">
             <div class="sideContainerContent">
                 <span class="itemImg"><img class="imgSide" src="{{URL::asset('imagem/principal.jpg')}}" /></span>
+                <a class="itemBusca" href="/catalogo"><h3 class="itemBusca">Todos</h3></a>
                 @foreach($categoi as $cat)
                 <a class="itemBusca" href="{{$cat->nome}}"><h3 class="itemBusca">{{$cat->nome}}</h3></a>
                 @endforeach

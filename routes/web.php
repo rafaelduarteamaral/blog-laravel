@@ -22,6 +22,8 @@ Route::get('/produtos', function () {
    return view('produtos');
 })->middleware(['auth']);
 
+Route::any('/pesquisar', [\App\Http\Controllers\ProdutosController::class, 'Pesquisar'])->name('produtos.pesquisa');
+Route::any('/pesquisar', [\App\Http\Controllers\ProdutosController::class, 'Pesquisar'])->name('produtos.pesquisa');
 
 Route::get('/editar_publicacao/{id}', [\App\Http\Controllers\PublicacoesController::class, 'editPub'])->middleware(['auth'])->name('editarPub.buscar');
 Route::get('/editar/{id}', [\App\Http\Controllers\ProdutosController::class, 'edit'])->middleware(['auth'])->name('editar.buscar');

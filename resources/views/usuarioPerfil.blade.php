@@ -47,7 +47,7 @@
                             <div class="imgProfile">
                                 <img class="imgProfileElement" src="{{ asset("img/{$usuarios->imagem}") }}" />
                             </div>  
-                            <input class="inputFile" type="file" name= "imagem" id="imagem" >
+                            <input onclick="ativaInputEmail()" class="inputFile" type="file" name= "imagem" id="imagem" >
                             <button class="buttonEnviarAlteracao" id="buttonEnviarAlteracao" style="display: none;">Enviar</button>
                         </form>
                     </div>

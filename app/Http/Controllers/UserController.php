@@ -24,14 +24,23 @@ class UserController extends Controller
     public function updateUsuarios(Request $req){
         $user = User::find(Auth::user()->id);
 
-
-            $user->name = $req['nome_usuario'];
-            $user->email = $req['email_usuario'];
-            
+            if($req['nome_usuario']){
+                $user->name = $req['nome_usuario'];
+            } else {
+                $user->name = $user->name;
+            }
+            if($req['email_usuario']){
+                $user->email = $req['email_usuario'];
+            } else {
+                $user->email = $user->email;
+            }
             if ($req->hasFile('imagem')) {
                 $path = $req->file('imagem')->store('', 'imagemUsuario');
+                $user->imagem = $path;
             }
-            $user->imagem = $path;
+            else {
+                $user->imagem = $user->imagem;
+            }
 
             $user->update();
 
