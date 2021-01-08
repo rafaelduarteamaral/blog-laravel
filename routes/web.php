@@ -48,6 +48,9 @@ Route::post('/usuarioPerfil/', [\App\Http\Controllers\UserController::class, 'up
 Route::delete('/produtos_cadastrados/{id}', [\App\Http\Controllers\ProdutosController::class, 'deletarProduto'])->middleware(['auth'])->name('excluir.produto');
 Route::delete('/publicacoes_cadastradas/{id}', [\App\Http\Controllers\PublicacoesController::class, 'deletarPublicacao'])->middleware(['auth'])->name('excluir.publicacoes');
 
+Route::get('/import', [\App\Http\Controllers\ProdutosController::class, 'import']);
+Route::get('/import', [\App\Http\Controllers\ProdutosController::class, 'importar'])->name('produtos.importar');
+
 require __DIR__ . '/auth.php';
 
 // Route::get('', [\App\Http\Controllers\CategoriaController::class, 'getCategoria'])->middleware(['auth'])->name('categoria.categoria');
