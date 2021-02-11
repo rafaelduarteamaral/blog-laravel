@@ -29,7 +29,7 @@
                                 <th>Nome</th>
                                 <th>Data Cadastro</th>
                                 <th>Categoria</th>
-                                <th>Imagem</th>
+                                <th>Imagens</th>
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -43,7 +43,11 @@
                                 <td>{{$p['produto']}}</td>
                                 <td>{{$p['created_at']}}</td>
                                 <td>{{$p['categoria']}}</td>
-                                <td><img src="{{asset("img/{$p->imagem}") }}" width="50" height="50"></td>
+                                <td><img src="{{asset("img/{$p->imagem}") }}" width="50" height="50">
+                                <img src="{{asset("img/{$p->imagem_2}") }}" width="50" height="50">
+                                <img src="{{asset("img/{$p->imagem_3}") }}" width="50" height="50">
+                                <img src="{{asset("img/{$p->imagem_4}") }}" width="50" height="50">
+                                <img src="{{asset("img/{$p->imagem_5}") }}" width="50" height="50"></td>
                                 <td> 
                                     <a href="{{url("/editar/{$p->id}")}}"><img src="./imagem/editar.png"/></a>
                                 </td>

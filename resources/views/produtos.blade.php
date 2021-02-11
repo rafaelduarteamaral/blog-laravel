@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{URL::asset('assets/css/style.css')}}">
     <script type="text/javascript" src="path_to/jquery.js"></script>
     <script type="text/javascript" src="path_to/jquery.simplePagination.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -17,7 +18,9 @@
         <div class="containerContent">
             <div class="sideContainerContent">
                 <span class="itemImg"><img class="imgSide" src="{{URL::asset('imagem/principal.jpg')}}" /></span>
-                <a class="itemBusca" href="/catalogo"><h3 class="itemBusca">Todos</h3></a>
+                <a class="itemBusca" href="/catalogo">
+                    <h3 class="itemBusca">Todos</h3>
+                </a>
             </div>
             <div class="listaContainerContent">
                 <div class="voltarBox">
@@ -29,37 +32,92 @@
                 <div class="cardWinner">
 
                     @foreach($produtos as $p)
+
                     <div class="imgCardWinner">
                         <img src="{{ asset("img/{$p->imagem}") }}" width="300" height="300" />
                     </div>
 
+                    
+                    <div class="imgCardWinner">
+                        <img src="{{ asset("img/{$p->imagem_2}") }}" width="300" height="300" />
+                    </div>
+
+                    
+                    <div class="imgCardWinner">
+                        <img src="{{ asset("img/{$p->imagem_3}") }}" width="300" height="300" />
+                    </div>
+
+                    
+                    <div class="imgCardWinner">
+                        <img src="{{ asset("img/{$p->imagem_4}") }}" width="300" height="300" />
+                    </div>
+
+                    
+                    <div class="imgCardWinner">
+                        <img src="{{ asset("img/{$p->imagem_5}") }}" width="300" height="300" />
+                    </div>
+
                     <div id="{{$p->id}}" name="produto" class="textCardWinner">
-                        <p id="cod_prod" name="cod_prod">{{$p->id}}</p>
                         <h1 class="h1TextCardWinner">{{$p->produto}}</h1>
                         <h2 class="h2TextCardWinner">{{$p->descricao}}</h2>
                         <p class="pTextCardWinner">{{$p->texto_prod}}</p>
                     </div>
                     <div class="lerMaisCardbox">
                         <!-- <button id="myBtn" class="buttonLerMais">ver mais</button> -->
-                        <div class="starRate">
-                            <a href="javascript:void(0)" onclick="Avaliar(1)">
-                                <img src="{{URL::asset('imagem/star0.png')}}" id="s1"></a>
-
-                            <a href="javascript:void(0)" onclick="Avaliar(2)">
-                                <img src="{{URL::asset('imagem/star0.png')}}" id="s2"></a>
-
-                            <a href="javascript:void(0)" onclick="Avaliar(3)">
-                                <img src="{{URL::asset('imagem/star0.png')}}" id="s3"></a>
-
-                            <a href="javascript:void(0)" onclick="Avaliar(4)">
-                                <img src="{{URL::asset('imagem/star0.png')}}" id="s4"></a>
-
-                            <a href="javascript:void(0)" onclick="Avaliar(5)">
-                                <img src="{{URL::asset('imagem/star0.png')}}" id="s5"></a>
-
-                            <h3 class="avaliarTexto">Avaliar esse produto</h3>
+                        <div class="estrelas">
+                            {{number_format($avaliacao, 1)}}
+                            @if($avaliacao < 1)
+                            <div class="divStar">
+                                <img class="starMedia" src="{{URL::asset('imagem/star0.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star0.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star0.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star0.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star0.png')}}" />
+                            </div>
+                            @elseif($avaliacao >= 1 && $avaliacao <= 1.9999 )
+                            <div class="divStar">
+                                <img class="starMedia" src="{{URL::asset('imagem/star1.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star0.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star0.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star0.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star0.png')}}" />
+                            </div>
+                            @elseif($avaliacao >= 2 && $avaliacao <= 2.9999)
+                            <div class="divStar">
+                                <img class="starMedia" src="{{URL::asset('imagem/star1.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star1.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star0.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star0.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star0.png')}}" />
+                            </div>
+                            @elseif($avaliacao >= 3 && $avaliacao <= 3.9999)
+                            <div class="divStar">
+                                <img class="starMedia" src="{{URL::asset('imagem/star1.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star1.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star1.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star0.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star0.png')}}" />
+                            </div>
+                            @elseif($avaliacao >= 4 && $avaliacao <= 4.9999)
+                            <div class="divStar">
+                                <img class="starMedia" src="{{URL::asset('imagem/star1.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star1.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star1.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star1.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/star0.png')}}" />
+                            </div>
+                            @else
+                            <div class="divStar">
+                                <img class="starMedia" src="{{URL::asset('imagem/1.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/1.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/1.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/1.png')}}" />
+                                <img class="starMedia" src="{{URL::asset('imagem/1.png')}}" />
+                            </div>
+                            @endif
                         </div>
                     </div>
+
                 </div>
 
                 <div class="containerComents">
@@ -68,28 +126,46 @@
                             <input name="id" type="hidden" value="{{$p->id}}"></input>
                             <h1 class="writeText">Comentar</h1>
                             <textarea id="comentar" name="comentar" class="textArea"></textarea>
+                            <h3 class="avaliarTexto">Avaliar esse produto</h3>
+                            <div class="estrelas">
+
+                                <input type="hidden" id="vazio" name="estrela" value="">
+
+                                <label for="estrela_um"><i class="fa" style="transform: none"></i></label>
+                                <input type="radio" id="estrela_um" name="estrela" value="1">
+
+                                <label for="estrela_dois"><i class="fa" style="transform: none"></i></label>
+                                <input type="radio" id="estrela_dois" name="estrela" value="2">
+
+                                <label for="estrela_tres"><i class="fa" style="transform: none"></i></label>
+                                <input type="radio" id="estrela_tres" name="estrela" value="3">
+
+                                <label for="estrela_quatro"><i class="fa" style="transform: none"></i></label>
+                                <input type="radio" id="estrela_quatro" name="estrela" value="4">
+
+                                <label for="estrela_cinco"><i class="fa" style="transform: none"></i></label>
+                                <input type="radio" id="estrela_cinco" name="estrela" value="5">
+
+                            </div>
+
                             <button class="buttonLerMais" type="submit">enviar</button>
                         </form>
                     </div>
                     @endforeach
 
-
+                    @foreach($comentarios as $c)
                     <div class="comentBox">
                         <div class="imgBox">
-                            <img class="imgComent" src="imagem/Capturar.PNG" />
-                            <h1 class="nameComent">Isabela</h1>
+                            <img class="imgComent" src="{{ asset("img/{$c->imagem}") }}">
+                            <h1 class="nameComent">{{$c->name}}</h1>
                         </div>
                         <div class="textBox">
-                            <p class="coment"></p>
-                        </div>
-                        <div class="likesBox">
-                            <form action="" method="post">
-                                <input type="number" name="curtida" />
-                                <buttom class="curtidas">Curtir</buttom>
-                                <span class="numCurtidas"><span id="num">7</span> curtidas</span>
-                            </form>
+                            {{$c->curtidas}}
+                            <img src="{{URL::asset('imagem/star1.png')}}" id="s5">
+                            <p class="coment">{{$c->comentario}}</p>
                         </div>
                     </div>
+                    @endforeach
 
                     <div class=espacoFim>
 
@@ -205,11 +281,11 @@
 
             if (estrela == 5) {
                 // if (s5 == url + "img/star0.png") {
-                document.getElementById("s1").src = "img/star1.png";
-                document.getElementById("s2").src = "img/star1.png";
-                document.getElementById("s3").src = "img/star1.png";
-                document.getElementById("s4").src = "img/star1.png";
-                document.getElementById("s5").src = "img/star1.png";
+                document.getElementById("s1").src = "{{URL::asset('imagem/star1.png')}}";
+                document.getElementById("s2").src = "{{URL::asset('imagem/star1.png')}}";
+                document.getElementById("s3").src = "{{URL::asset('imagem/star1.png')}}";
+                document.getElementById("s4").src = "{{URL::asset('imagem/star1.png')}}";
+                document.getElementById("s5").src = "{{URL::asset('imagem/star1.png')}}";
                 avaliacao = 5;
                 // } else {
                 //     document.getElementById("s1").src = "img/star1.png";
@@ -224,11 +300,11 @@
             //ESTRELA 4
             if (estrela == 4) {
                 // if (s4 == url + "img/star0.png") {
-                document.getElementById("s1").src = "img/star1.png";
-                document.getElementById("s2").src = "img/star1.png";
-                document.getElementById("s3").src = "img/star1.png";
-                document.getElementById("s4").src = "img/star1.png";
-                document.getElementById("s5").src = "img/star0.png";
+                document.getElementById("s1").src = "{{URL::asset('imagem/star1.png')}}";
+                document.getElementById("s2").src = "{{URL::asset('imagem/star1.png')}}";
+                document.getElementById("s3").src = "{{URL::asset('imagem/star1.png')}}";
+                document.getElementById("s4").src = "{{URL::asset('imagem/star1.png')}}";
+                document.getElementById("s5").src = "{{URL::asset('imagem/star0.png')}}";
                 avaliacao = 4;
                 // } else {
                 //     document.getElementById("s1").src = "img/star1.png";
@@ -243,11 +319,11 @@
             //ESTRELA 3
             if (estrela == 3) {
                 // if (s3 == url + "img/star0.png") {
-                document.getElementById("s1").src = "img/star1.png";
-                document.getElementById("s2").src = "img/star1.png";
-                document.getElementById("s3").src = "img/star1.png";
-                document.getElementById("s4").src = "img/star0.png";
-                document.getElementById("s5").src = "img/star0.png";
+                document.getElementById("s1").src = "{{URL::asset('imagem/star1.png')}}";
+                document.getElementById("s2").src = "{{URL::asset('imagem/star1.png')}}";
+                document.getElementById("s3").src = "{{URL::asset('imagem/star1.png')}}";
+                document.getElementById("s4").src = "{{URL::asset('imagem/star0.png')}}";
+                document.getElementById("s5").src = "{{URL::asset('imagem/star0.png')}}";
                 avaliacao = 3;
                 // } else {
                 //     document.getElementById("s1").src = "img/star1.png";
@@ -262,11 +338,11 @@
             //ESTRELA 2
             if (estrela == 2) {
                 // if (s2 == url + "img/star0.png") {
-                document.getElementById("s1").src = "img/star1.png";
-                document.getElementById("s2").src = "img/star1.png";
-                document.getElementById("s3").src = "img/star0.png";
-                document.getElementById("s4").src = "img/star0.png";
-                document.getElementById("s5").src = "img/star0.png";
+                document.getElementById("s1").src = "{{URL::asset('imagem/star1.png')}}";
+                document.getElementById("s2").src = "{{URL::asset('imagem/star1.png')}}";
+                document.getElementById("s3").src = "{{URL::asset('imagem/star0.png')}}";
+                document.getElementById("s4").src = "{{URL::asset('imagem/star0.png')}}";
+                document.getElementById("s5").src = "{{URL::asset('imagem/star0.png')}}";
                 avaliacao = 2;
                 // } else {
                 //     document.getElementById("s1").src = "img/star1.png";
@@ -281,11 +357,11 @@
             //ESTRELA 1
             if (estrela == 1) {
                 // if (s1 == url + "img/star0.png") {
-                document.getElementById("s1").src = "img/star1.png";
-                document.getElementById("s2").src = "img/star0.png";
-                document.getElementById("s3").src = "img/star0.png";
-                document.getElementById("s4").src = "img/star0.png";
-                document.getElementById("s5").src = "img/star0.png";
+                document.getElementById("s1").src = "{{URL::asset('imagem/star1.png')}}";
+                document.getElementById("s2").src = "{{URL::asset('imagem/star0.png')}}";
+                document.getElementById("s3").src = "{{URL::asset('imagem/star0.png')}}";
+                document.getElementById("s4").src = "{{URL::asset('imagem/star0.png')}}";
+                document.getElementById("s5").src = "{{URL::asset('imagem/star0.png')}}";
                 avaliacao = 1;
                 // } else {
                 //     document.getElementById("s1").src = "img/star0.png";

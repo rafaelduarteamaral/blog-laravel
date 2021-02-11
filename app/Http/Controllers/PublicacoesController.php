@@ -64,6 +64,7 @@ class PublicacoesController extends Controller
         if ($req->hasFile('imagem')) {
             $path = $req->file('imagem')->store('', 'imagemPublicacao');
         }
+
         $publicacoes->imagem = $path;
         $publicacoes->update();
 

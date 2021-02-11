@@ -334,7 +334,21 @@ input {
 }
 
 .starRate {
+    display: flex;
     margin-top: 10px;
+    flex-direction: row;
+}
+
+.starMedia {
+
+    width: 15px !important;
+    height: 17px !important;
+}
+
+.divStar {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
 }
 
 .avaliarTexto {
@@ -969,4 +983,22 @@ li:first-child {
       justify-content: center;
       align-items: center;
       width: 80%;
+  }
+
+  .estrelas {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: row;
+    z-index: 1;
+  }
+  
+  .estrelas input[type=radio] {
+    display: none;
+  }
+  .estrelas label i.fa:before {
+    content:'\f005';
+    color: #FC0;
+  }
+  .estrelas input[type=radio]:checked ~ label i.fa:before {
+    color: #CCC;
   }

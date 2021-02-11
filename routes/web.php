@@ -6,6 +6,7 @@ Route::get('/catalogo', function () {
    return view('catalogo');
 });
 
+
 Route::get('/admin', function () {
    return view('admin');
 })->middleware(['auth'])->name('dashboard');
@@ -34,12 +35,13 @@ Route::get('/user', [\App\Http\Controllers\UserController::class, 'buscarUsuario
 Route::get('/catalogo', [\App\Http\Controllers\ProdutosController::class, 'buscarProdutos'])->middleware(['auth'])->name('produtos.buscar');
 Route::get('/categoria/{id}', [\App\Http\Controllers\CategoriaController::class, 'selectCategoria'])->middleware(['auth'])->name('categoria.buscar');
 Route::get('/usuarioPerfil', [\App\Http\Controllers\UserController::class, 'getUsuarios'])->middleware(['auth'])->name('usuario.atualizar');
-Route::get('/', [\App\Http\Controllers\PublicacoesController::class, 'getPublicacoes'])->middleware(['auth'])->name('publicacoes.buscar');
+Route::get('/', [\App\Http\Controllers\PublicacoesController::class, 'getPublicacoes'])->name('publicacoes.buscar');
 Route::get('/publicacoes_cadastradas', [\App\Http\Controllers\PublicacoesController::class, 'buscarPublicacoesTabela'])->middleware(['auth'])->name('publicacoes.buscar');
 
 Route::post('/editar_publicacao/{id}', [\App\Http\Controllers\PublicacoesController::class, 'updatePub'])->middleware(['auth'])->name('editarPub.update');
 Route::post('/editar/{id}', [\App\Http\Controllers\ProdutosController::class, 'update'])->middleware(['auth'])->name('editar.update');
 Route::post('/admin_produtos', [\App\Http\Controllers\ProdutosController::class, 'inserir'])->middleware(['auth'])->name('produtos.inserir');
+Route::post('/inserir_imagem', [\App\Http\Controllers\ProdutosController::class, 'save'])->middleware(['auth'])->name('produtos.save');
 Route::post('/admin_publicacoes', [\App\Http\Controllers\PublicacoesController::class, 'inserir'])->middleware(['auth'])->name('publicacoes.inserir');
 Route::post('/produtos', [\App\Http\Controllers\ComentariosController::class, 'comentario'])->middleware(['auth'])->name('comentarios.comentario');
 Route::post('', [\App\Http\Controllers\CategoriaController::class, 'categoria'])->middleware(['auth'])->name('inserir.categoria');
@@ -49,7 +51,7 @@ Route::delete('/produtos_cadastrados/{id}', [\App\Http\Controllers\ProdutosContr
 Route::delete('/publicacoes_cadastradas/{id}', [\App\Http\Controllers\PublicacoesController::class, 'deletarPublicacao'])->middleware(['auth'])->name('excluir.publicacoes');
 
 Route::get('/import', [\App\Http\Controllers\ProdutosController::class, 'import']);
-Route::get('/import', [\App\Http\Controllers\ProdutosController::class, 'importar'])->name('produtos.importar');
+Route::post('/importar', [\App\Http\Controllers\ProdutosController::class, 'importar'])->name('produtos.importar');
 
 require __DIR__ . '/auth.php';
 

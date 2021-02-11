@@ -17,7 +17,7 @@
 
 <body>
     @include('layouts.admin_header');
-
+<?php use App\Models\Categoria;?>
     <div class="containerContent">
         <div class="boxContent">
             <div class="tableContainer">
@@ -28,9 +28,9 @@
                     @foreach($editar as $e)
                     @if (isset($editar))
                     <form action="{{route('editar.update', $e->id)}}" method="post" enctype="multipart/form-data">
-                    @else
-                    <form action="{{route('editar.edit')}}" method="post" enctype="multipart/form-data">
-                    @endif
+                        @else
+                        <form action="{{route('editar.edit')}}" method="post" enctype="multipart/form-data">
+                            @endif
                             <div class="boxPreview">
                                 <div class="titlePreview">
                                     <h1 class="textEditar">Titulo da Publicação</h1>
@@ -40,20 +40,57 @@
                                     <h1 class="textEditar">Descrição da Publicação</h1>
                                     <input class="inputEditar" id="descricaoDinamico" name="descricao" value="{{$e->descricao}}"></input>
                                 </div>
+
+
                                 <div class="descricaoPreview">
                                     <h1 class="textEditar">Categoria da Publicação</h1>
-                                    <input class="inputEditar" id="descricaoDinamico" name="categoria" value="{{$e->categoria}}"></input>
+                                    <select id="categoria" name="categoria" class="select">
+                                        <option class="optionDisabled" selected disabled>Categoria</option>
+                                        <?php
+
+
+                                        $data = Categoria::all();
+                                        foreach ($data as $c) { ?>
+                                            <option><?= $c->nome ?></option>
+                                        <?php } ?>
+                                    </select>
                                 </div>
+
                                 <div class="imgPreviewEdit">
                                     <h1 class="textEditar">Imagem da Publicação</h1>
                                     <input id="img_input" name="imagem" type="file" class="inputImageEdit">
                                     <img id="img_preview" name="imagem" src="{{asset("img/{$e->imagem}") }}" alt="Image Preview" class="imgPreviewElement" />
                                 </div>
+
+                                <div class="imgPreviewEdit">
+                                    <h1 class="textEditar">Imagem da Publicação</h1>
+                                    <input id="img_input" name="imagem_2" type="file" class="inputImageEdit">
+                                    <img id="img_preview" name="imagem_2" src="{{asset("img/{$e->imagem_2}") }}" alt="Image Preview" class="imgPreviewElement" />
+                                </div>
+
+                                <div class="imgPreviewEdit">
+                                    <h1 class="textEditar">Imagem da Publicação</h1>
+                                    <input id="img_input" name="imagem_3" type="file" class="inputImageEdit">
+                                    <img id="img_preview" name="imagem_3" src="{{asset("img/{$e->imagem_3}") }}" alt="Image Preview" class="imgPreviewElement" />
+                                </div>
+
+                                <div class="imgPreviewEdit">
+                                    <h1 class="textEditar">Imagem da Publicação</h1>
+                                    <input id="img_input" name="imagem_4" type="file" class="inputImageEdit">
+                                    <img id="img_preview" name="imagem_4" src="{{asset("img/{$e->imagem_4}") }}" alt="Image Preview" class="imgPreviewElement" />
+                                </div>
+
+                                <div class="imgPreviewEdit">
+                                    <h1 class="textEditar">Imagem da Publicação</h1>
+                                    <input id="img_input" name="imagem_5" type="file" class="inputImageEdit">
+                                    <img id="img_preview" name="imagem_5" src="{{asset("img/{$e->imagem_5}") }}" alt="Image Preview" class="imgPreviewElement" />
+                                </div>
+
                                 <div class="textoPreview">
                                     <h1 class="textEditar">Texto da Publicação</h1>
                                     <textarea class="textAreaEditar" id="paragrafoDinamico" name="texto" class="paragraph" value="">{{$e->texto_prod}}</textarea>
                                 </div>
-                            <button class="buttonEnviarEdit" onclick="alerta()" type="submit">Enviar</button>
+                                <button class="buttonEnviarEdit" onclick="alerta()" type="submit">Enviar</button>
                             </div>
                         </form>
                         @endforeach
@@ -73,9 +110,9 @@
     </div>
 
     <script>
-    function alerta(){
-        alert("Produto editado com sucesso!");
-    }
+        function alerta() {
+            alert("Produto editado com sucesso!");
+        }
 
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";

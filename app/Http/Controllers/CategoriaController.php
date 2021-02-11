@@ -33,7 +33,6 @@ class CategoriaController extends Controller
             ->leftJoin('produtos as p', 'c.nome', '=', 'p.categoria')
             ->where('p.categoria', $nome)
             ->get();
-            print_r($nome);
         $data = Produtos::all();
         $data2 = Categoria::all();
 

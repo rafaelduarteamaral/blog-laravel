@@ -15,6 +15,7 @@ class ComentariosController extends Controller
         if($req->has('comentar')){
             $texto          =    $req->input('comentar');
             $id_produto     =    $req->input('id');
+            $avaliacao      =    $req->input('estrela');
 
             $id = Auth::id(); 
 
@@ -22,6 +23,7 @@ class ComentariosController extends Controller
                 $comentario->comentario = $texto;
                 $comentario->id_pessoa = $id;
                 $comentario->id_produto = $id_produto;
+                $comentario->avaliacoes = $avaliacao;
                 $comentario->save();
                 return redirect('/produtos/'.$id_produto);
         }

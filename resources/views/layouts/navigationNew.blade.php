@@ -17,6 +17,11 @@
                 <a href="/usuarioPerfil">
                     <p class="buttonGustavo">{{ Auth::user()->name }}</p>
                 </a>
+                @if(Auth::user()->id == 1)
+                <a href="/admin">
+                    <p class="buttonGustavo">Admin</p>
+                </a>
+                @endif
 
             </div>
 

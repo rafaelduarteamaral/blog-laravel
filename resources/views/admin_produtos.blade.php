@@ -40,10 +40,33 @@
                         <?php } ?>
                     </select>
                     <textarea class="textArea" name="texto_prod" cols="30" rows="10" placeholder="Texto Apresentação"></textarea>
+
                     <div class="imgProduto">
                         <img id="img_preview" src="" alt="Image Preview" class="img" />
                         <input id="img_input" name="imagem" type="file" class="input">
                     </div>
+
+                    <div class="imgProduto">
+                        <img id="img_preview_2" src="" alt="Image Preview" class="img" />
+                        <input id="img_input_2" name="imagem_2" type="file" class="input">
+                    </div>
+
+                    <div class="imgProduto">
+                        <img id="img_preview_3" src="" alt="Image Preview" class="img" />
+                        <input id="img_input_3" name="imagem_3" type="file" class="input">
+                    </div>
+
+                    <div class="imgProduto">
+                        <img id="img_preview_4" src="" alt="Image Preview" class="img" />
+                        <input id="img_input_4" name="imagem_4" type="file" class="input">
+                    </div>
+
+                    
+                    <div class="imgProduto">
+                        <img id="img_preview_5" src="" alt="Image Preview" class="img" />
+                        <input id="img_input_5" name="imagem_5" type="file" class="input">
+                    </div>
+
                     <button class="buttonEnviar" type="submit">Enviar</button>
                 </form>
                 <button class="cadastrarCategoria" id="myBtn">Cadastrar Nova Categoria</button>

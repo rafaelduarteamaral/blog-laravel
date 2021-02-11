@@ -42,7 +42,7 @@
                         </div>
                     </div>
                 <?php $count++;
-                    if ($count == 10) break;
+                    if ($count == 25) break;
                 } ?>
 
                 <!-- @foreach($catalogo as $cat)

@@ -19,7 +19,7 @@ class CreatePublicacoesTable extends Migration
             $table->string('titulo');
             $table->string('descricao');
             $table->longText('texto');
-            $table->string('imagem');
+            $table->string('imagem')->nullable();
             $table->string('categoria')->nullable();
         });
     }
